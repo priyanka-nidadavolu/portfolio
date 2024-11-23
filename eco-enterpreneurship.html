@@ -26,6 +26,254 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f8fb;
+      margin: 0;
+    }
+
+    .highlight {
+      color: #28a745;
+      font-weight: bold;
+    }
+
+    .navbar {
+      background-color: #222;
+      padding: 20px 0;
+    }
+
+    .navbar a {
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .navbar a:hover {
+      color: #28a745;
+    }
+
+    .badge-tech {
+      background: #28a745;
+      color: #fff;
+      border-radius: 5px;
+      font-size: 12px;
+      margin-right: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .badge-tech:hover {
+      background: rgb(137, 42, 42);
+    }
+
+    .project-image {
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease-in-out;
+      max-width: 100%;
+    }
+
+    .project-image:hover {
+      transform: scale(1.05);
+    }
+
+    .project-info-card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .timeline {
+      list-style: none;
+      padding: 0;
+      border-left: 3px solid #28a745;
+    }
+
+    .timeline li {
+      margin-bottom: 20px;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .timeline li:before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      background: #28a745;
+      position: absolute;
+      left: -6px;
+      top: 5px;
+      border-radius: 50%;
+    }
+
+    .cta-buttons .btn {
+      margin-right: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .cta-buttons .btn-primary {
+      background-color: #28a745;
+      border: none;
+      transition: background-color 0.3s;
+    }
+
+    .cta-buttons .btn-primary:hover {
+      background-color: #218838;
+    }
+
+    .cta-buttons .btn-success {
+      background-color: #28a745;
+      border: none;
+      transition: background-color 0.3s;
+    }
+
+    .cta-buttons .btn-success:hover {
+      background-color: rgb(137, 42, 42);
+    }
+
+    .breadcrumbs a {
+      color: #28a745;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+
+    .accordion-button {
+      background-color: #28a745;
+      color: white;
+      font-weight: bold;
+    }
+
+    .accordion-button:hover {
+      background-color: #218838;
+    }
+
+    .accordion-item {
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #222;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .project-info-container {
+        flex-direction: column;
+      }
+
+      .project-info-card {
+        margin-top: 20px;
+      }
+
+      .project-image {
+        margin-top: 20px;
+      }
+    }
+    .accordion-button {
+      background-color: #28a745;
+      font-weight: bold;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+  
+    .accordion-button:hover {
+      background-color: #f1f1f1;
+      cursor: pointer;
+      border-color: #28a745;
+    }
+  
+    .accordion-button:not(.collapsed) {
+      background-color: #28a745;
+      color: white;
+      border-color: #28a745;
+    }
+  
+    .accordion-item {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+    }
+  
+    .accordion-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+  
+    .accordion-body {
+      padding: 15px;
+      font-size: 1rem;
+      color: #555;
+    }
+  
+    .accordion-button i {
+      font-size: 1.5rem;
+    }
+  
+    .highlight {
+      color: #28a745;
+    }
+  
+    .accordion-header {
+      margin-bottom: 5px;
+    }
+
+    .image-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+  
+    .styled-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 15px; /* Rounded corners */
+      border: 5px solid #28a745; /* Green border for a fresh look */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+      transition: all 0.3s ease; /* Smooth transition on hover */
+    }
+  
+    .styled-image:hover {
+      transform: scale(1.05); /* Slight zoom on hover */
+      opacity: 0.9; /* Subtle opacity change */
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+    }
+  
+    .image-container img {
+      border-radius: 15px;
+      max-width: 100%;
+      height: auto;
+    }
+  
+    /* Ensure responsiveness on mobile screens */
+    @media (max-width: 768px) {
+      .styled-image {
+        max-height: 300px;
+      }
+    }
+  </style>
 
   <!-- =======================================================
   * Template Name: Personal
@@ -44,7 +292,7 @@
       <a href="projects.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <p class="sitename">&lt;back</p>
+        <p class="sitename">&lt;All Projects</p>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -63,92 +311,212 @@
   </header>
 
   <main class="main">
+    <div class="container mt-5" data-aos="fade-in">
+      <!-- Breadcrumbs -->
+<br><br><br><br>
+      <!-- Project Info -->
+      <div class="project-info-container d-flex flex-wrap justify-content-center">
+        <!-- Project Info Card -->
+        <div class="col-md-6 col-8" data-aos="zoom-in">
+          <div class="project-info-card">
+            <h1 class="text-center highlight">Eco Entrepreneurship</h1>
+            <p class="text-center">Promoting eco-friendly businesses by offering tools and recommendations for sustainability.</p>
+            <ul class="timeline">
+              <li><strong>Duration:</strong> Oct 2021 - Jan 2022</li>
+              <li><strong>Institution:</strong> K L University</li>
+              <li>
+                <strong>Tech Stack:</strong>
+                <span class="badge-tech" title="Java programming language">Java</span>
+                <span class="badge-tech" title="Spring Boot Framework">Spring Boot</span>
+                <span class="badge-tech" title="Relational Database">MySQL</span>
+                <span class="badge-tech" title="Cloud Services by AWS">AWS</span>
+                <span class="badge-tech" title="Frontend Markup Language">JSP</span>
+              </li>
+            </ul>
+            <br>
+            <div class="cta-buttons mt-3 text-center">
+              <a href="https://github.com/jfsd-sdp-project/eco-enterpreneurship" class="btn btn-success" target="_blank"><i class="fab fa-github"></i> View GitHub</a>
+              <a href="https://www.linkedin.com/pulse/eco-entrepreneurship-nidadavolu-s-p-priyanka/" class="btn btn-success" target="_blank"><i class="fab fa-github"></i> Blog</a>
+            </div>
+          </div>
+        </div>
 
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>Eco Entrepreneurship</h1>
-              <p class="mb-0">This project promotes sustainable business practices in India by offering eco-friendly startup recommendations and tools to evaluate their environmental impact.</p>
+        <!-- Project Image -->
+
+        
+          <div class="image-container text-center mt-4" data-aos="zoom-in">
+            <img src="assets/img/projects/eco.webp" alt="Project Image" class="styled-image img-fluid" style="height: 500px;">
+          </div>
+        </div>
+
+      <!-- Problem Statement -->
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <h3 class="text-center mb-4 highlight">Problem Statement</h3>
+          <div class="accordion-body">With growing environmental concerns, there is an increasing demand for sustainable businesses that focus on eco-friendly solutions. However, many aspiring entrepreneurs lack resources and guidance on starting and scaling green businesses. The challenge was to create a platform that not only encourages eco-entrepreneurship but also provides tools, resources, and actionable insights for budding entrepreneurs to develop and evaluate environmentally sustainable ventures.
+
+          </div><br><br>
+          <h3 class="text-center mb-4 highlight">Objective</h3>
+          <div class="accordion-body">
+            To design a platform that promotes green entrepreneurship in India by offering suggestions for eco-friendly startup ideas, allowing users to assess the environmental impact of their projects, discover existing green initiatives, and contribute to social causes.
+          </div>
+        </div>
+      </div>
+
+      <!-- Modules -->
+      <!-- Modules Section -->
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <h3 class="text-center mb-4 highlight">About the Project</h3>
+          <div class="accordion" id="modulesAccordion">
+            <!-- Module 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="module1">
+                <button class="accordion-button d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                  <i class="fas fa-users me-3" style="color:#28a745;"></i><span>Key Contributions</span>
+                </button>
+              </h2>
+              <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="module1" data-bs-parent="#modulesAccordion">
+                <div class="accordion-body">
+                  <h5>Eco-Friendly Startup Suggestions:</h5>
+
+                  Created a feature that provides curated suggestions for starting eco-friendly businesses based on market trends and environmental needs.
+                  <br>
+                  Focused on low-cost, scalable ideas to support entrepreneurs in economically diverse regions.
+                  <br><br>
+                 <h5>Environmental Impact Assessment Tool:</h5>
+
+                  Developed a tool for users to assess the environmental impact of their business ideas.
+                  <br>Integrated key metrics such as energy consumption, waste production, and carbon footprint to help users make informed decisions.
+                  <br><br>
+                  
+                  <h5>Platform for Existing Green Initiatives:</h5>
+
+                  Integrated a database of existing eco-friendly startups and initiatives, enabling users to explore successful business models and potential collaboration opportunities.
+                  <br>Created a community feature that encouraged sharing of ideas, challenges, and solutions.
+                  <br><br>
+                  <h5>Social Cause Contributions:</h5>
+
+                  Designed features that allowed users to contribute to social causes related to sustainability, such as tree planting, renewable energy projects, or waste management initiatives.
+
+                </div>
+              </div>
+            </div>
+      
+            <!-- Module 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="module2">
+                <button class="accordion-button d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                  <i class="fas fa-plant me-3" style="color:#28a745;"></i><span>Technologies Used</span>
+                </button>
+              </h2>
+              <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="module2" data-bs-parent="#modulesAccordion">
+                <div class="accordion-body">
+                  <h5>Programming Language:</h5>
+                  Java: Used for developing the core application logic, ensuring scalability and robustness.<br><br>
+
+                  <h5>Web Framework:</h5>
+                  Spring Boot: Employed for creating a RESTful backend that handles user interactions, business logic, and database management.<br><br>
+                  
+                  <h5>Frontend Technologies:</h5>
+                  HTML/CSS/JavaScript: Built an intuitive and responsive user interface to enhance user experience and ensure accessibility across devices.<br><br>
+                  
+                  <h5>Database Management:</h5>
+                  MySQL: Utilized to store and manage user data, environmental metrics, and business suggestions.<br>
+                  Optimized relational database design for fast data retrieval and smooth performance.<br><br>
+            
+                  <h5>Deployment and Cloud Hosting:</h5>
+                  Amazon Web Services (AWS):<br>
+                  Deployed the application on AWS EC2 instances, ensuring high availability, scalability, and cost efficiency.<br>
+                  Utilized AWS RDS for MySQL database management, providing managed, scalable database solutions with automated backups and maintenance.<br>
+                  Leveraged AWS S3 for storing and serving static files such as images and documents related to the business ideas and initiatives.<br><br>
+                  
+                  <h5>Version Control and Collaboration:</h5>
+                  Git/GitHub: Used for version control and team collaboration, ensuring smooth development and code management.
+                </div>
+              </div>
+            </div>
+      
+            <!-- Module 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="module3">
+                <button class="accordion-button d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                  <i class="fas fa-recycle me-3" style="color:#006400;"></i><span>Impact</span>
+                </button>
+              </h2>
+              <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="module3" data-bs-parent="#modulesAccordion">
+                <div class="accordion-body">
+                  <h5>Empowered Eco-Entrepreneurs:</h5>
+                  Helped aspiring entrepreneurs by providing them with valuable resources and tools to start their eco-friendly ventures.<br>
+                  Supported scalability of green businesses, promoting sustainable practices from the ground up.<br><br>
+
+                  <h5>Boosted Environmental Awareness:</h5>
+                  The environmental impact assessment tool encouraged users to minimize their ecological footprint while launching new businesses.<br>
+                  Increased awareness around the importance of sustainable entrepreneurship and its role in addressing climate change and other environmental issues.<br><br>
+                  
+                  <h5>Facilitated Collaboration and Social Responsibility:</h5>
+                  Enabled users to connect with other green entrepreneurs and participate in sustainability-focused initiatives, fostering a sense of community and shared purpose.<br>
+                  Contributed to social causes and environmental conservation by promoting volunteerism and donations for green projects.<br><br>
+                  
+                  <h5>Scalable and Reliable Infrastructure:</h5>
+                  Deployed on AWS, the platform provided a highly available and scalable solution that can handle increasing user traffic and data as the user base grows.<br>
+                  AWS services ensured the application could run efficiently, with minimal downtime and excellent performance.<br><br>
+                  
+                  <h5>Economic Value and Business Growth:</h5>
+                  Enabled entrepreneurs to launch cost-effective businesses that promote sustainability while benefiting from reduced operational costs through optimized resource management.<br>
+                  Positioned the platform as a valuable tool for both new entrepreneurs and established green businesses seeking collaboration opportunities.
+                </div>
+              </div>
+            </div>
+      
+            <!-- Module 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="module4">
+                <button class="accordion-button d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                  <i class="fas fa-hand-holding-heart me-3" style="color:#17a2b8;"></i><span>Modules</span>
+                </button>
+              </h2>
+              <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="module4" data-bs-parent="#modulesAccordion">
+                <div class="accordion-body">
+                  <h5>User Module:</h5>
+                  Allows users to create and manage accounts with profile customization.<br>
+                  Tracks user activity, such as contributions to social causes, saved project ideas, and purchase history.<br>
+                  Implements secure user authentication using Spring Security with JWT (JSON Web Tokens).<br><br>
+
+                  <h5>Generate/Suggest Ideas Module:</h5>
+                  Provides personalized eco-friendly business suggestions based on user inputs such as interests, location, and available budget.<br>
+                  Uses a rule-based engine and database lookups for tailored recommendations.<br>
+                  Enables users to save suggested ideas for future reference or refinement.<br><br>
+
+                  <h5>View Existing Projects Module:</h5>
+                  Displays a curated list of ongoing and completed eco-friendly initiatives.<br>
+                  Includes detailed project information, such as goals, environmental impact, and success stories.<br>
+                  Allows users to interact with projects by leaving feedback or contacting project owners for collaboration.<br><br>
+
+                  <h5>Donating Money and Buying Module:</h5>
+                  Enables users to support eco-friendly projects through monetary donations.<br>
+                  Offers a marketplace where users can purchase eco-friendly products or services provided by listed green businesses.<br>
+                  Integrates secure payment gateways such as PayPal or Stripe for transactions.<br><br>
+
+                  <h5>Update and Delete Projects Module:</h5>
+                  Allows project owners to update details of their projects, such as progress updates, new goals, or environmental impact reports.<br>
+                  Provides functionality to archive or delete projects that are no longer active or relevant.<br>
+                  Ensures only authenticated project owners can perform these actions.
+
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <nav class="breadcrumbs">
-        <div class="container">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Project Details</li>
-          </ol>
-        </div>
-      </nav>
-    </div><!-- End Page Title -->
-
-    <!-- Service Details Section -->
-    <section id="service-details" class="service-details section">
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="services-list">
-              <div style="display: flex; align-items: center;">
-                <i class="bi bi-calendar" style="color: rgb(137, 42, 42)"></i>
-                <h7 style="margin-left: 8px;">Oct 2021 - Jan 2022</h7>
-              </div><br>
-              <div style="display: flex; align-items: center;">
-                <i class="bi bi-geo-alt" style="color: rgb(137, 42, 42)"></i>
-                <h7 style="margin-left: 8px;">K L University</h7>
-              </div><br>
-              <div style="display: flex; align-items: center;">
-                <i class="bi bi-tools" style="color: rgb(137, 42, 42)"></i>
-                <h7 style="margin-left: 8px;">Eclipse · MySQL · Spring Boot · AWS cloud · HTML · Java · Spring MVC · Amazon Web Services (AWS) · JavaServer Pages (JSP)</h7>
-              </div><br>
-              <div style="display: flex; align-items: center;">
-                <i class="bi bi-link" style="color: rgb(137, 42, 42)"></i>
-                <h7><a href="https://github.com/jfsd-sdp-project/eco-enterpreneurship">&nbsp; Github Link</a></h7>
-              </div><br>
-            </div>
-
-            <h4>OBJECTIVE OF OUR PROJECT</h4>
-            <p>
-              Our primary goal is to assist startups in enhancing their environmental projects, ultimately fostering the growth of green entrepreneurship. By providing support and resources, we aim to empower these startups to develop innovative solutions that contribute to sustainability and address pressing environmental challenges. Through collaboration and knowledge sharing, we believe we can cultivate a thriving ecosystem of eco-friendly businesses that not only benefit the planet but also create economic opportunities.</p>
-          </div>
-
-          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/img/projects/GREEN-ENTREPRENEURSHIP.jpg" alt="" class="img-fluid services-img">
-            <h3>PROBLEM STATEMENT</h3>
-            <p>
-              To develop an application that can impact green enterpreneurship in India using java full stack development. As countries achieve a certain level of economic development, the increased income from entrepreneurial activity encourages a higher societal demand for a clean environment and induces efforts to reduce environmental damage by increasing the number of environmentally friendly projects and introducing clean production to improve environmental quality.
-            </p><br>
-            <h3>PROPOSED SOLUTION</h3>
-            <p>
-              Our application provides suggestions for developing eco-friendly entrepreneurship initiatives. It assesses the environmental impact of projects, helping users understand how sustainable their ideas are. Additionally, the app allows users to contribute their own ideas for eco-friendly projects, explore existing sustainable initiatives, and even donate to social causes if they wish. We aim to offer valuable insights and inspiration to those looking to create eco-friendly ventures while enabling users to evaluate and promote the projects shared by others on the platform. This way, users can recommend these sustainable startups to their networks, fostering a community dedicated to environmental responsibility.
-            </p><br>
-            <h3>MODULES</h3>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> <span>User module</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Generate/Suggest Ideas module</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>View Existing Projects module</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Donating money and buying module</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Update and delete Projects module</span></li>
-            </ul><br>
-            <h3>E POSTER</h3><br>
-            <div class="portfolio-content h-100">
-              <a href="assets/img/projects/eposter.png" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><img src="assets/img/projects/eposter.png" class="img-fluid"><br></i></a>
-  
-            </div>
-          </div>
-
-        </div>
+      <h3 class="text-center mb-4 highlight">E-Poster</h3>
+      <div class="portfolio-content h-100">
+        <a href="assets/img/projects/eposter.png" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><img src="assets/img/projects/eposter.png" class="img-fluid"><br></i></a>
 
       </div>
-
-    </section><!-- /Service Details Section -->
-
+      <div class="accordion-body">The "Eco Entrepreneurship" platform successfully integrates green entrepreneurship, sustainability tools, and community engagement. By incorporating key modules like idea generation, project management, and donation capabilities, it addresses critical challenges in eco-business development. AWS deployment ensures the platform’s scalability, reliability, and high performance, making it a powerful tool for fostering green business ecosystems and promoting environmental sustainability.
+      </div>
+    </div>
   </main>
 
   <footer id="footer" class="footer dark-background">

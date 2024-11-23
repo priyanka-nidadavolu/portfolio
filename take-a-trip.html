@@ -26,7 +26,254 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f8fb;
+      margin: 0;
+    }
 
+    .highlight {
+      color: #240769;
+      font-weight: bold;
+    }
+
+    .navbar {
+      background-color: #222;
+      padding: 20px 0;
+    }
+
+    .navbar a {
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .navbar a:hover {
+      color: #240769;
+    }
+
+    .badge-tech {
+      background: #240769;
+      color: #fff;
+      border-radius: 5px;
+      font-size: 12px;
+      margin-right: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .badge-tech:hover {
+      background: rgb(137, 42, 42);
+    }
+
+    .project-image {
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease-in-out;
+      max-width: 100%;
+    }
+
+    .project-image:hover {
+      transform: scale(1.05);
+    }
+
+    .project-info-card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .timeline {
+      list-style: none;
+      padding: 0;
+      border-left: 3px solid #240769;
+    }
+
+    .timeline li {
+      margin-bottom: 20px;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .timeline li:before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      background: #240769;
+      position: absolute;
+      left: -6px;
+      top: 5px;
+      border-radius: 50%;
+    }
+
+    .cta-buttons .btn {
+      margin-right: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .cta-buttons .btn-primary {
+      background-color: #240769;
+      border: none;
+      transition: background-color 0.3s;
+    }
+
+    .cta-buttons .btn-primary:hover {
+      background-color: #218838;
+    }
+
+    .cta-buttons .btn-success {
+      background-color: #240769;
+      border: none;
+      transition: background-color 0.3s;
+    }
+
+    .cta-buttons .btn-success:hover {
+      background-color: rgb(137, 42, 42);
+    }
+
+    .breadcrumbs a {
+      color: #240769;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+
+    .accordion-button {
+      background-color: #240769;
+      color: white;
+      font-weight: bold;
+    }
+
+    .accordion-button:hover {
+      background-color: #218838;
+    }
+
+    .accordion-item {
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #222;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .project-info-container {
+        flex-direction: column;
+      }
+
+      .project-info-card {
+        margin-top: 20px;
+      }
+
+      .project-image {
+        margin-top: 20px;
+      }
+    }
+    .accordion-button {
+      background-color: #240769;
+      font-weight: bold;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+  
+    .accordion-button:hover {
+      background-color: #f1f1f1;
+      cursor: pointer;
+      border-color: #240769;
+    }
+  
+    .accordion-button:not(.collapsed) {
+      background-color: #240769;
+      color: white;
+      border-color: #240769;
+    }
+  
+    .accordion-item {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+    }
+  
+    .accordion-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+  
+    .accordion-body {
+      padding: 15px;
+      font-size: 1rem;
+      color: #555;
+    }
+  
+    .accordion-button i {
+      font-size: 1.5rem;
+    }
+  
+    .highlight {
+      color: #240769;
+    }
+  
+    .accordion-header {
+      margin-bottom: 5px;
+    }
+
+    .image-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+  
+    .styled-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 15px; /* Rounded corners */
+      border: 5px solid #240769; /* Green border for a fresh look */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+      transition: all 0.3s ease; /* Smooth transition on hover */
+    }
+  
+    .styled-image:hover {
+      transform: scale(1.05); /* Slight zoom on hover */
+      opacity: 0.9; /* Subtle opacity change */
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+    }
+  
+    .image-container img {
+      border-radius: 15px;
+      max-width: 100%;
+      height: auto;
+    }
+  
+    /* Ensure responsiveness on mobile screens */
+    @media (max-width: 768px) {
+      .styled-image {
+        max-height: 300px;
+      }
+    }
+  </style>
   <!-- =======================================================
   * Template Name: Personal
   * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
@@ -44,7 +291,7 @@
       <a href="projects.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <p class="sitename">&lt;back</p>
+        <p class="sitename">&lt;All Projects</p>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -63,120 +310,173 @@
   </header>
 
   <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>Take a Trip</h1>
-              <p class="mb-0">Developed a travel planning platform that provides tailored suggestions and connections to travel agents, featuring robust backend management and a responsive user interface for a seamless planning experience.</p>
+    <div class="container mt-5" data-aos="fade-in">
+      <!-- Breadcrumbs -->
+<br><br><br><br>
+      <!-- Project Info -->
+      <div class="project-info-container d-flex flex-wrap justify-content-center">
+        <!-- Project Info Card -->
+        <div class="col-md-6 col-8" data-aos="zoom-in">
+          <div class="project-info-card">
+            <h1 class="text-center highlight">Take a Trip</h1>
+            <p class="text-center">Developed a travel planning platform that provides tailored suggestions and connections to travel agents, featuring robust backend management and a responsive user interface for a seamless planning experience.</p>
+            <ul class="timeline">
+              <li><strong>Duration:</strong>Dec 2020 - May 2021</li>
+              <li><strong>Institution:</strong>K L University</li>
+              <li>
+                <strong>Tech Stack:</strong>
+                <span class="badge-tech" title="Java programming language">Python</span>
+                <span class="badge-tech" title="Java programming language">MySQL</span>
+                <span class="badge-tech" title="Java programming language">HTML and CSS</span>
+                <span class="badge-tech" title="Java programming language">Django</span>
+              </li>
+            </ul>
+            <br>
+            <div class="cta-buttons mt-3 text-center">
+              <a href="https://github.com/sdp-projects/travel_tourism_hospitaity" class="btn btn-success" target="_blank"><i class="fab fa-github"></i> View GitHub</a>
+              <a href="https://travel-tourism-hospitaity.onrender.com/" class="btn btn-success" target="_blank"><i class="fab fa-github"></i> Project Demo</a>
+              <a href="https://www.figma.com/design/FahPiGlTBc7KsShKlagmXM/Take-a-Trip---Prototype" class="btn btn-success" target="_blank"><i class="fab fa-github"></i> Figma Demo</a>
+              <br>
             </div>
+            <div class="cta-buttons mt-3 text-center">
+            <a href="https://www.linkedin.com/pulse/trip-travel-tourism-hospitality-website-nsp-priyanka/" class="btn btn-success" target="_blank"><i class="fab fa-github"></i> Blog</a>
+          </div>
+          </div>
+        </div>
+
+        <!-- Project Image -->
+
+        
+          <div class="image-container text-center mt-4" data-aos="zoom-in">
+            <img src="assets/img/projects/trip.avif" alt="Project Image" class="styled-image img-fluid" style="height: 500px;">
+          </div>
+        </div>
+
+      <!-- Problem Statement -->
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <h3 class="text-center mb-4 highlight">Problem Statement</h3>
+          <div class="accordion-body">Travel planning often involves juggling multiple platforms to book transportation, accommodations, and activities while staying within budget and ensuring convenience. Many existing solutions lack personalized recommendations, seamless integration of services, or intelligent assistance. This project sought to address these challenges by creating an all-in-one platform that optimizes trip planning, simplifies bookings, and enhances user experience.
+
+
+
+          </div><br><br>
+          <h3 class="text-center mb-4 highlight">Objective</h3>
+          <div class="accordion-body">
+            To design and implement a user-friendly travel planning platform that leverages optimization algorithms, data science, and robust technical frameworks to deliver cost-efficient travel solutions, personalized recommendations, and seamless booking experiences.
           </div>
         </div>
       </div>
-      <nav class="breadcrumbs">
-        <div class="container">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Project Details</li>
-          </ol>
-        </div>
-      </nav>
-    </div><!-- End Page Title -->
 
-    <!-- Service Details Section -->
-    <section id="service-details" class="service-details section">
+      <!-- Modules -->
+      <!-- Modules Section -->
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <h3 class="text-center mb-4 highlight">About the Project</h3>
+          <div class="accordion" id="modulesAccordion">
+            <!-- Module 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="module1">
+                <button class="accordion-button d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                  <i class="fas fa-users me-3" style="color:#28a745;"></i><span>Key Contributions</span>
+                </button>
+              </h2>
+              <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="module1" data-bs-parent="#modulesAccordion">
+                <div class="accordion-body">
+                  <h5>Mathematical Programming for Optimization:</h5>
 
-      <div class="container">
+                  Implemented optimization algorithms to recommend the best and cheapest travel routes, accommodations, and itineraries.
+                  <br>
+                  Allowed users to set preferences like budget, destinations, and travel dates to receive tailored solutions.
+                  <br><br>
+                 <h5>Technical Implementation:</h5>
+                  Django Framework:
+                  <br>Developed the backend to handle data processing, API integrations, and user management.
+                  <br>Built a responsive frontend for an interactive and user-friendly interface.
+                  <br>MySQL Database: For efficient storage and retrieval of user profiles, bookings, and travel-related data.
+                  <br>HTML/CSS and JavaScript: Designed a modern, visually appealing, and responsive UI.
+                  <br>Figma Designs: Created detailed wireframes and prototypes to plan and visualize the platform’s user interface and experience.
+                  <br><br>
+                  
+                  <h5>Integration with Travel Services:</h5>
 
-        <div class="row gy-4">
+                  Enabled users to book transportation and accommodations directly through the platform.
+                  <br>Offered access to curated travel guides and connections to travel agents for customized itineraries.
+                  
 
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="services-list">
-              <div style="display: flex; align-items: center;">
-                <i class="bi bi-calendar" style="color: rgb(137, 42, 42)"></i>
-                <h7 style="margin-left: 8px;">Dec 2020 - May 2021</h7>
-              </div><br>
-              <div style="display: flex; align-items: center;">
-                <i class="bi bi-geo-alt" style="color: rgb(137, 42, 42)"></i>
-                <h7 style="margin-left: 8px;">K L University</h7>
-              </div><br>
-              <div style="display: flex; align-items: center;">
-                <i class="bi bi-tools" style="color: rgb(137, 42, 42)"></i>
-                <h7 style="margin-left: 8px;">Python (Programming Language) · MySQL · HTML · Cascading Style Sheets (CSS) · Django</h7>
-              </div><br>
-              <div style="display: flex; align-items: center;">
-                <i class="bi bi-link" style="color: rgb(137, 42, 42)"></i>
-                <h7><a href="https://github.com/sdp-projects/travel_tourism_hospitaity/tree/main">&nbsp; Github Link</a></h7>
-              </div><br>
-            </div>
-                
-    
-                <h4>OBJECTIVE OF OUR PROJECT</h4>
-                <p>
-                  To develop a travel planning platform that offers curated travel suggestions, connects users to trusted travel agents, and enables seamless itinerary management with an interactive and responsive user interface.
-    
-                </p>
+                </div>
               </div>
-    
-              <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-                <img src="assets/img/projects/trip.avif" alt="" class="img-fluid services-img" style="width: 1000px;">
-                
-                <h3>PROBLEM STATEMENT</h3>
-                <p> Travel planning can be overwhelming for users due to the lack of centralized platforms offering curated suggestions, reliable agent connections, and efficient itinerary management. Existing solutions often require users to switch between multiple platforms, making the process time-consuming and prone to errors. This project aimed to create a unified, user-friendly platform that simplifies travel planning and provides tailored recommendations.</p>
-                <h3>CONCEPTS USED</h3>
-                <p>
-                    Mathematical programming- providing best and cheapest solution<br>
-                    Data science - providing travel support bot<br>    
-                    Technical skills- Django for preparing frontend and backend<br>
-    
-    
-                </p><br>
-                <h3>KEY CONTRIBUTIONS</h3>
-                <p>Platform Features:</p>
-                <ul>
-                  <li><i class="bi bi-check-circle"></i> <span>Curated Travel Suggestions: Personalized recommendations based on user preferences (e.g., destination, budget, travel type).</span></li>
-                  <li><i class="bi bi-check-circle"></i> <span>Travel Agent Integration: Direct connection to verified agents for bookings and customizations.</span></li>
-                  <li><i class="bi bi-check-circle"></i> <span>Itinerary Management: Tools to create, edit, and manage detailed travel plans.</span></li>
-                 
-                </ul><br>
-                <p>Backend Development:</p>
-                <ul>
-                  <li><i class="bi bi-check-circle"></i> <span>Designed an efficient backend using Django for seamless communication between the user interface and the database.</span></li>
-                  <li><i class="bi bi-check-circle"></i> <span>Ensured data security and scalability to handle multiple users simultaneously.</span></li>
-                </ul><br>
-                <p>Database Management:</p>
-                <ul>
-                  <li><i class="bi bi-check-circle"></i> <span>Developed a robust database using MySQL to store user preferences, travel data, and itineraries.</span></li>
-                  <li><i class="bi bi-check-circle"></i> <span>Optimized queries to ensure fast data retrieval and updates.</span></li>
-                </ul><br>
-                <p>Frontend Development:</p>
-                <ul>
-                  <li><i class="bi bi-check-circle"></i> <span>Built an interactive and responsive interface using HTML, CSS, and JavaScript.</span></li>
-                  <li><i class="bi bi-check-circle"></i> <span>Ensured cross-device compatibility for a smooth user experience on desktops, tablets, and smartphones.</span></li>
-                </ul><br>
-    
-                <h3> Please refer to the Figma design via this <a href="https://www.figma.com/design/FahPiGlTBc7KsShKlagmXM/Take-a-Trip---Prototype">link</a></h3>
-                <br>
-                <h3>MODULES</h3>
-                <ul>
-                  <li><i class="bi bi-check-circle"></i> <span>Login/Register</span></li>
-                  <li><i class="bi bi-check-circle"></i> <span>Transportation booking</span></li>
-                  <li><i class="bi bi-check-circle"></i> <span>Hotel Booking</span></li>
-                  <li><i class="bi bi-check-circle"></i> <span>Travel Guide</span></li>
-                  <li><i class="bi bi-check-circle"></i> <span>Payment</span></li>
-                </ul><br>
-    
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="module2">
+                  <button class="accordion-button d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                    <i class="fas fa-plant me-3" style="color:#28a745;"></i><span>Modules</span>
+                  </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="module2" data-bs-parent="#modulesAccordion">
+                  <div class="accordion-body">
+                    
+                    <h5>Login/Register Module:</h5>
+                    Facilitated secure user authentication and account management.
+                    <br>Enabled users to save preferences, past trips, and future bookings.<br><br>
+  
+                    <h5>Transportation Booking Module:</h5>
+                    Provided search and booking options for flights, trains, and rental vehicles.
+                    <br>Used optimization to suggest cost-effective travel routes.<br><br>
+                    
+                    <h5>Hotel Booking Module:</h5>
+                    Integrated a hotel search engine and availability filters.<br>
+                    Allowed users to book accommodations matching their preferences.<br><br>
+                    
+                    <h5>Travel Guide Module:</h5>
+                    Offered personalized suggestions for attractions, restaurants, and activities based on destination.<br>
+                    Connected users with travel agents for custom trip planning.<br><br>
+
+                    <h5>Payment Module:</h5>
+                    Enabled secure transactions for bookings with multiple payment options.<br>
+                    Provided detailed payment summaries and receipts for user reference.
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Module 3 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="module3">
+                  <button class="accordion-button d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                    <i class="fas fa-recycle me-3" style="color:#006400;"></i><span>Recognition and Impact:</span>
+                  </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="module3" data-bs-parent="#modulesAccordion">
+                  <div class="accordion-body">
+                    <h5>Figma Design Excellence:</h5>
+                    The platform's user interface and user experience were planned and visualized using Figma, ensuring a polished and intuitive design that met user expectations.
+<br><br>
+  
+                    <h5>Awarded Best Project of the Cohort:</h5>
+                    Recognized as one of the best projects in the cohort for its innovative features, seamless integration, and technical robustness.
+<br><br>
+                    
+                    <h5>Optimized Travel Planning:</h5>
+                    Helped users save up to 20% on travel costs by providing tailored, cost-efficient solutions.<br><br>
+                    
+                    <h5>Enhanced User Engagement:</h5>
+                    Increased satisfaction through personalized recommendations and real-time assistance.<br><br>
+
+                    <h5>Seamless Integration:</h5>
+                    Combined multiple travel services into a single platform, eliminating the need for multiple applications or websites.
+                    
+                  </div>
+                </div>
+              </div>
+        
+            </div>
+      
           </div>
-
         </div>
-
       </div>
-
-    </section><!-- /Service Details Section -->
-
+      
+      <div class="accordion-body">The Take A Trip project stands out as a comprehensive travel planning solution, blending optimization techniques, data science, and cutting-edge design. Its recognition as a best project in the cohort highlights its innovation and potential impact in simplifying and enhancing travel planning experiences.
+      </div>
+    </div>
   </main>
 
   <footer id="footer" class="footer dark-background">
