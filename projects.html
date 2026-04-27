@@ -1,52 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Projects - Priyanka Nidadavolu</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
-  <!-- Favicons -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects  -  Priyanka Nidadavolu</title>
   <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/portfolio.css" rel="stylesheet">
+  <style>
+    /* ── Extended filter UI ── */
+    .projects-hero { padding-bottom: 0; }
 
-  <!-- =======================================================
-  * Template Name: Personal
-  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    .filter-section {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 28px 0;
+      position: sticky;
+      top: 64px;
+      z-index: 100;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+    }
+
+    .search-box {
+      position: relative;
+      margin-bottom: 16px;
+    }
+    .search-box input {
+      width: 100%;
+      padding: 12px 16px 12px 44px;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--ink);
+      background: var(--surface-alt);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .search-box input:focus { border-color: var(--accent); background: #fff; }
+    .search-box .search-icon {
+      position: absolute;
+      left: 14px; top: 50%;
+      transform: translateY(-50%);
+      color: var(--ink-muted);
+      font-size: 1rem;
+      pointer-events: none;
+    }
+    .search-box input::placeholder { color: var(--ink-muted); }
+
+    .filter-group { margin-bottom: 10px; }
+    .filter-group-label {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 8px;
+      display: block;
+    }
+    .filter-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .chip {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.06em;
+      padding: 5px 12px;
+      border-radius: 100px;
+      border: 1.5px solid var(--border);
+      background: var(--surface-alt);
+      color: var(--ink-muted);
+      cursor: pointer;
+      transition: all 0.18s;
+      user-select: none;
+      white-space: nowrap;
+    }
+    .chip:hover { border-color: var(--accent); color: var(--accent); }
+    .chip.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .chip.skill-chip-filter { border-radius: 6px; }
+
+    .results-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 0 0;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .results-count {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--ink-muted);
+      letter-spacing: 0.06em;
+    }
+    .results-count strong { color: var(--accent); }
+    .clear-btn {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--ink-muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: all 0.18s;
+      display: none;
+    }
+    .clear-btn:hover { color: var(--accent); background: var(--accent-light); }
+    .clear-btn.visible { display: block; }
+
+    /* ── Card enhancements ── */
+    .project-card { cursor: pointer; }
+    .card-skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 12px; }
+    .skill-tag {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: var(--surface-alt);
+      color: var(--ink-muted);
+      border: 1px solid var(--border);
+    }
+    .card-year {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      color: var(--ink-muted);
+      margin-bottom: 4px;
+    }
+
+    .no-results {
+      display: none;
+      text-align: center;
+      padding: 80px 24px;
+      color: var(--ink-muted);
+    }
+    .no-results.visible { display: block; }
+    .no-results h3 { font-family: var(--font-display); font-size: 1.4rem; color: var(--ink); margin-bottom: 8px; }
+    .no-results p { font-size: 0.9rem; }
+
+    /* stays wide only when all shown */
+    @media (max-width: 768px) {
+    }
+  </style>
 </head>
-
 <body class="services-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Priyanka</h1>
-      </a>
-
+      <a href="index.html" class="logo d-flex align-items-center"><span class="sitename">Priyanka</span></a>
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -58,173 +160,418 @@
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
     </div>
   </header>
 
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>Projects</h1>
-              <p class="mb-0">Skilled in developing scalable, data-driven solutions using Python, cloud technologies, and AI. Successfully led projects to reduce cloud costs, improve speech recognition, and optimize marketing strategies.</p>
-            </div>
+  <main>
+    <!-- Hero -->
+    <section class="projects-hero" style="padding-bottom:56px;">
+      <div class="container" style="position:relative;z-index:2;">
+        <span class="page-hero-eyebrow" data-aos="fade-up">Selected Work</span>
+        <h1 data-aos="fade-up" data-aos-delay="80">Projects</h1>
+        <p data-aos="fade-up" data-aos-delay="160" style="color:rgba(255,255,255,0.55);font-size:1rem;max-width:560px;line-height:1.7;">
+          11 projects spanning data engineering, machine learning, cloud infrastructure, and full-stack development  -  built at IBM, Samsung, UCSD, and KL University.
+        </p>
+        <!-- Stat chips in hero -->
+        <div style="display:flex;flex-wrap:wrap;gap:24px;margin-top:40px;" data-aos="fade-up" data-aos-delay="240">
+          <div style="text-align:center;">
+            <div style="font-family:var(--font-display);font-size:2.2rem;color:var(--accent);line-height:1;">14</div>
+            <div style="font-family:var(--font-mono);font-size:0.62rem;color:rgba(255,255,255,0.45);letter-spacing:0.1em;text-transform:uppercase;">Projects</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-family:var(--font-display);font-size:2.2rem;color:var(--accent);line-height:1;">4</div>
+            <div style="font-family:var(--font-mono);font-size:0.62rem;color:rgba(255,255,255,0.45);letter-spacing:0.1em;text-transform:uppercase;">Categories</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-family:var(--font-display);font-size:2.2rem;color:var(--accent);line-height:1;">15+</div>
+            <div style="font-family:var(--font-mono);font-size:0.62rem;color:rgba(255,255,255,0.45);letter-spacing:0.1em;text-transform:uppercase;">Technologies</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-family:var(--font-display);font-size:2.2rem;color:var(--accent);line-height:1;">4</div>
+            <div style="font-family:var(--font-mono);font-size:0.62rem;color:rgba(255,255,255,0.45);letter-spacing:0.1em;text-transform:uppercase;">Years</div>
           </div>
         </div>
       </div>
-      <nav class="breadcrumbs">
-        <div class="container">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Projects</li>
-          </ol>
-        </div>
-      </nav>
-    </div><!-- End Page Title -->
+    </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services section">
-
+    <!-- Sticky filter bar -->
+    <div class="filter-section">
       <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-cloud-check"></i>
+        <div class="search-box">
+          <i class="bi bi-search search-icon"></i>
+          <input type="text" id="searchInput" placeholder="Search projects, technologies, keywords…" oninput="applyFilters()">
+        </div>
+        <div class="row g-2">
+          <div class="col-lg-6">
+            <div class="filter-group">
+              <span class="filter-group-label">Type</span>
+              <div class="filter-chips" id="typeChips">
+                <span class="chip active" data-type="all" onclick="toggleType(this)">All</span>
+                <span class="chip" data-type="data" onclick="toggleType(this)">Data &amp; ML</span>
+                <span class="chip" data-type="cloud" onclick="toggleType(this)">Cloud</span>
+                <span class="chip" data-type="web" onclick="toggleType(this)">Web &amp; Apps</span>
               </div>
-              <a href="cloud-provisioner.html" class="stretched-link">
-                <h3>Multi cloud Provisioner</h3>
-              </a>
-              <p>Created an MVP that leveraged LLMs and IBM Cloud to optimize resource management, reducing costs by 40% and improving operational efficiency.</p>
-              <a href="cloud-provisioner.html" class="stretched-link"></a>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-search"></i>
+          <div class="col-lg-6">
+            <div class="filter-group">
+              <span class="filter-group-label">Skills</span>
+              <div class="filter-chips" id="skillChips">
+                <span class="chip skill-chip-filter" data-skill="Python" onclick="toggleSkill(this)">Python</span>
+                <span class="chip skill-chip-filter" data-skill="SQL" onclick="toggleSkill(this)">SQL</span>
+                <span class="chip skill-chip-filter" data-skill="AWS" onclick="toggleSkill(this)">AWS</span>
+                <span class="chip skill-chip-filter" data-skill="Java" onclick="toggleSkill(this)">Java</span>
+                <span class="chip skill-chip-filter" data-skill="LLM" onclick="toggleSkill(this)">LLMs</span>
+                <span class="chip skill-chip-filter" data-skill="Tableau" onclick="toggleSkill(this)">Tableau</span>
+                <span class="chip skill-chip-filter" data-skill="Django" onclick="toggleSkill(this)">Django</span>
+                <span class="chip skill-chip-filter" data-skill="Triton" onclick="toggleSkill(this)">Triton</span>
+                <span class="chip skill-chip-filter" data-skill="FastAPI" onclick="toggleSkill(this)">FastAPI</span>
+                <span class="chip skill-chip-filter" data-skill="Docker" onclick="toggleSkill(this)">Docker</span>
+                <span class="chip skill-chip-filter" data-skill="Neo4j" onclick="toggleSkill(this)">Neo4j</span>
+                <span class="chip skill-chip-filter" data-skill="NLP" onclick="toggleSkill(this)">NLP</span>
               </div>
-              <a href="samsung.html" class="stretched-link">
-                <h3>
-                  Samsung Prism Project</h3>
-              </a>
-              <p>Enhanced Speech Recognition Accuracy with Multilingual Phonetic Dataset</p>
             </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item  position-relative">
-              <div class="icon">
-                <i class="bi bi-tree"></i>
-              </div>
-              <a href="eco-enterpreneurship.html" class="stretched-link">
-                <h3>Eco Entrepreneurship</h3>
-              </a>
-              <p>This project promotes sustainable business practices in India by offering eco-friendly startup recommendations and tools to evaluate their environmental impact.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-cloud"></i>
-              </div>
-              <a href="aws.html" class="stretched-link">
-                <h3>Amazon Web Services Project</h3>
-              </a>
-              <p>Configured a Linux-based EC2 instance on AWS with Apache HTTP Server to optimize static content delivery.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-search"></i>
-              </div>
-              <a href="dvt-prj.html" class="stretched-link">
-                <h3>
-                  Customer Response Analysis in Direct Marketing Campaigns</h3>
-              </a>
-              <p>Analyzed marketing records from a Portuguese bank using Python and Tableau, identifying trends that improved marketing strategies.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-airplane-engines"></i>
-              </div>
-              <a href="take-a-trip.html" class="stretched-link">
-                <h3>TAKE A TRIP</h3>
-              </a>
-              <p>Developed a travel planning platform that provides tailored suggestions and connections to travel agents, featuring robust backend management and a responsive user interface for a seamless planning experience.</p>
-              <a href="take-a-trip.html" class="stretched-link"></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-check-square  "></i>
-              </div>
-              <a href="survey-system.html" class="stretched-link">
-                <h3>Online Survey System</h3>
-              </a>
-              <p>Built an Online Survey System for creating, distributing, and analyzing surveys, featuring secure data management and a user-friendly interface for real-time responses.</p>
-              <a href="survey-system.html" class="stretched-link"></a>
-            </div>
-          </div><!-- End Service Item -->
-          
-
+          </div>
         </div>
-
-      </div>
-
-    </section><!-- /Services Section -->
-
-  </main>
-
-  <footer id="footer" class="footer dark-background">
-    <div class="container">
-      
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        <div class="results-bar">
+          <span class="results-count" id="resultsCount"><strong>14</strong> projects</span>
+          <button class="clear-btn" id="clearBtn" onclick="clearAll()">✕ Clear filters</button>
         </div>
       </div>
     </div>
+
+    <!-- Grid -->
+    <section class="projects-grid-section">
+      <div class="container">
+        <div class="projects-grid" id="projectsGrid">
+
+          <a href="grid-green.html" class="project-card" data-type="data" data-skills="Python,FastAPI,Next.js,NLP,Docker" data-search="gridgreen carbon ml training co2 emissions sustainability fastapi nextjs rag prophet snowflake databricks sagemaker mcp">
+            <div class="card-visual">
+              <img src="assets/img/projects/grid-green.svg" alt="" class="card-visual-img">
+              <i class="bi bi-lightning-charge card-visual-icon"></i>
+            </div>
+            <div class="card-body-custom">
+              <div class="card-year">2025 &#xB7; UC San Diego</div>
+              <div class="card-category">Carbon-Aware ML &#xB7; AI</div>
+              <h2 class="card-title">GridGreen</h2>
+              <p class="card-desc">A developer-first copilot that analyzes ML training code before execution  -  estimating CO&#x2082;, suggesting greener model alternatives, and scheduling jobs in cleaner grid windows.</p>
+              <div class="card-skills"><span class="skill-tag">Python</span><span class="skill-tag">FastAPI</span><span class="skill-tag">RAG</span><span class="skill-tag">Prophet</span><span class="skill-tag">MCP</span></div>
+              <div class="card-footer-row" style="margin-top:14px;">
+                <div class="card-tags"><span class="card-tag">&#x1F3C6; 2nd Place DataHacks 2026</span><span class="card-tag">77.6% compute reduction</span></div>
+                <div class="card-arrow"><i class="bi bi-arrow-right"></i></div>
+              </div>
+            </div>
+          </a>
+          <a href="gpu-kernel.html" class="project-card" data-type="data" data-skills="Python,Triton,CUDA,MPI" data-search="gpu kernel triton cuda operator fusion distributed training mpi allreduce tensor parallelism data parallelism transformer">
+            <div class="card-visual">
+              <img src="assets/img/projects/gpu-kernel.svg" alt="" class="card-visual-img">
+              <i class="bi bi-gpu-card card-visual-icon"></i>
+            </div>
+            <div class="card-body-custom">
+              <div class="card-year">2025 &#xB7; UC San Diego</div>
+              <div class="card-category">ML Systems &#xB7; GPU &#xB7; Distributed</div>
+              <h2 class="card-title">GPU Kernel + Distributed Training</h2>
+              <p class="card-desc">Fused Triton GPU kernel (D=ReLU(A&#xD7;B+C)) achieving &#x2265;1.25&#xD7; PyTorch speedup via shared memory tiling and operator fusion, plus 2D data &#xD7; tensor parallel transformer training with custom MPI primitives.</p>
+              <div class="card-skills"><span class="skill-tag">Triton</span><span class="skill-tag">CUDA</span><span class="skill-tag">MPI</span><span class="skill-tag">NumPy</span></div>
+              <div class="card-footer-row" style="margin-top:14px;">
+                <div class="card-tags"><span class="card-tag">&#x2265;1.25&#xD7; speedup</span><span class="card-tag">2D parallelism</span></div>
+                <div class="card-arrow"><i class="bi bi-arrow-right"></i></div>
+              </div>
+            </div>
+          </a>
+          <a href="autodiff.html" class="project-card" data-type="data" data-skills="Python,Triton" data-search="autodiff automatic differentiation transformer language model decoder only gpt causal attention next token prediction sgd scratch pytorch">
+            <div class="card-visual">
+              <img src="assets/img/projects/autodiff.svg" alt="" class="card-visual-img">
+              <i class="bi bi-diagram-3 card-visual-icon"></i>
+            </div>
+            <div class="card-body-custom">
+              <div class="card-year">2025 &#xB7; UC San Diego</div>
+              <div class="card-category">Deep Learning Systems</div>
+              <h2 class="card-title">AutoDiff Engine + Transformer LM</h2>
+              <p class="card-desc">Custom automatic differentiation engine and a decoder-only Transformer language model built from scratch  -  no PyTorch autograd. Full computational graph, 8 operators, causal attention, and autoregressive generation.</p>
+              <div class="card-skills"><span class="skill-tag">Python</span><span class="skill-tag">PyTorch tensors</span><span class="skill-tag">Custom AutoDiff</span><span class="skill-tag">Transformer</span></div>
+              <div class="card-footer-row" style="margin-top:14px;">
+                <div class="card-tags"><span class="card-tag">8/10 sentences memorized</span><span class="card-tag">0 lines of autograd</span></div>
+                <div class="card-arrow"><i class="bi bi-arrow-right"></i></div>
+              </div>
+            </div>
+          </a>
+          <a href="large-scale.html" class="project-card" data-type="data" data-skills="Python,Dask,PyArrow,PCA,Pandas,NumPy" data-search="large scale nyc taxi pipeline distributed dask pyarrow pca time series gam xgboost analytics 57gb data engineering">
+            <div class="card-visual">
+              <img src="assets/img/projects/large-scale.svg" alt="" class="card-visual-img">
+              <i class="bi bi-diagram-3 card-visual-icon"></i>
+            </div>
+            <div class="card-body-custom">
+              <div class="card-year">2025 &#xB7; UC San Diego</div>
+              <div class="card-category">Data Engineering &#xB7; ML</div>
+              <h2 class="card-title">Large-Scale NYC Taxi Pipeline</h2>
+              <p class="card-desc">Distributed analytics pipeline processing 57GB+ NYC taxi data with Dask and PyArrow  -  PCA-based representation learning, heavy-tail statistical analysis, bootstrap stability, GAM fare prediction, and XGBoost classification.</p>
+              <div class="card-skills"><span class="skill-tag">Python</span><span class="skill-tag">Dask</span><span class="skill-tag">PyArrow</span><span class="skill-tag">PCA</span><span class="skill-tag">XGBoost</span><span class="skill-tag">GAM</span></div>
+              <div class="card-footer-row" style="margin-top:14px;">
+                <div class="card-tags"><span class="card-tag">57GB+ dataset</span><span class="card-tag">GAM + XGBoost</span></div>
+                <div class="card-arrow"><i class="bi bi-arrow-right"></i></div>
+              </div>
+            </div>
+          </a>
+          <a href="medidb.html" class="project-card" data-type="data" data-skills="Python,PostgreSQL,Neo4j,Qdrant,MongoDB,SQL,Docker,NLP" data-search="medidb drug safety recommendation clinical database graph vector neo4j qdrant mongodb streamlit healthcare ddi">
+            <div class="card-visual">
+              <img src="assets/img/projects/medidb.svg" alt="" class="card-visual-img">
+              <i class="bi bi-heart-pulse card-visual-icon"></i>
+            </div>
+            <div class="card-body-custom">
+              <div class="card-year">2025 &#xB7; UC San Diego</div>
+              <div class="card-category">Healthcare &#xB7; AI &#xB7; Multi-DB</div>
+              <h2 class="card-title">MediDB &#x2013; Drug Safety &amp; Recommendation</h2>
+              <p class="card-desc">Multi-database clinical decision-support system combining SQL, graph, and vector retrieval  -  explainable drug safety assessments with DDI detection, a Streamlit UI, and Docker deployment.</p>
+              <div class="card-skills"><span class="skill-tag">PostgreSQL</span><span class="skill-tag">Neo4j</span><span class="skill-tag">Qdrant</span><span class="skill-tag">MongoDB</span><span class="skill-tag">Docker</span></div>
+              <div class="card-footer-row" style="margin-top:14px;">
+                <div class="card-tags"><span class="card-tag">4 databases</span><span class="card-tag">DDI detection</span></div>
+                <div class="card-arrow"><i class="bi bi-arrow-right"></i></div>
+              </div>
+            </div>
+          </a>
+          <a href="stats.html" class="project-card" data-type="data" data-skills="Python,Pandas,NumPy" data-search="taipei house price prediction regression lasso bootstrap logistic statistics statsmodels sklearn gam xgboost real estate">
+            <div class="card-visual">
+              <img src="assets/img/projects/taipei-stats.svg" alt="" class="card-visual-img">
+              <i class="bi bi-house-check card-visual-icon"></i>
+            </div>
+            <div class="card-body-custom">
+              <div class="card-year">2025 &#xB7; UC San Diego</div>
+              <div class="card-category">Statistical Modeling</div>
+              <h2 class="card-title">Predicting House Prices in Taipei</h2>
+              <p class="card-desc">Rigorous regression analysis of 414 Taipei transactions  -  LASSO, 10-fold CV (best CV MSE 67.2, R&#xB2; 0.71 on log scale), bootstrap CIs 28-30% wider than classical, and logistic model with 82.6% accuracy, AUC 0.92.</p>
+              <div class="card-skills"><span class="skill-tag">Python</span><span class="skill-tag">LASSO</span><span class="skill-tag">Statsmodels</span><span class="skill-tag">Bootstrap</span></div>
+              <div class="card-footer-row" style="margin-top:14px;">
+                <div class="card-tags"><span class="card-tag">CV MSE 67.2</span><span class="card-tag">AUC 0.92</span></div>
+                <div class="card-arrow"><i class="bi bi-arrow-right"></i></div>
+              </div>
+            </div>
+          </a>
+          <a href="dvt-prj.html" class="project-card" data-type="data" data-skills="Python,Tableau,Pandas,NumPy" data-search="customer response analysis direct marketing portuguese bank tableau visualization behavioral segmentation campaign">
+            <div class="card-visual">
+              <img src="assets/img/projects/marketing-analysis.svg" alt="" class="card-visual-img">
+              <i class="bi bi-bar-chart-line card-visual-icon"></i>
+            </div>
+            <div class="card-body-custom">
+              <div class="card-year">2025 &#xB7; UC San Diego</div>
+              <div class="card-category">Data Analysis &#xB7; Tableau</div>
+              <h2 class="card-title">Customer Response Analysis</h2>
+              <p class="card-desc">Analysed 40,000+ bank marketing records with Python and Tableau  -  surfacing behavioral segments (retired 34%, students 28% conversion) and channel patterns that improved targeting efficiency by 12%.</p>
+              <div class="card-skills"><span class="skill-tag">Python</span><span class="skill-tag">Tableau</span><span class="skill-tag">Pandas</span><span class="skill-tag">Seaborn</span></div>
+              <div class="card-footer-row" style="margin-top:14px;">
+                <div class="card-tags"><span class="card-tag">40K+ records</span><span class="card-tag">+12% efficiency</span></div>
+                <div class="card-arrow"><i class="bi bi-arrow-right"></i></div>
+              </div>
+            </div>
+          </a>
+          <a href="recommend.html" class="project-card" data-type="data" data-skills="Python,Pandas,NumPy,NLP" data-search="recommendation system bayesian markov random field social trust epinions mrf auc fastapi docker hugging face">
+            <div class="card-visual">
+              <img src="assets/img/projects/recommend.svg" alt="" class="card-visual-img">
+              <i class="bi bi-people card-visual-icon"></i>
+            </div>
+            <div class="card-body-custom">
+              <div class="card-year">2025 &#xB7; UC San Diego</div>
+              <div class="card-category">Machine Learning &#xB7; RecSys</div>
+              <h2 class="card-title">Socially-Aware Recommendation System</h2>
+              <p class="card-desc">Production-ready recommendation system with Bayesian MRF and social trust networks on 664K+ Epinions reviews  -  AUC 0.6248, 25% over baseline, 6% over IJCAI 2017, deployed on Hugging Face with FastAPI.</p>
+              <div class="card-skills"><span class="skill-tag">Python</span><span class="skill-tag">MRF</span><span class="skill-tag">scikit-learn</span><span class="skill-tag">FastAPI</span><span class="skill-tag">Docker</span></div>
+              <div class="card-footer-row" style="margin-top:14px;">
+                <div class="card-tags"><span class="card-tag">AUC 0.6248</span><span class="card-tag">+25% over baseline</span></div>
+                <div class="card-arrow"><i class="bi bi-arrow-right"></i></div>
+              </div>
+            </div>
+          </a>
+          <a href="cloud-provisioner.html" class="project-card" data-type="cloud" data-skills="Python,AWS,LLM" data-search="cloud provisioner llm ibm multicloud resource management cost reduction asyncio sonarqube cicd">
+            <div class="card-visual">
+              <img src="assets/img/projects/cloud-provisioner.svg" alt="" class="card-visual-img">
+              <i class="bi bi-cloud-check card-visual-icon"></i>
+            </div>
+            <div class="card-body-custom">
+              <div class="card-year">Jan 2023&#x2013;Jul 2025 &#xB7; IBM</div>
+              <div class="card-category">Cloud &#xB7; LLMs &#xB7; Production</div>
+              <h2 class="card-title">Multi-Cloud Provisioner</h2>
+              <p class="card-desc">LLM-powered provisioner built at IBM  -  natural language to optimised IBM Cloud resource configs, cutting costs by 40% and validation time by 90% in production. Star of the Month award.</p>
+              <div class="card-skills"><span class="skill-tag">Python</span><span class="skill-tag">IBM Cloud</span><span class="skill-tag">LLMs</span><span class="skill-tag">asyncio</span></div>
+              <div class="card-footer-row" style="margin-top:14px;">
+                <div class="card-tags"><span class="card-tag">40% cost cut</span><span class="card-tag">&#x2B50; Star of Month</span></div>
+                <div class="card-arrow"><i class="bi bi-arrow-right"></i></div>
+              </div>
+            </div>
+          </a>
+          <a href="eco-enterpreneurship.html" class="project-card" data-type="web" data-skills="Java,SQL,AWS" data-search="eco entrepreneurship spring boot java mysql aws sustainability green startup environmental impact india">
+            <div class="card-visual">
+              <img src="assets/img/projects/eco-platform.svg" alt="" class="card-visual-img">
+              <i class="bi bi-tree card-visual-icon"></i>
+            </div>
+            <div class="card-body-custom">
+              <div class="card-year">2022 &#xB7; KL University</div>
+              <div class="card-category">Sustainability &#xB7; Full-Stack</div>
+              <h2 class="card-title">Eco Entrepreneurship</h2>
+              <p class="card-desc">Full-stack platform promoting green business in India  -  startup idea recommendations, environmental impact calculators, and a marketplace deployed on AWS EC2 + RDS + S3.</p>
+              <div class="card-skills"><span class="skill-tag">Java</span><span class="skill-tag">Spring Boot</span><span class="skill-tag">MySQL</span><span class="skill-tag">AWS</span></div>
+              <div class="card-footer-row" style="margin-top:14px;">
+                <div class="card-tags"><span class="card-tag">AWS deployed</span><span class="card-tag">5 modules</span></div>
+                <div class="card-arrow"><i class="bi bi-arrow-right"></i></div>
+              </div>
+            </div>
+          </a>
+          <a href="aws.html" class="project-card" data-type="cloud" data-skills="AWS" data-search="amazon web services aws ec2 vpc apache http server load balancer auto scaling cloudwatch">
+            <div class="card-visual">
+              <img src="assets/img/projects/aws-project.svg" alt="" class="card-visual-img">
+              <i class="bi bi-cloud card-visual-icon"></i>
+            </div>
+            <div class="card-body-custom">
+              <div class="card-year">2021 &#xB7; AICTE Internship</div>
+              <div class="card-category">Cloud &#xB7; Infrastructure</div>
+              <h2 class="card-title">Amazon Web Services Project</h2>
+              <p class="card-desc">Production-grade AWS hosting  -  EC2 with Apache, VPC network isolation, Elastic Load Balancer, Auto Scaling groups, and CloudWatch monitoring.</p>
+              <div class="card-skills"><span class="skill-tag">AWS EC2</span><span class="skill-tag">VPC</span><span class="skill-tag">Apache</span><span class="skill-tag">CloudWatch</span></div>
+              <div class="card-footer-row" style="margin-top:14px;">
+                <div class="card-tags"><span class="card-tag">VPC isolated</span><span class="card-tag">Auto Scaling</span></div>
+                <div class="card-arrow"><i class="bi bi-arrow-right"></i></div>
+              </div>
+            </div>
+          </a>
+          <a href="survey-system.html" class="project-card" data-type="web" data-skills="Java,SQL" data-search="online survey system java jsp servlets sql real time analytics templates forms">
+            <div class="card-visual">
+              <img src="assets/img/projects/survey-system.svg" alt="" class="card-visual-img">
+              <i class="bi bi-check-square card-visual-icon"></i>
+            </div>
+            <div class="card-body-custom">
+              <div class="card-year">2021 &#xB7; KL University</div>
+              <div class="card-category">Full-Stack &#xB7; Web App</div>
+              <h2 class="card-title">Online Survey System</h2>
+              <p class="card-desc">Survey platform with Java Servlets and JSP  -  customisable templates, shareable links, real-time response dashboards with Chart.js, and secure user data management.</p>
+              <div class="card-skills"><span class="skill-tag">Java</span><span class="skill-tag">JSP</span><span class="skill-tag">Servlets</span><span class="skill-tag">SQL</span></div>
+              <div class="card-footer-row" style="margin-top:14px;">
+                <div class="card-tags"><span class="card-tag">6 modules</span><span class="card-tag">Real-time charts</span></div>
+                <div class="card-arrow"><i class="bi bi-arrow-right"></i></div>
+              </div>
+            </div>
+          </a>
+          <a href="samsung.html" class="project-card" data-type="data" data-skills="Python,NLP,Pandas,NumPy" data-search="phoneme data creation samsung prism speech recognition nlp multilingual soundex metaphone ipa">
+            <div class="card-visual">
+              <img src="assets/img/projects/samsung-phoneme.svg" alt="" class="card-visual-img">
+              <i class="bi bi-mic card-visual-icon"></i>
+            </div>
+            <div class="card-body-custom">
+              <div class="card-year">2021&#x2013;2022 &#xB7; Samsung Prism</div>
+              <div class="card-category">NLP &#xB7; Speech Recognition</div>
+              <h2 class="card-title">Phoneme Data Creation</h2>
+              <p class="card-desc">Multilingual phonetic dataset of 10,000+ names with IPA annotations  -  Soundex/Metaphone validation achieves 10% accuracy improvement in speech recognition at Samsung Prism.</p>
+              <div class="card-skills"><span class="skill-tag">Python</span><span class="skill-tag">Soundex</span><span class="skill-tag">IPA</span><span class="skill-tag">Pandas</span></div>
+              <div class="card-footer-row" style="margin-top:14px;">
+                <div class="card-tags"><span class="card-tag">10K+ names</span><span class="card-tag">+10% accuracy</span></div>
+                <div class="card-arrow"><i class="bi bi-arrow-right"></i></div>
+              </div>
+            </div>
+          </a>
+          <a href="take-a-trip.html" class="project-card" data-type="web" data-skills="Python,Django,SQL" data-search="take a trip travel tourism django mysql booking optimization route hotel payment figma best project award kl university">
+            <div class="card-visual">
+              <img src="assets/img/projects/take-a-trip.svg" alt="" class="card-visual-img">
+              <i class="bi bi-airplane-engines card-visual-icon"></i>
+            </div>
+            <div class="card-body-custom">
+              <div class="card-year">2021 &#xB7; KL University</div>
+              <div class="card-category">Full-Stack &#xB7; &#x1F3C6; Best Project</div>
+              <h2 class="card-title">Take A Trip</h2>
+              <p class="card-desc">Award-winning travel planning platform  -  Dijkstra route optimisation (up to 20% cost savings), hotel booking, agent connections, and a Figma-designed responsive interface.</p>
+              <div class="card-skills"><span class="skill-tag">Python</span><span class="skill-tag">Django</span><span class="skill-tag">MySQL</span><span class="skill-tag">Figma</span></div>
+              <div class="card-footer-row" style="margin-top:14px;">
+                <div class="card-tags"><span class="card-tag">&#x1F3C6; Best Project, KL Uni</span><span class="card-tag">20% savings</span></div>
+                <div class="card-arrow"><i class="bi bi-arrow-right"></i></div>
+              </div>
+            </div>
+          </a>
+
+        
+
+        
+
+        </div>
+        <div class="no-results" id="noResults">
+          <h3>No projects match</h3>
+          <p>Try adjusting your filters or search term.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container"><div class="credits">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a></div></div>
   </footer>
-
-  <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
   <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    let activeType = 'all';
+    let activeSkills = new Set();
 
+    function toggleType(el) {
+      document.querySelectorAll('#typeChips .chip').forEach(c => c.classList.remove('active'));
+      el.classList.add('active');
+      activeType = el.dataset.type;
+      applyFilters();
+    }
+
+    function toggleSkill(el) {
+      const skill = el.dataset.skill;
+      if (activeSkills.has(skill)) {
+        activeSkills.delete(skill);
+        el.classList.remove('active');
+      } else {
+        activeSkills.add(skill);
+        el.classList.add('active');
+      }
+      applyFilters();
+    }
+
+    function clearAll() {
+      activeType = 'all';
+      activeSkills.clear();
+      document.querySelectorAll('#typeChips .chip').forEach(c => c.classList.remove('active'));
+      document.querySelector('[data-type="all"]').classList.add('active');
+      document.querySelectorAll('#skillChips .chip').forEach(c => c.classList.remove('active'));
+      document.getElementById('searchInput').value = '';
+      applyFilters();
+    }
+
+    function applyFilters() {
+      const query = document.getElementById('searchInput').value.toLowerCase().trim();
+      const cards = document.querySelectorAll('#projectsGrid .project-card');
+      let visible = 0;
+
+      cards.forEach(card => {
+        const typeMatch = activeType === 'all' || card.dataset.type === activeType;
+        const cardSkills = card.dataset.skills || '';
+        const skillMatch = activeSkills.size === 0 || [...activeSkills].every(s => cardSkills.includes(s));
+        const searchMatch = !query || (card.dataset.search || '').includes(query) || card.innerText.toLowerCase().includes(query);
+
+        const show = typeMatch && skillMatch && searchMatch;
+        card.style.display = show ? '' : 'none';
+        card.classList.remove('featured');
+        if (show) {
+          visible++;
+        }
+      });
+
+      // make first visible only if showing all
+
+      // update count
+      document.getElementById('resultsCount').innerHTML = `<strong>${visible}</strong> project${visible !== 1 ? 's' : ''}`;
+
+      // show/hide clear button
+      const hasFilter = activeType !== 'all' || activeSkills.size > 0 || query;
+      document.getElementById('clearBtn').classList.toggle('visible', hasFilter);
+
+      // no results
+      document.getElementById('noResults').classList.toggle('visible', visible === 0);
+    }
+
+    // init
+    applyFilters();
+  </script>
 </body>
-
 </html>

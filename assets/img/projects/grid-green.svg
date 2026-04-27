@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d1a"/><stop offset="100%" style="stop-color:#10101f"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="15" cy="15" r="1" fill="#22c55e" opacity="0.06"/></pattern>
+  <rect width="1200" height="600" fill="url(#dots)"/>
+  <radialGradient id="cg" cx="0%" cy="0%" r="60%">
+    <stop offset="0%" style="stop-color:#22c55e;stop-opacity:0.1"/>
+    <stop offset="100%" style="stop-color:#22c55e;stop-opacity:0"/>
+  </radialGradient>
+  <rect width="1200" height="600" fill="url(#cg)"/>
+  <rect x="0" y="0" width="1200" height="3" fill="#22c55e" opacity="0.8"/>
+  <text x="50" y="44" font-family="monospace" font-size="11" letter-spacing="0.14em" fill="#22c55e" opacity="0.9">SUSTAINABILITY · AI · CARBON-AWARE ML</text>
+  <text x="36" y="88" font-family="Georgia,serif" font-size="34" font-weight="700" fill="#ffffff" opacity="0.95">GridGreen</text>
+  
+  <!-- Code editor area -->
+  <rect x="36" y="115" width="560" height="300" rx="12" fill="#ffffff06" stroke="#22c55e25"/>
+  <rect x="36" y="115" width="560" height="32" rx="12" fill="#ffffff0a"/>
+  <text x="56" y="136" font-family="monospace" font-size="9" fill="#ffffff35">model_training.py</text>
+  <text x="440" y="136" font-family="monospace" font-size="9" fill="#22c55e88">&#x25CF; carbon-aware</text>
+  <!-- Code lines -->
+  <g font-family="monospace" font-size="11">
+    <text x="56" y="168" fill="#fa687e">import</text><text x="116" y="168" fill="#ffffff66"> transformers</text>
+    <text x="56" y="190" fill="#fa687e">model</text><text x="104" y="190" fill="#ffffff55"> = </text><text x="124" y="190" fill="#ffd580">GPT2LMHeadModel</text><text x="310" y="190" fill="#ffffff44">.from_pretrained(...)</text>
+    <text x="56" y="212" fill="#fa687e">trainer</text><text x="115" y="212" fill="#ffffff55"> = </text><text x="135" y="212" fill="#ffd580">Trainer</text><text x="200" y="212" fill="#ffffff44">(model=model, ...)</text>
+    <text x="56" y="234" fill="#22c55e">trainer</text><text x="114" y="234" fill="#ffffff55">.</text><text x="122" y="234" fill="#ffd580">train</text><text x="168" y="234" fill="#ffffff44">()</text>
+    <!-- annotation arrow -->
+    <line x1="168" y1="240" x2="168" y2="260" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.7"/>
+    <text x="180" y="272" font-size="9" fill="#22c55e" opacity="0.8">&#x2197; analyzed by GridGreen</text>
+  </g>
+  <!-- Analysis result panel -->
+  <rect x="36" y="430" width="560" height="100" rx="12" fill="#22c55e12" stroke="#22c55e35"/>
+  <text x="56" y="456" font-family="monospace" font-size="9" fill="#22c55e" letter-spacing="0.1em">CARBON ESTIMATE</text>
+  <g font-family="monospace" font-size="11">
+    <text x="56" y="478" fill="#ffffff66">CO&#x2082;:     </text><text x="150" y="478" fill="#fa687e">2.4 kg</text>
+    <text x="280" y="478" fill="#ffffff66">GPU-hrs: </text><text x="390" y="478" fill="#fa687e">18.3 h</text>
+    <text x="56" y="498" fill="#ffffff66">Energy:  </text><text x="150" y="498" fill="#ffd580">12.1 kWh</text>
+    <text x="280" y="498" fill="#ffffff66">Latency: </text><text x="390" y="498" fill="#22c55e">&lt;20ms</text>
+  </g>
+  <!-- RAG suggestion panel -->
+  <rect x="620" y="115" width="550" height="185" rx="12" fill="#ffffff06" stroke="#22c55e20"/>
+  <text x="640" y="140" font-family="monospace" font-size="9" fill="#22c55e" letter-spacing="0.1em">GREENER MODEL SUGGESTIONS (RAG)</text>
+  <g font-family="monospace" font-size="10">
+    <text x="640" y="168" fill="#ffffff44">GPT-2 Large (1.5B)</text>
+    <text x="900" y="168" fill="#fa687e">baseline</text>
+    <line x1="640" y1="175" x2="1150" y2="175" stroke="#ffffff0c"/>
+    <text x="640" y="196" fill="#22c55e">&#x2193; DistilGPT-2 (82M)</text>
+    <text x="900" y="196" fill="#22c55e">-77.6% compute</text>
+    <text x="640" y="214" fill="#ffffff44">   MMLU retention: 94.2%</text>
+    <text x="640" y="234" fill="#7ec8a4">&#x2193; GPT-2 Medium (345M)</text>
+    <text x="900" y="234" fill="#7ec8a4">-54.9% CO&#x2082;</text>
+    <text x="640" y="252" fill="#ffffff44">   MMLU retention: 97.1%</text>
+    <text x="640" y="272" fill="#ffffff33">58 model-swap pairs in dataset</text>
+    <text x="640" y="290" fill="#ffffff25">Sentence Transformers (MiniLM) + TF-IDF fallback</text>
+  </g>
+  <!-- Grid scheduling panel -->
+  <rect x="620" y="315" width="550" height="110" rx="12" fill="#ffffff05" stroke="#ffd58020"/>
+  <text x="640" y="340" font-family="monospace" font-size="9" fill="#ffd580" letter-spacing="0.1em">GRID-AWARE SCHEDULING (48h forecast)</text>
+  <polyline points="640,395 680,375 720,385 760,360 800,370 840,345 880,355 920,335 960,348 1000,328 1040,338 1080,320 1120,330 1150,318"
+            fill="none" stroke="#ffd580" stroke-width="2" opacity="0.85" filter="url(#glow)"/>
+  <polygon points="640,395 680,375 720,385 760,360 800,370 840,345 880,355 920,335 960,348 1000,328 1040,338 1080,320 1120,330 1150,318 1150,415 640,415"
+           fill="#ffd580" opacity="0.05"/>
+  <circle cx="840" cy="345" r="5" fill="#ffd580" filter="url(#glow)"/>
+  <text x="820" y="332" font-family="monospace" font-size="9" fill="#ffd580">cleanest window</text>
+  <!-- Metrics table -->
+  <rect x="620" y="440" width="550" height="90" rx="12" fill="#ffffff06" stroke="#22c55e15"/>
+  <text x="640" y="462" font-family="monospace" font-size="9" fill="#22c55e" letter-spacing="0.1em">EVALUATION RESULTS (12/12 workloads)</text>
+  <g font-family="monospace" font-size="10" fill="#ffffff66">
+    <text x="640" y="482">CO&#x2082; reduction (LLMs)</text><text x="870" y="482" fill="#22c55e">54.9%</text>
+    <text x="980" y="482">Success rate</text><text x="1110" y="482" fill="#22c55e">100%</text>
+    <text x="640" y="500">Avg compute reduction</text><text x="870" y="500" fill="#22c55e">77.6%</text>
+    <text x="980" y="500">Mean latency</text><text x="1110" y="500" fill="#22c55e">&lt;20ms</text>
+    <text x="640" y="518">CO&#x2082; reduction (Vision)</text><text x="870" y="518" fill="#22c55e">57.1%</text>
+    <text x="980" y="518">Suggestion coverage</text><text x="1110" y="518" fill="#22c55e">66.7%</text>
+  </g>
+  <rect x="0" y="548" width="1200" height="52" fill="#ffffff04" stroke="#ffffff08" stroke-width="1"/>
+  <text x="36" y="578" font-family="monospace" font-size="11" letter-spacing="0.1em" fill="#22c55e" opacity="0.7">PYTHON · FASTAPI · NEXT.JS · RAG · PROPHET · SNOWFLAKE · DATABRICKS · AWS SAGEMAKER · W&B</text>
+</svg>

@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Socially-Aware Recommendation System  -  Priyanka Nidadavolu</title><link href="assets/img/favicon.png" rel="icon">
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+<link href="assets/css/main.css" rel="stylesheet"><link href="assets/css/portfolio.css" rel="stylesheet">
+<style>
+    .callout{background:var(--surface-alt);border-left:4px solid var(--accent);border-radius:0 10px 10px 0;padding:18px 22px;margin:24px 0;}
+    .callout p{margin:0;font-size:.9rem;color:var(--ink-soft);line-height:1.7;}.callout strong{color:var(--ink);}
+    .code-block{background:var(--ink);border-radius:10px;padding:20px 24px;margin:20px 0;overflow-x:auto;}
+    .code-block pre{margin:0;font-family:var(--font-mono);font-size:.78rem;color:rgba(255,255,255,.85);line-height:1.65;white-space:pre;}
+    .comment{color:rgba(255,255,255,.35);}.kw{color:#fa687e;}.fn{color:#ffd580;}.str{color:#98c379;}
+    .challenge-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin:20px 0 32px;}
+    .challenge-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 20px;}
+    .challenge-item .ch-label{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
+    .challenge-item h5{font-family:var(--font-display);font-size:.95rem;font-weight:600;color:var(--ink);margin-bottom:6px;}
+    .challenge-item p{font-size:.83rem;color:var(--ink-soft);line-height:1.6;margin:0;}
+    .learn-list{list-style:none;padding:0;margin:0 0 32px;}
+    .learn-list li{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);font-size:.9rem;color:var(--ink-soft);line-height:1.6;}
+    .learn-list li:last-child{border-bottom:none;}.learn-list li::before{content:"→";color:var(--accent);flex-shrink:0;font-weight:600;}
+</style></head><body class="service-details-page">
+  <header id="header" class="header d-flex align-items-center fixed-top"><div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"><a href="projects.html" class="logo d-flex align-items-center gap-2"><i class="bi bi-arrow-left" style="color:var(--accent);font-size:0.9rem;"></i><span class="sitename">All Projects</span></a><nav id="navmenu" class="navmenu"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="overview.html">Overview</a></li><li><a href="projects.html">Projects</a></li><li><a href="blogs.html">Blogs</a></li><li><a href="contact.html">Contact</a></li></ul><i class="mobile-nav-toggle d-xl-none bi bi-list"></i></nav></div></header><main>
+  <section class="article-hero"><div class="container" style="position:relative;z-index:2;">
+    <div class="article-hero-eyebrow" data-aos="fade-up"><span>Projects</span> / Machine Learning</div>
+    <h1 data-aos="fade-up" data-aos-delay="80">Socially-Aware Bayesian<br>Recommendation System</h1>
+    <p class="article-hero-tagline" data-aos="fade-up" data-aos-delay="140">Traditional collaborative filtering ignores who you trust. This system uses your social network as signal  -  and it works.</p>
+    <div class="meta-row" data-aos="fade-up" data-aos-delay="180">
+      <div class="meta-pill" style="background:#a78bfa22;border-color:#a78bfa55;color:#a78bfa;"><i class="bi bi-trophy"></i> Live Demo on Hugging Face Spaces</div>
+      <div class="meta-pill"><i class="bi bi-calendar3"></i> Dec 2025</div>
+      <div class="meta-pill"><i class="bi bi-building"></i> UC San Diego</div>
+      <div class="meta-pill"><i class="bi bi-graph-up"></i> ML · RecSys</div>
+    </div>
+    <div class="tech-row" data-aos="fade-up" data-aos-delay="220">
+      <span class="badge-tech">Python</span><span class="badge-tech">Markov Random Field</span><span class="badge-tech">scikit-learn</span><span class="badge-tech">Pandas</span><span class="badge-tech">NumPy</span><span class="badge-tech">Hugging Face</span>
+    </div>
+    <div class="hero-actions" data-aos="fade-up" data-aos-delay="260">
+      <a href="https://github.com/sanjana-garimella/socially-aware-spatial-markov-random-field-for-personalized-recommendation" target="_blank" class="btn-hero-primary"><i class="bi bi-github"></i> GitHub</a>
+      <a href="https://huggingface.co/spaces/PriyankaNidada/recommended-systems" target="_blank" class="btn-hero-secondary"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
+    </div>
+  </div></section>
+
+  <div class="article-body">
+    <div data-aos="fade-up">
+      <div class="section-label">01  -  The Problem</div>
+      <h2 class="section-title">The social signal that collaborative filtering ignores</h2>
+      <div class="prose">
+        <p>Standard collaborative filtering asks: <em>who has similar tastes to me?</em> It ignores a far stronger signal: <em>who do I actually trust?</em> The Epinions dataset is uniquely suited to explore this  -  it has both 664K+ product reviews and an explicit social trust graph where users indicate who they trust.</p>
+        <p>The hypothesis: incorporating trust relationships alongside behavioral features should produce better personalised rankings than similarity-based methods alone. The dataset's sparsity (most users review only a handful of items) makes this even more important  -  trust relationships bridge the cold-start problem.</p>
+      </div>
+    </div>
+
+    <div class="callout" data-aos="fade-up">
+      <p><strong>Dataset:</strong> Epinions  -  664,824 reviews from 49,289 users across 139,738 items. Social trust graph with 487,183 directed trust edges. Sparsity ~99.99%. Rating scale 1–5.</p>
+    </div>
+
+    <div data-aos="fade-up">
+      <div class="section-label">02  -  Approach</div>
+      <h2 class="section-title">From baselines to socially-aware MRF</h2>
+      <div class="prose"><p>Started with simple baselines, diagnosed their failures, then built up to the full Socially-Aware Markov Random Field model  -  each step justified by what the previous one couldn't capture.</p></div>
+
+      <div class="contributions-grid">
+        <div class="contrib-card"><div class="contrib-icon"><i class="bi bi-bar-chart"></i></div><h4>Baseline: Jaccard Similarity</h4><p>User-user and item-item Jaccard as the starting point. Fast to compute, interpretable  -  but ignores the trust graph entirely and degrades rapidly in high-sparsity conditions.</p></div>
+        <div class="contrib-card"><div class="contrib-icon"><i class="bi bi-calculator"></i></div><h4>Baseline: Bayesian Logistic Regression</h4><p>Treated recommendation as binary classification (high/low rating). Added user activity features and item popularity  -  better than Jaccard on AUC but still ignores social structure.</p></div>
+        <div class="contrib-card"><div class="contrib-icon"><i class="bi bi-list-columns"></i></div><h4>Feature Engineering (35+ features)</h4><p>User behavioural: avg rating, review count, rating variance, recency. Item: popularity, avg rating, category. Social: in-degree trust, out-degree trust, mutual trust count, 2-hop trust path count.</p></div>
+        <div class="contrib-card"><div class="contrib-icon"><i class="bi bi-diagram-3"></i></div><h4>Socially-Aware MRF</h4><p>A Markov Random Field where each user's preference is influenced by both their own history and the preferences of users they trust  -  inspired by the SBMC framework. The joint probability over user preferences incorporates social graph structure directly into the model.</p></div>
+        <div class="contrib-card"><div class="contrib-icon"><i class="bi bi-clipboard-data"></i></div><h4>Evaluation: AUC Ranking</h4><p>Primary metric: AUC for distinguishing high (≥4) vs low (≤2) rated items. MRF outperforms both Jaccard and Bayesian LR  -  the improvement is largest for users with rich trust networks.</p></div>
+        <div class="contrib-card"><div class="contrib-icon"><i class="bi bi-hdd-network"></i></div><h4>Hugging Face Demo</h4><p>Built an interactive Streamlit demo deployed to Hugging Face Spaces  -  enter a user ID, get personalised recommendations with explanations showing which trust connections influenced the result.</p></div>
+      </div>
+
+      <div class="code-block">
+        <pre><span class="comment"># Core social feature: weighted trust influence on rating prediction</span>
+<span class="kw">def</span> <span class="fn">social_prior</span>(user_id, item_id, trust_graph, ratings):
+    trusted_users = trust_graph.successors(user_id)
+    trusted_ratings = [ratings.get((u, item_id)) <span class="kw">for</span> u <span class="kw">in</span> trusted_users
+                       <span class="kw">if</span> ratings.get((u, item_id)) <span class="kw">is not</span> <span class="kw">None</span>]
+    <span class="kw">if not</span> trusted_ratings:
+        <span class="kw">return</span> global_mean  <span class="comment"># fallback if no trusted reviews</span>
+    <span class="kw">return</span> np.mean(trusted_ratings)  <span class="comment"># trust-weighted average</span></pre>
+      </div>
+    </div>
+
+    <div data-aos="fade-up">
+      <div class="section-label">03  -  Challenges</div>
+      <h2 class="section-title">What made this hard</h2>
+      <div class="challenge-grid">
+        <div class="challenge-item"><div class="ch-label">Challenge</div><h5>Extreme sparsity</h5><p>99.99% of user-item pairs have no rating. Most similarity-based methods collapse under this sparsity  -  it's why social trust as a bridge signal is so valuable.</p></div>
+        <div class="challenge-item"><div class="ch-label">Challenge</div><h5>Graph computation at scale</h5><p>Computing 2-hop trust paths for 49K users was expensive. We precomputed trust influence matrices using NetworkX with aggressive caching rather than computing on-the-fly.</p></div>
+        <div class="challenge-item"><div class="ch-label">Challenge</div><h5>Cold-start users</h5><p>Users with few reviews and no trust connections get weak recommendations. We fell back to global popularity ranking for these cases  -  a known limitation of social approaches.</p></div>
+        <div class="challenge-item"><div class="ch-label">Challenge</div><h5>Evaluation fairness</h5><p>Ensuring the test set didn't leak social network information was tricky  -  trust edges implicitly encode who reviewed what, so train/test splitting required time-based ordering.</p></div>
+      </div>
+    </div>
+
+    <div data-aos="fade-up">
+      <div class="section-label">04  -  Stack</div>
+      <h2 class="section-title">Technologies Used</h2>
+      <table class="tech-table">
+        <thead><tr><th>Component</th><th>Tool &amp; Purpose</th></tr></thead>
+        <tbody>
+          <tr><td>Language</td><td>Python  -  data processing, feature engineering, model implementation</td></tr>
+          <tr><td>Graph Processing</td><td>NetworkX  -  trust graph construction, traversal, feature extraction</td></tr>
+          <tr><td>ML / Baselines</td><td>scikit-learn  -  Logistic Regression, AUC scoring, cross-validation</td></tr>
+          <tr><td>Data Libraries</td><td>Pandas &amp; NumPy  -  preprocessing and feature computation</td></tr>
+          <tr><td>Advanced Model</td><td>Custom Markov Random Field  -  socially-aware probabilistic recommendation</td></tr>
+          <tr><td>Demo</td><td>Streamlit + Hugging Face Spaces  -  interactive recommendation interface</td></tr>
+          <tr><td>Dataset</td><td>Epinions  -  664K+ reviews, 487K trust edges</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div data-aos="fade-up">
+      <section class="impact-section">
+        <div class="section-label">05  -  Outcomes</div>
+        <h2 class="section-title">Results</h2>
+        <div class="impact-grid">
+          <div class="impact-stat"><div class="stat-number">664K+</div><div class="stat-label">Epinions reviews processed</div></div>
+          <div class="impact-stat"><div class="stat-number">35+</div><div class="stat-label">engineered features per user-item pair</div></div>
+          <div class="impact-stat"><div class="stat-number">MRF</div><div class="stat-label">beats Jaccard + Bayesian LR on AUC</div></div>
+        </div>
+        <ul class="impact-bullets">
+          <li>Social trust signal measurably improves ranking quality over similarity-only baselines</li>
+          <li>Improvement largest for users with well-connected trust networks  -  validates the hypothesis</li>
+          <li>Live Hugging Face demo lets anyone explore personalised recommendations with social explanations</li>
+          <li>35+ features provide a reusable feature library for future social recommendation work</li>
+        </ul>
+      </section>
+    </div>
+
+    <div data-aos="fade-up">
+      <div class="section-label">06  -  Learnings</div>
+      <h2 class="section-title">What I took away</h2>
+      <ul class="learn-list">
+        <li>Social signals are most valuable exactly where collaborative filtering struggles most  -  sparse data, cold-start users, niche items.</li>
+        <li>Precomputing graph features (trust paths, centrality) is essential at this scale  -  lazy computation in a training loop is prohibitively slow.</li>
+        <li>AUC is the right metric for ranking problems, not accuracy  -  "did you recommend the right items in the right order" matters more than "did you predict the exact rating".</li>
+        <li>Building a live demo early forces you to think about latency and usability, not just offline model performance.</li>
+      </ul>
+    </div>
+
+    <div class="article-footer-nav">
+      <a href="projects.html" class="back-link"><i class="bi bi-arrow-left"></i> All Projects</a>
+      <span class="article-meta-note">Dec 2025 · UC San Diego</span>
+    </div>
+  </div>
+</main>  <footer id="footer" class="footer dark-background"><div class="container"><div class="credits">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a></div></div></footer>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a><div id="preloader"></div>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script><script src="assets/vendor/aos/aos.js"></script><script src="assets/vendor/glightbox/js/glightbox.min.js"></script><script src="assets/js/main.js"></script></body></html>

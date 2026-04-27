@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d1a"/><stop offset="100%" style="stop-color:#10101f"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+    <circle cx="15" cy="15" r="1" fill="#fa687e" opacity="0.06"/>
+  </pattern>
+  <rect width="1200" height="600" fill="url(#dots)"/>
+  <radialGradient id="cg" cx="0%" cy="0%" r="60%">
+    <stop offset="0%" style="stop-color:#fa687e;stop-opacity:0.1"/>
+    <stop offset="100%" style="stop-color:#fa687e;stop-opacity:0"/>
+  </radialGradient>
+  <rect width="1200" height="600" fill="url(#cg)"/>
+  <rect x="0" y="0" width="1200" height="3" fill="#fa687e" opacity="0.8"/>
+  <text x="50" y="44" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.14em" fill="#fa687e" opacity="0.9">DATA ANALYSIS · TABLEAU</text>
+  <text x="36" y="88" font-family="'Fraunces',Georgia,serif" font-size="34" font-weight="700" fill="#ffffff" opacity="0.95">Customer Response Analysis</text>
+  
+  <!-- KPI strip -->
+  <g>
+    <rect x="36" y="120" width="220" height="66" rx="10" fill="#ffffff06" stroke="#ffffff0c"/>
+    <text x="146" y="145" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff35">TOTAL RECORDS</text>
+    <text x="146" y="173" text-anchor="middle" font-family="Georgia,serif" font-size="28" font-weight="bold" fill="white">41K+</text>
+    <rect x="272" y="120" width="220" height="66" rx="10" fill="#fa687e10" stroke="#fa687e25"/>
+    <text x="382" y="145" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff35">SUBSCRIBED</text>
+    <text x="382" y="173" text-anchor="middle" font-family="Georgia,serif" font-size="28" font-weight="bold" fill="#fa687e">11.7%</text>
+    <rect x="508" y="120" width="220" height="66" rx="10" fill="#fa687e10" stroke="#fa687e25"/>
+    <text x="618" y="145" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff35">TOP SEGMENT</text>
+    <text x="618" y="168" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="white">Retired</text>
+    <text x="618" y="183" text-anchor="middle" font-family="monospace" font-size="10" fill="#fa687e">2.8× avg rate</text>
+    <rect x="744" y="120" width="200" height="66" rx="10" fill="#7ec8a410" stroke="#7ec8a425"/>
+    <text x="844" y="145" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff35">EFFICIENCY GAIN</text>
+    <text x="844" y="173" text-anchor="middle" font-family="Georgia,serif" font-size="28" font-weight="bold" fill="#7ec8a4">+12%</text>
+    <rect x="960" y="120" width="200" height="66" rx="10" fill="#ffffff06" stroke="#ffffff0c"/>
+    <text x="1060" y="145" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff35">BEST PERIOD</text>
+    <text x="1060" y="173" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="white">May–Aug</text>
+  </g>
+  <!-- Bar chart conversion by job -->
+  <rect x="36" y="210" width="500" height="220" rx="12" fill="#ffffff04" stroke="#ffffff0c"/>
+  <text x="286" y="236" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff35" letter-spacing="0.08em">CONVERSION RATE BY JOB TYPE</text>
+  <g>
+    <text x="120" y="268" text-anchor="end" font-family="monospace" font-size="9" fill="#ffffff55">Retired</text>
+    <rect x="128" y="258" width="280" height="14" rx="4" fill="#fa687e" opacity="0.9"/>
+    <text x="415" y="270" font-family="monospace" font-size="9" fill="#fa687e">34%</text>
+    <text x="120" y="294" text-anchor="end" font-family="monospace" font-size="9" fill="#ffffff55">Student</text>
+    <rect x="128" y="284" width="228" height="14" rx="4" fill="#fa687e" opacity="0.65"/>
+    <text x="363" y="296" font-family="monospace" font-size="9" fill="#ffffff55">28%</text>
+    <text x="120" y="320" text-anchor="end" font-family="monospace" font-size="9" fill="#ffffff55">Admin</text>
+    <rect x="128" y="310" width="130" height="14" rx="4" fill="#fa687e" opacity="0.4"/>
+    <text x="265" y="322" font-family="monospace" font-size="9" fill="#ffffff44">16%</text>
+    <text x="120" y="346" text-anchor="end" font-family="monospace" font-size="9" fill="#ffffff55">Blue-collar</text>
+    <rect x="128" y="336" width="82" height="14" rx="4" fill="#fa687e" opacity="0.25"/>
+    <text x="217" y="348" font-family="monospace" font-size="9" fill="#ffffff33">10%</text>
+    <text x="120" y="372" text-anchor="end" font-family="monospace" font-size="9" fill="#ffffff55">Other</text>
+    <rect x="128" y="362" width="57" height="14" rx="4" fill="#fa687e" opacity="0.18"/>
+    <text x="192" y="374" font-family="monospace" font-size="9" fill="#ffffff25">7%</text>
+  </g>
+  <!-- Seasonal line chart -->
+  <rect x="556" y="210" width="400" height="220" rx="12" fill="#ffffff04" stroke="#ffffff0c"/>
+  <text x="756" y="236" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff35" letter-spacing="0.08em">SEASONAL CONVERSION TREND</text>
+  <polyline points="576,385 610,370 644,354 678,362 712,332 746,318 780,312 814,324 848,340 882,358 916,370 950,380" fill="none" stroke="#fa687e" stroke-width="2.5"/>
+  <polygon points="576,385 610,370 644,354 678,362 712,332 746,318 780,312 814,324 848,340 882,358 916,370 950,380 950,418 576,418" fill="#fa687e" opacity="0.07"/>
+  <circle cx="746" cy="318" r="5" fill="#fa687e" filter="url(#glow)"/>
+  <circle cx="780" cy="312" r="6" fill="#fa687e" filter="url(#glow)"/>
+  <text x="780" y="300" text-anchor="middle" font-family="monospace" font-size="9" fill="#fa687e">Peak</text>
+  <g font-family="monospace" font-size="8" fill="#ffffff25" text-anchor="middle">
+    <text x="576" y="408">Jan</text><text x="644" y="408">Mar</text><text x="712" y="408">May</text>
+    <text x="780" y="408">Jul</text><text x="848" y="408">Sep</text><text x="916" y="408">Nov</text>
+  </g>
+  <!-- Recommendations footer strip -->
+  <rect x="36" y="450" width="1124" height="78" rx="12" fill="#ffffff06" stroke="#ffffff0c"/>
+  <text x="56" y="474" font-family="monospace" font-size="9" fill="#fa687e" letter-spacing="0.1em">RECOMMENDATIONS</text>
+  <g font-family="monospace" font-size="11" fill="#ffffff77">
+    <text x="56" y="497">→  Focus May–Aug campaigns on retired + student segments via cellular · Thursday/Friday outperforms by 22%</text>
+    <text x="56" y="516">→  Prioritise previously-contacted customers with positive outcomes — 3.2× higher conversion rate</text>
+  </g>
+  <rect x="0" y="548" width="1200" height="52" fill="#ffffff04" stroke="#ffffff08" stroke-width="1"/>
+  <text x="36" y="578" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.1em" fill="#fa687e" opacity="0.7">PYTHON · TABLEAU · PANDAS · NUMPY · MATPLOTLIB · SEABORN</text>
+</svg>

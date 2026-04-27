@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d1a"/><stop offset="100%" style="stop-color:#10101f"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="15" cy="15" r="1" fill="#8b5cf6" opacity="0.06"/></pattern>
+  <rect width="1200" height="600" fill="url(#dots)"/>
+  <radialGradient id="cg" cx="0%" cy="0%" r="60%">
+    <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.1"/>
+    <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0"/>
+  </radialGradient>
+  <rect width="1200" height="600" fill="url(#cg)"/>
+  <rect x="0" y="0" width="1200" height="3" fill="#8b5cf6" opacity="0.8"/>
+  <text x="50" y="44" font-family="monospace" font-size="11" letter-spacing="0.14em" fill="#8b5cf6" opacity="0.9">DEEP LEARNING SYSTEMS · FROM SCRATCH</text>
+  <text x="36" y="88" font-family="Georgia,serif" font-size="34" font-weight="700" fill="#ffffff" opacity="0.95">AutoDiff Engine + Transformer LM</text>
+  
+  <!-- Computational graph -->
+  <rect x="36" y="115" width="500" height="315" rx="12" fill="#ffffff06" stroke="#8b5cf625"/>
+  <text x="56" y="140" font-family="monospace" font-size="9" fill="#8b5cf6" letter-spacing="0.1em">COMPUTATIONAL GRAPH (FORWARD)</text>
+  <!-- nodes -->
+  <g filter="url(#glow)">
+    <rect x="170" y="158" width="80" height="32" rx="8" fill="#8b5cf625" stroke="#8b5cf6"/>
+    <text x="210" y="178" text-anchor="middle" font-family="monospace" font-size="10" fill="#c4b5fd">MatMul</text>
+    <rect x="290" y="158" width="80" height="32" rx="8" fill="#8b5cf620" stroke="#8b5cf6aa"/>
+    <text x="330" y="178" text-anchor="middle" font-family="monospace" font-size="10" fill="#c4b5fd">Add</text>
+    <rect x="410" y="158" width="80" height="32" rx="8" fill="#8b5cf618" stroke="#8b5cf688"/>
+    <text x="450" y="178" text-anchor="middle" font-family="monospace" font-size="10" fill="#c4b5fd">ReLU</text>
+    <rect x="170" y="220" width="80" height="32" rx="8" fill="#fa687e20" stroke="#fa687e"/>
+    <text x="210" y="240" text-anchor="middle" font-family="monospace" font-size="10" fill="#fca5a5">Softmax</text>
+    <rect x="290" y="220" width="80" height="32" rx="8" fill="#fa687e18" stroke="#fa687e88"/>
+    <text x="330" y="240" text-anchor="middle" font-family="monospace" font-size="10" fill="#fca5a5">LayerNorm</text>
+    <rect x="290" y="282" width="80" height="32" rx="8" fill="#ffd58020" stroke="#ffd580"/>
+    <text x="330" y="302" text-anchor="middle" font-family="monospace" font-size="10" fill="#fde68a">Cross-Entropy</text>
+    <rect x="170" y="344" width="80" height="32" rx="8" fill="#22c55e18" stroke="#22c55e88"/>
+    <text x="210" y="364" text-anchor="middle" font-family="monospace" font-size="10" fill="#86efac">Loss</text>
+  </g>
+  <!-- edges -->
+  <g stroke="#ffffff20" stroke-width="1.5" fill="none">
+    <line x1="250" y1="174" x2="290" y2="174"/>
+    <line x1="370" y1="174" x2="410" y2="174"/>
+    <line x1="210" y1="190" x2="210" y2="220"/>
+    <line x1="330" y1="190" x2="330" y2="220"/>
+    <line x1="330" y1="252" x2="330" y2="282"/>
+    <line x1="250" y1="236" x2="290" y2="296"/>
+    <line x1="210" y1="252" x2="210" y2="344"/>
+    <line x1="370" y1="298" x2="250" y2="360"/>
+  </g>
+  <!-- backward arrow -->
+  <path d="M 56 410 Q 56 430 480 430 Q 500 430 500 410" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="6,4" opacity="0.7"/>
+  <text x="200" y="425" font-family="monospace" font-size="9" fill="#8b5cf6" opacity="0.8">&#x21BA; backward pass (reverse-mode autodiff)</text>
+  <!-- Transformer architecture -->
+  <rect x="560" y="115" width="610" height="415" rx="12" fill="#ffffff05" stroke="#8b5cf615"/>
+  <text x="580" y="140" font-family="monospace" font-size="9" fill="#8b5cf6" letter-spacing="0.1em">DECODER-ONLY TRANSFORMER</text>
+  <!-- token flow -->
+  <g font-family="monospace" font-size="10" text-anchor="middle">
+    <rect x="600" y="155" width="180" height="30" rx="8" fill="#ffffff08" stroke="#ffffff18"/>
+    <text x="690" y="174" fill="#ffffff77">Token Embeddings + Pos Enc</text>
+    <path d="M690 185 L690 205" stroke="#8b5cf666" stroke-width="1.5" fill="none"/>
+    <!-- attention block -->
+    <rect x="580" y="205" width="560" height="100" rx="10" fill="#8b5cf610" stroke="#8b5cf640"/>
+    <text x="860" y="225" fill="#c4b5fd" font-size="9" letter-spacing="0.08em">CAUSAL SELF-ATTENTION BLOCK</text>
+    <text x="620" y="248" text-anchor="start" fill="#ffffff55" font-size="9">Q = XW&#x2071;    K = XW&#x1D48;    V = XW&#x1D5D;</text>
+    <text x="620" y="266" text-anchor="start" fill="#ffffff55" font-size="9">scores = (QK&#x1D40; / &#x221A;d) + causal_mask</text>
+    <text x="620" y="284" text-anchor="start" fill="#ffffff55" font-size="9">output = Softmax(scores) V W&#x2092;</text>
+    <text x="1090" y="254" fill="#22c55e" font-size="9">mask</text>
+    <text x="1090" y="270" fill="#22c55e" font-size="9">&#x2212;1e9</text>
+    <path d="M860 305 L860 325" stroke="#8b5cf666" stroke-width="1.5" fill="none"/>
+    <!-- FFN -->
+    <rect x="680" y="325" width="360" height="28" rx="8" fill="#ffffff08" stroke="#ffffff15"/>
+    <text x="860" y="343" fill="#ffffff66">Residual + LayerNorm + FFN (ReLU)</text>
+    <path d="M860 353 L860 373" stroke="#8b5cf666" stroke-width="1.5" fill="none"/>
+    <!-- output -->
+    <rect x="720" y="373" width="280" height="28" rx="8" fill="#ffd58015" stroke="#ffd58040"/>
+    <text x="860" y="391" fill="#fde68a">logits (vocab_size) &#x2192; Cross-entropy loss</text>
+    <path d="M860 401 L860 418" stroke="#ffd58066" stroke-width="1.5" fill="none"/>
+    <!-- generation -->
+    <rect x="640" y="418" width="440" height="50" rx="10" fill="#22c55e10" stroke="#22c55e30"/>
+    <text x="860" y="437" fill="#86efac" font-size="9" letter-spacing="0.08em">AUTOREGRESSIVE GENERATION</text>
+    <text x="860" y="454" fill="#ffffff44" font-size="9">prompt &#x2192; forward pass &#x2192; argmax &#x2192; append &#x2192; repeat</text>
+    <!-- metrics -->
+    <rect x="580" y="478" width="560" height="40" rx="8" fill="#ffffff06" stroke="#ffffff0c"/>
+    <text x="680" y="496" fill="#ffffff55" font-size="9">No PyTorch autograd</text>
+    <text x="860" y="496" fill="#8b5cf6" font-size="9">8/10 sentences memorized</text>
+    <text x="1060" y="496" fill="#ffffff55" font-size="9">SGD from scratch</text>
+    <text x="680" y="510" fill="#ffffff35" font-size="9">Operators: MatMul, Transpose, ReLU, Softmax, LayerNorm, Power, Mean, Div</text>
+  </g>
+  <rect x="0" y="548" width="1200" height="52" fill="#ffffff04" stroke="#ffffff08" stroke-width="1"/>
+  <text x="36" y="578" font-family="monospace" font-size="11" letter-spacing="0.1em" fill="#8b5cf6" opacity="0.7">PYTHON · PYTORCH TENSORS (NO AUTOGRAD) · CUSTOM AUTODIFF · TRANSFORMER · NEXT-TOKEN PREDICTION</text>
+</svg>

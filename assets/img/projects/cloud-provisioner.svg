@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d1a"/><stop offset="100%" style="stop-color:#10101f"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+    <circle cx="15" cy="15" r="1" fill="#fa687e" opacity="0.06"/>
+  </pattern>
+  <rect width="1200" height="600" fill="url(#dots)"/>
+  <radialGradient id="cg" cx="0%" cy="0%" r="60%">
+    <stop offset="0%" style="stop-color:#fa687e;stop-opacity:0.1"/>
+    <stop offset="100%" style="stop-color:#fa687e;stop-opacity:0"/>
+  </radialGradient>
+  <rect width="1200" height="600" fill="url(#cg)"/>
+  <rect x="0" y="0" width="1200" height="3" fill="#fa687e" opacity="0.8"/>
+  <text x="50" y="44" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.14em" fill="#fa687e" opacity="0.9">CLOUD · LLMS · IBM PRODUCTION</text>
+  <text x="36" y="88" font-family="'Fraunces',Georgia,serif" font-size="34" font-weight="700" fill="#ffffff" opacity="0.95">Multi-Cloud Provisioner</text>
+  
+  <!-- Pipeline boxes -->
+  <!-- Input -->
+  <rect x="36" y="150" width="220" height="88" rx="12" fill="#ffffff08" stroke="#ffffff18"/>
+  <text x="146" y="178" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff44">USER REQUEST</text>
+  <text x="146" y="200" text-anchor="middle" font-family="monospace" font-size="12" fill="white">"medium python API</text>
+  <text x="146" y="218" text-anchor="middle" font-family="monospace" font-size="12" fill="white">50GB · east-US"</text>
+  <!-- Arrow -->
+  <path d="M256 194 L316 194" stroke="#fa687e" stroke-width="2" fill="none" marker-end="url(#a1)"/>
+  <defs><marker id="a1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3z" fill="#fa687e"/></marker></defs>
+  <!-- LLM box -->
+  <rect x="316" y="140" width="200" height="108" rx="14" fill="#fa687e20" stroke="#fa687e" stroke-width="2"/>
+  <text x="416" y="172" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="bold" fill="white">LLM</text>
+  <text x="416" y="194" text-anchor="middle" font-family="monospace" font-size="10" fill="#fa687e">Intent Parser</text>
+  <text x="416" y="213" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff44">→ JSON config</text>
+  <text x="416" y="231" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff44">→ validated schema</text>
+  <!-- Arrow -->
+  <path d="M516 194 L576 194" stroke="#ffd580" stroke-width="2" fill="none" marker-end="url(#a2)"/>
+  <defs><marker id="a2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3z" fill="#ffd580"/></marker></defs>
+  <!-- Cost Engine -->
+  <rect x="576" y="140" width="180" height="108" rx="14" fill="#ffd58018" stroke="#ffd580" stroke-width="1.5"/>
+  <text x="666" y="172" text-anchor="middle" font-family="monospace" font-size="12" fill="#ffd580">Cost Engine</text>
+  <text x="666" y="194" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff55">right-sizing rules</text>
+  <text x="666" y="212" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff55">spot-instance policy</text>
+  <text x="666" y="230" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff55">region optimizer</text>
+  <!-- Arrow -->
+  <path d="M756 194 L816 194" stroke="#7ec8a4" stroke-width="2" fill="none" marker-end="url(#a3)"/>
+  <defs><marker id="a3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3z" fill="#7ec8a4"/></marker></defs>
+  <!-- IBM Cloud -->
+  <rect x="816" y="125" width="350" height="138" rx="14" fill="#0530ad18" stroke="#4a90d9" stroke-width="1.8"/>
+  <text x="991" y="158" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#4a90d9">IBM Cloud</text>
+  <g font-family="monospace" font-size="10" fill="#ffffff55" text-anchor="middle">
+    <text x="880" y="185">VPC Compute</text><text x="880" y="205">✓ provisioned</text>
+    <text x="991" y="185">Object Storage</text><text x="991" y="205">✓ provisioned</text>
+    <text x="1105" y="185">Database</text><text x="1105" y="205">✓ provisioned</text>
+    <text x="991" y="238">auto-scaling · health checks · CloudWatch</text>
+  </g>
+  <!-- Result badge -->
+  <rect x="36" y="310" width="480" height="72" rx="12" fill="#7ec8a418" stroke="#7ec8a440"/>
+  <text x="276" y="342" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="#7ec8a4">40% cost reduction in production</text>
+  <text x="276" y="365" text-anchor="middle" font-family="monospace" font-size="11" fill="#ffffff44">Validation pipeline: 45s → 5s (−90% time)</text>
+  <!-- Async validation visual -->
+  <text x="36" y="430" font-family="monospace" font-size="9" fill="#ffffff30" letter-spacing="0.1em">PARALLEL ASYNC VALIDATION</text>
+  <g opacity="0.75">
+    <rect x="36" y="445" width="90" height="28" rx="6" fill="#fa687e22" stroke="#fa687e55"/>
+    <text x="81" y="463" text-anchor="middle" font-family="monospace" font-size="9" fill="#fa687e">Check 1</text>
+    <rect x="140" y="445" width="90" height="28" rx="6" fill="#fa687e22" stroke="#fa687e55"/>
+    <text x="185" y="463" text-anchor="middle" font-family="monospace" font-size="9" fill="#fa687e">Check 2</text>
+    <rect x="244" y="445" width="90" height="28" rx="6" fill="#fa687e22" stroke="#fa687e55"/>
+    <text x="289" y="463" text-anchor="middle" font-family="monospace" font-size="9" fill="#fa687e">Check 3</text>
+    <rect x="348" y="445" width="90" height="28" rx="6" fill="#fa687e22" stroke="#fa687e55"/>
+    <text x="393" y="463" text-anchor="middle" font-family="monospace" font-size="9" fill="#fa687e">Check 4</text>
+    <text x="460" y="463" font-family="monospace" font-size="11" fill="#7ec8a4">→ all parallel · 5s</text>
+  </g>
+  <!-- SonarQube badge -->
+  <rect x="740" y="310" width="420" height="72" rx="12" fill="#ffffff08" stroke="#ffffff15"/>
+  <text x="950" y="340" text-anchor="middle" font-family="monospace" font-size="10" fill="#ffffff55">CI/CD PIPELINE</text>
+  <text x="950" y="365" text-anchor="middle" font-family="monospace" font-size="12" fill="white">SonarQube quality gates on every commit</text>
+  <rect x="0" y="548" width="1200" height="52" fill="#ffffff04" stroke="#ffffff08" stroke-width="1"/>
+  <text x="36" y="578" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.1em" fill="#fa687e" opacity="0.7">PYTHON · IBM CLOUD APIs · LLMs · ASYNCIO · SONARQUBE · CI/CD</text>
+</svg>

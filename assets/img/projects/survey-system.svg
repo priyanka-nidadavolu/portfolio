@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d1a"/><stop offset="100%" style="stop-color:#10101f"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+    <circle cx="15" cy="15" r="1" fill="#7c3aed" opacity="0.06"/>
+  </pattern>
+  <rect width="1200" height="600" fill="url(#dots)"/>
+  <radialGradient id="cg" cx="0%" cy="0%" r="60%">
+    <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.1"/>
+    <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0"/>
+  </radialGradient>
+  <rect width="1200" height="600" fill="url(#cg)"/>
+  <rect x="0" y="0" width="1200" height="3" fill="#7c3aed" opacity="0.8"/>
+  <text x="50" y="44" font-family="monospace" font-size="11" letter-spacing="0.14em" fill="#7c3aed" opacity="0.9">FULL-STACK · WEB APP · JAVA SERVLETS</text>
+  <text x="36" y="88" font-family="Georgia,serif" font-size="34" font-weight="700" fill="#ffffff" opacity="0.95">Online Survey System</text>
+  <!-- Browser chrome / form mockup -->
+  <rect x="36" y="120" width="680" height="400" rx="14" fill="#ffffff06" stroke="#ffffff0c"/>
+  <rect x="36" y="120" width="680" height="36" rx="14" fill="#ffffff0a"/>
+  <circle cx="58" cy="138" r="5" fill="#ff5f57" opacity="0.6"/>
+  <circle cx="76" cy="138" r="5" fill="#ffbd2e" opacity="0.6"/>
+  <circle cx="94" cy="138" r="5" fill="#28c840" opacity="0.6"/>
+  <rect x="126" y="128" width="380" height="18" rx="6" fill="#ffffff08"/>
+  <text x="316" y="141" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff30">survey.app/create</text>
+  <!-- Form content -->
+  <text x="56" y="184" font-family="Georgia,serif" font-size="15" fill="white" font-weight="bold">Customer Satisfaction Survey</text>
+  <text x="56" y="206" font-family="monospace" font-size="10" fill="#ffffff44">Q1. How satisfied are you with our service?</text>
+  <g fill="#7c3aed" opacity="0.8"><rect x="56" y="214" width="12" height="12" rx="3"/></g>
+  <text x="76" y="225" font-family="monospace" font-size="10" fill="#ffffff77">&#x25CF; Very Satisfied</text>
+  <rect x="56" y="234" width="12" height="12" rx="3" fill="none" stroke="#ffffff25"/>
+  <text x="76" y="245" font-family="monospace" font-size="10" fill="#ffffff40">&#x25CB; Satisfied</text>
+  <rect x="56" y="254" width="12" height="12" rx="3" fill="none" stroke="#ffffff25"/>
+  <text x="76" y="265" font-family="monospace" font-size="10" fill="#ffffff40">&#x25CB; Neutral</text>
+  <text x="56" y="296" font-family="monospace" font-size="10" fill="#ffffff44">Q2. Share any additional feedback:</text>
+  <rect x="56" y="304" width="636" height="50" rx="6" fill="#ffffff06" stroke="#ffffff15"/>
+  <text x="72" y="334" font-family="monospace" font-size="9" fill="#ffffff25">Great service, very responsive team. Would definitely recommend...</text>
+  <!-- Share link -->
+  <rect x="56" y="374" width="390" height="30" rx="6" fill="#7c3aed15" stroke="#7c3aed40"/>
+  <text x="72" y="393" font-family="monospace" font-size="10" fill="#a78bfa">survey.app/s/abc123xyz7</text>
+  <rect x="460" y="374" width="80" height="30" rx="6" fill="#7c3aed" opacity="0.85"/>
+  <text x="500" y="393" text-anchor="middle" font-family="monospace" font-size="10" fill="white">Copy</text>
+  <rect x="556" y="374" width="140" height="30" rx="6" fill="#ffffff08" stroke="#ffffff15"/>
+  <text x="626" y="393" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff55">Email · Slack · Social</text>
+  <!-- Analytics panel -->
+  <rect x="760" y="120" width="400" height="400" rx="14" fill="#ffffff04" stroke="#ffffff0c"/>
+  <text x="960" y="158" text-anchor="middle" font-family="monospace" font-size="9" fill="#7c3aed" letter-spacing="0.1em">REAL-TIME ANALYTICS</text>
+  <!-- Donut -->
+  <circle cx="960" cy="260" r="70" fill="none" stroke="#7c3aed" stroke-width="28" stroke-dasharray="264 440"/>
+  <circle cx="960" cy="260" r="70" fill="none" stroke="#a78bfa" stroke-width="28" stroke-dasharray="110 440" stroke-dashoffset="-264"/>
+  <circle cx="960" cy="260" r="70" fill="none" stroke="#ffffff18" stroke-width="28" stroke-dasharray="66 440" stroke-dashoffset="-374"/>
+  <text x="960" y="254" text-anchor="middle" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="white">248</text>
+  <text x="960" y="274" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff55">responses</text>
+  <g font-family="monospace" font-size="10">
+    <rect x="800" y="350" width="12" height="12" rx="3" fill="#7c3aed"/>
+    <text x="820" y="361" fill="#ffffff66">Very Satisfied 60%</text>
+    <rect x="800" y="374" width="12" height="12" rx="3" fill="#a78bfa"/>
+    <text x="820" y="385" fill="#ffffff66">Satisfied 25%</text>
+    <rect x="800" y="398" width="12" height="12" rx="3" fill="#ffffff18"/>
+    <text x="820" y="409" fill="#ffffff44">Other 15%</text>
+  </g>
+  <!-- Module strip -->
+  <rect x="36" y="448" width="1124" height="52" rx="10" fill="#ffffff06" stroke="#ffffff0c"/>
+  <g font-family="monospace" font-size="10" fill="#ffffff50" text-anchor="middle">
+    <text x="120" y="478">User Auth</text>
+    <text x="296" y="478">Templates</text>
+    <text x="472" y="478">Form Builder</text>
+    <text x="648" y="478">Share Links</text>
+    <text x="824" y="478">Responses</text>
+    <text x="1000" y="478">Analytics</text>
+    <text x="1110" y="478">Export</text>
+  </g>
+  <g stroke="#ffffff10" stroke-width="1">
+    <line x1="200" y1="448" x2="200" y2="500"/><line x1="384" y1="448" x2="384" y2="500"/>
+    <line x1="560" y1="448" x2="560" y2="500"/><line x1="736" y1="448" x2="736" y2="500"/>
+    <line x1="912" y1="448" x2="912" y2="500"/><line x1="1056" y1="448" x2="1056" y2="500"/>
+  </g>
+  <rect x="0" y="548" width="1200" height="52" fill="#ffffff04" stroke="#ffffff08" stroke-width="1"/>
+  <text x="36" y="578" font-family="monospace" font-size="11" letter-spacing="0.1em" fill="#7c3aed" opacity="0.7">JAVA · JSP · JAVA SERVLETS · MYSQL · HTML/CSS/JS · CHART.JS</text>
+</svg>

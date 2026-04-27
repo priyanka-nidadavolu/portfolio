@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d1a"/><stop offset="100%" style="stop-color:#10101f"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+    <circle cx="15" cy="15" r="1" fill="#2f43d6" opacity="0.06"/>
+  </pattern>
+  <rect width="1200" height="600" fill="url(#dots)"/>
+  <radialGradient id="cg" cx="0%" cy="0%" r="60%">
+    <stop offset="0%" style="stop-color:#2f43d6;stop-opacity:0.1"/>
+    <stop offset="100%" style="stop-color:#2f43d6;stop-opacity:0"/>
+  </radialGradient>
+  <rect width="1200" height="600" fill="url(#cg)"/>
+  <rect x="0" y="0" width="1200" height="3" fill="#2f43d6" opacity="0.8"/>
+  <text x="50" y="44" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.14em" fill="#2f43d6" opacity="0.9">NLP · SPEECH · SAMSUNG PRISM</text>
+  <text x="36" y="88" font-family="'Fraunces',Georgia,serif" font-size="34" font-weight="700" fill="#ffffff" opacity="0.95">Phoneme Data Creation</text>
+  
+  <!-- Waveform -->
+  <g stroke="#2f43d6" stroke-width="2" fill="none" filter="url(#glow)">
+    <polyline points="36,340 70,290 104,380 138,250 172,420 206,230 240,390 274,278 308,340 342,305 376,360 410,290 444,320" opacity="0.9"/>
+  </g>
+  <g stroke="#4a6eff" stroke-width="1.5" fill="none" opacity="0.4">
+    <polyline points="480,340 514,310 548,355 582,298 616,350 650,318 684,332 718,322 752,335 786,318 820,330"/>
+  </g>
+  <!-- IPA annotation block -->
+  <rect x="36" y="130" width="800" height="80" rx="12" fill="#ffffff06" stroke="#2f43d630"/>
+  <text x="56" y="158" font-family="Georgia,serif" font-size="26" fill="#ffffff" opacity="0.9">ˈmoʊ.hæ.məd</text>
+  <text x="56" y="185" font-family="monospace" font-size="12" fill="#ffffff44">Muhammad · Mohammed · Muhamad · Mehmed → same phoneme cluster</text>
+  <!-- Dataset table -->
+  <rect x="36" y="390" width="540" height="140" rx="12" fill="#ffffff06" stroke="#2f43d630"/>
+  <text x="306" y="418" text-anchor="middle" font-family="monospace" font-size="9" fill="#4a6eff" letter-spacing="0.1em">MULTILINGUAL PHONETIC DATASET</text>
+  <line x1="56" y1="428" x2="556" y2="428" stroke="#ffffff10"/>
+  <g font-family="monospace" font-size="11">
+    <text x="70" y="450" fill="#ffffff55">Name</text><text x="240" y="450" fill="#ffffff55">Origin</text><text x="400" y="450" fill="#2f43d6">IPA</text>
+    <text x="70" y="473" fill="#ffffff88">Priyanka</text><text x="240" y="473" fill="#ffffff66">Telugu/Hindi</text><text x="400" y="473" fill="#4a6eff88">ˈpriː.jɑː.ŋkɑː</text>
+    <text x="70" y="493" fill="#ffffff88">García</text><text x="240" y="493" fill="#ffffff66">Spanish</text><text x="400" y="493" fill="#4a6eff88">ɡarˈθi.a</text>
+    <text x="70" y="513" fill="#ffffff55">10,000+ entries · 15+ languages</text>
+  </g>
+  <!-- Algorithm cards -->
+  <rect x="620" y="390" width="250" height="66" rx="12" fill="#2f43d620" stroke="#2f43d650"/>
+  <text x="745" y="415" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#4a6eff">Soundex</text>
+  <text x="745" y="435" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff55">phonetic hashing · English family</text>
+  <text x="745" y="450" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff44">SMITH = SMYTHE = S530</text>
+  <rect x="620" y="468" width="250" height="58" rx="12" fill="#2f43d618" stroke="#2f43d640"/>
+  <text x="745" y="491" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#4a6eff">Metaphone</text>
+  <text x="745" y="510" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff55">broader multilingual coverage</text>
+  <!-- Result badge -->
+  <rect x="900" y="140" width="264" height="80" rx="12" fill="#2f43d622" stroke="#2f43d660"/>
+  <text x="1032" y="170" text-anchor="middle" font-family="Georgia,serif" font-size="28" font-weight="bold" fill="#4a6eff">+10%</text>
+  <text x="1032" y="194" text-anchor="middle" font-family="monospace" font-size="11" fill="#ffffff55">ASR accuracy improvement</text>
+  <rect x="900" y="240" width="264" height="60" rx="12" fill="#ffffff08" stroke="#ffffff15"/>
+  <text x="1032" y="264" text-anchor="middle" font-family="monospace" font-size="11" fill="white">10,000+ names</text>
+  <text x="1032" y="283" text-anchor="middle" font-family="monospace" font-size="10" fill="#ffffff55">IPA annotated · validated</text>
+  <rect x="0" y="548" width="1200" height="52" fill="#ffffff04" stroke="#ffffff08" stroke-width="1"/>
+  <text x="36" y="578" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.1em" fill="#2f43d6" opacity="0.7">PYTHON · SOUNDEX · METAPHONE · IPA · PANDAS · SPEECHRECOGNITION</text>
+</svg>

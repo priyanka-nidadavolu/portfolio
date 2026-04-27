@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d1a"/>
+      <stop offset="100%" style="stop-color:#10101f"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="softglow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <!-- Background -->
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <!-- Subtle dot grid -->
+  <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+    <circle cx="15" cy="15" r="1" fill="#fa687e" opacity="0.06"/>
+  </pattern>
+  <rect width="1200" height="600" fill="url(#dots)"/>
+  <!-- Accent corner glow -->
+  <radialGradient id="cornerglow" cx="0%" cy="0%" r="60%">
+    <stop offset="0%" style="stop-color:#fa687e;stop-opacity:0.12"/>
+    <stop offset="100%" style="stop-color:#fa687e;stop-opacity:0"/>
+  </radialGradient>
+  <rect width="1200" height="600" fill="url(#cornerglow)"/>
+  <!-- Top label strip -->
+  <rect x="0" y="0" width="1200" height="3" fill="#fa687e" opacity="0.8"/>
+  <!-- Project label pill -->
+  <rect x="36" y="28" width="auto" height="24" rx="12" fill="#fa687e22" stroke="#fa687e55" stroke-width="1"/>
+  <text x="50" y="44" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.14em" fill="#fa687e" opacity="0.9">DATA ENGINEERING</text>
+  <!-- Title -->
+  <text x="36" y="88" font-family="'Fraunces',Georgia,serif" font-size="34" font-weight="700" fill="#ffffff" opacity="0.95">Large-Scale NYC Taxi Pipeline</text>
+  <!-- Main visual area -->
+  
+  <!-- Time series chart -->
+  <g filter="url(#glow)">
+    <polyline points="60,480 130,455 200,430 280,445 350,405 430,385 510,370 590,380 670,352 750,342 830,358 910,328 990,342 1070,308 1140,298"
+              fill="none" stroke="#fa687e" stroke-width="2.5" opacity="0.9"/>
+    <polyline points="60,520 130,508 200,490 280,502 350,478 430,465 510,452 590,440 670,448 750,422 830,432 910,408 990,418 1070,396 1140,384"
+              fill="none" stroke="#fa687e" stroke-width="1.5" opacity="0.4"/>
+    <g fill="#fa687e">
+      <circle cx="60" cy="480" r="4"/><circle cx="350" cy="405" r="4"/>
+      <circle cx="670" cy="352" r="5.5"/><circle cx="910" cy="328" r="4"/>
+      <circle cx="1140" cy="298" r="6"/>
+    </g>
+  </g>
+  <!-- Area fill under line -->
+  <polygon points="60,480 130,455 200,430 280,445 350,405 430,385 510,370 590,380 670,352 750,342 830,358 910,328 990,342 1070,308 1140,298 1140,548 60,548"
+           fill="#fa687e" opacity="0.05"/>
+  <!-- Y axis labels -->
+  <g font-family="monospace" font-size="9" fill="#ffffff25">
+    <text x="42" y="348" text-anchor="end">↑ rides</text>
+    <text x="42" y="420" text-anchor="end"></text>
+    <text x="42" y="490" text-anchor="end"></text>
+  </g>
+  <!-- PCA clusters -->
+  <g opacity="0.85" filter="url(#glow)">
+    <circle cx="870" cy="220" r="52" fill="none" stroke="#fa687e" stroke-width="1.5" stroke-dasharray="5,4"/>
+    <circle cx="870" cy="220" r="28" fill="#fa687e1a"/>
+    <text x="870" y="215" text-anchor="middle" font-family="monospace" font-size="10" fill="#fa687e">Airport</text>
+    <text x="870" y="229" text-anchor="middle" font-family="monospace" font-size="9" fill="#fa687e88">Zone A</text>
+    <circle cx="990" cy="170" r="38" fill="none" stroke="#ffd580" stroke-width="1.5" stroke-dasharray="5,4"/>
+    <circle cx="990" cy="170" r="20" fill="#ffd5801a"/>
+    <text x="990" y="174" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffd580">Midtown</text>
+    <circle cx="1100" cy="235" r="44" fill="none" stroke="#7ec8a4" stroke-width="1.5" stroke-dasharray="5,4"/>
+    <circle cx="1100" cy="235" r="24" fill="#7ec8a41a"/>
+    <text x="1100" y="239" text-anchor="middle" font-family="monospace" font-size="9" fill="#7ec8a4">Outer</text>
+  </g>
+  <!-- Stats badges -->
+  <g>
+    <rect x="36" y="120" width="100" height="52" rx="8" fill="#fa687e14" stroke="#fa687e33"/>
+    <text x="86" y="142" text-anchor="middle" font-family="Georgia,serif" font-size="20" font-weight="bold" fill="#fa687e">57GB+</text>
+    <text x="86" y="160" text-anchor="middle" font-family="monospace" font-size="8" fill="#ffffff44">DATASET</text>
+    <rect x="148" y="120" width="100" height="52" rx="8" fill="#fa687e14" stroke="#fa687e33"/>
+    <text x="198" y="142" text-anchor="middle" font-family="Georgia,serif" font-size="20" font-weight="bold" fill="#fa687e">10M+</text>
+    <text x="198" y="160" text-anchor="middle" font-family="monospace" font-size="8" fill="#ffffff44">TRIPS</text>
+    <rect x="260" y="120" width="100" height="52" rx="8" fill="#fa687e14" stroke="#fa687e33"/>
+    <text x="310" y="142" text-anchor="middle" font-family="Georgia,serif" font-size="20" font-weight="bold" fill="#fa687e">PCA</text>
+    <text x="310" y="160" text-anchor="middle" font-family="monospace" font-size="8" fill="#ffffff44">CLUSTERS</text>
+  </g>
+  <!-- Tech strip at bottom -->
+  <rect x="0" y="548" width="1200" height="52" fill="#ffffff04" stroke="#ffffff08" stroke-width="1"/>
+  <text x="36" y="578" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.1em" fill="#fa687e" opacity="0.7">PYTHON · DASK · PYARROW · PCA · PANDAS</text>
+</svg>

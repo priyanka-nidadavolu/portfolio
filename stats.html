@@ -1,0 +1,146 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Taipei House Price Statistical Modeling  -  Priyanka Nidadavolu</title><link href="assets/img/favicon.png" rel="icon">
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+<link href="assets/css/main.css" rel="stylesheet"><link href="assets/css/portfolio.css" rel="stylesheet">
+<style>
+    .callout{background:var(--surface-alt);border-left:4px solid var(--accent);border-radius:0 10px 10px 0;padding:18px 22px;margin:24px 0;}
+    .callout p{margin:0;font-size:.9rem;color:var(--ink-soft);line-height:1.7;}.callout strong{color:var(--ink);}
+    .code-block{background:var(--ink);border-radius:10px;padding:20px 24px;margin:20px 0;overflow-x:auto;}
+    .code-block pre{margin:0;font-family:var(--font-mono);font-size:.78rem;color:rgba(255,255,255,.85);line-height:1.65;white-space:pre;}
+    .comment{color:rgba(255,255,255,.35);}.kw{color:#fa687e;}.fn{color:#ffd580;}.str{color:#98c379;}
+    .challenge-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin:20px 0 32px;}
+    .challenge-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 20px;}
+    .challenge-item .ch-label{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
+    .challenge-item h5{font-family:var(--font-display);font-size:.95rem;font-weight:600;color:var(--ink);margin-bottom:6px;}
+    .challenge-item p{font-size:.83rem;color:var(--ink-soft);line-height:1.6;margin:0;}
+    .learn-list{list-style:none;padding:0;margin:0 0 32px;}
+    .learn-list li{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);font-size:.9rem;color:var(--ink-soft);line-height:1.6;}
+    .learn-list li:last-child{border-bottom:none;}.learn-list li::before{content:"→";color:var(--accent);flex-shrink:0;font-weight:600;}
+</style></head><body class="service-details-page">
+  <header id="header" class="header d-flex align-items-center fixed-top"><div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"><a href="projects.html" class="logo d-flex align-items-center gap-2"><i class="bi bi-arrow-left" style="color:var(--accent);font-size:0.9rem;"></i><span class="sitename">All Projects</span></a><nav id="navmenu" class="navmenu"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="overview.html">Overview</a></li><li><a href="projects.html">Projects</a></li><li><a href="blogs.html">Blogs</a></li><li><a href="contact.html">Contact</a></li></ul><i class="mobile-nav-toggle d-xl-none bi bi-list"></i></nav></div></header><main>
+  <section class="article-hero"><div class="container" style="position:relative;z-index:2;">
+    <div class="article-hero-eyebrow" data-aos="fade-up"><span>Projects</span> / Statistical Modeling</div>
+    <h1 data-aos="fade-up" data-aos-delay="80">Predicting House Prices<br>in Taipei</h1>
+    <p class="article-hero-tagline" data-aos="fade-up" data-aos-delay="140">Applying LASSO regression, 10-fold cross-validation, and bootstrap resampling to answer: what actually drives property prices  -  and how confident can we be?</p>
+    <div class="meta-row" data-aos="fade-up" data-aos-delay="180">
+      <div class="meta-pill"><i class="bi bi-calendar3"></i> Jan – Mar 2026</div>
+      <div class="meta-pill"><i class="bi bi-building"></i> UC San Diego</div>
+      <div class="meta-pill"><i class="bi bi-house-check"></i> Statistical Modeling</div>
+    </div>
+    <div class="tech-row" data-aos="fade-up" data-aos-delay="220">
+      <span class="badge-tech">Python</span><span class="badge-tech">Statsmodels</span><span class="badge-tech">scikit-learn</span><span class="badge-tech">LASSO</span><span class="badge-tech">Bootstrap</span><span class="badge-tech">Seaborn</span>
+    </div>
+  </div></section>
+
+  <div class="article-body">
+    <img src="assets/img/projects/taipei-stats.svg" alt="" style="width:100%;max-height:420px;object-fit:cover;border-radius:16px;margin-bottom:48px;">
+
+    <div data-aos="fade-up">
+      <div class="section-label">01  -  The Problem</div>
+      <h2 class="section-title">What drives property prices  -  and can we prove it?</h2>
+      <div class="prose">
+        <p>Real estate pricing is driven by multiple factors simultaneously. The challenge isn't just building a model  -  it's building one you can <em>trust</em>. A model that overfits to 414 data points is useless. So is one that can't tell you which features matter and by how much.</p>
+        <p>This project focused on statistical rigour: proper diagnostics, regularisation to handle multicollinearity, and resampling methods to quantify uncertainty around every coefficient estimate.</p>
+      </div>
+    </div>
+
+    <div class="callout" data-aos="fade-up">
+      <p><strong>Dataset:</strong> 414 real estate transactions from Sindian District, Taipei (UCI repository). Features: house age, distance to nearest MRT station, number of nearby convenience stores, latitude, longitude, transaction date. Target: price per unit area (NT$/Ping).</p>
+    </div>
+
+    <div data-aos="fade-up">
+      <div class="section-label">02  -  What I Built</div>
+      <h2 class="section-title">From EDA to validated predictions</h2>
+
+      <div class="contributions-grid">
+        <div class="contrib-card"><div class="contrib-icon"><i class="bi bi-search"></i></div><h4>Exploratory Data Analysis</h4><p>Distribution plots, correlation heatmap, scatter matrix. Identified that distance-to-MRT is severely right-skewed  -  the closest stations dominate. House age shows non-linear price effects.</p></div>
+        <div class="contrib-card"><div class="contrib-icon"><i class="bi bi-arrow-up-right"></i></div><h4>Log Transform on MRT Distance</h4><p>Applying log(distance_to_MRT) stabilised variance and made the relationship with price linear  -  a classic fix that materially improved regression diagnostics and model fit.</p></div>
+        <div class="contrib-card"><div class="contrib-icon"><i class="bi bi-graph-up"></i></div><h4>OLS Regression + Diagnostics</h4><p>Built multiple OLS models, tested assumptions via Breusch-Pagan (heteroscedasticity), Shapiro-Wilk (normality of residuals), and VIF scores (multicollinearity). Iterated until diagnostics passed.</p></div>
+        <div class="contrib-card"><div class="contrib-icon"><i class="bi bi-shield-check"></i></div><h4>LASSO Regularisation</h4><p>Applied LASSO (L1) to simultaneously regularise and perform feature selection. Used LassoCV to find optimal α via cross-validation. Geographic coordinates were correctly shrunk to near-zero.</p></div>
+        <div class="contrib-card"><div class="contrib-icon"><i class="bi bi-recycle"></i></div><h4>10-Fold Cross-Validation</h4><p>Evaluated generalisation with 10-fold CV  -  reporting CV MSE ~79 and R² ~0.58. This is the honest performance estimate, not the in-sample R² which always looks better.</p></div>
+        <div class="contrib-card"><div class="contrib-icon"><i class="bi bi-arrow-down-up"></i></div><h4>Bootstrap Confidence Intervals</h4><p>1,000 bootstrap samples to estimate 95% confidence intervals for each coefficient. MRT distance coefficient: -0.31 [−0.38, −0.24]  -  statistically robust across all resamples.</p></div>
+      </div>
+
+      <div class="code-block">
+        <pre><span class="comment"># Bootstrap confidence intervals for regression coefficients</span>
+n_bootstrap = 1000
+boot_coefs = []
+<span class="kw">for</span> _ <span class="kw">in</span> range(n_bootstrap):
+    idx = np.random.choice(len(X), size=len(X), replace=<span class="kw">True</span>)
+    X_b, y_b = X[idx], y[idx]
+    model = LinearRegression().fit(X_b, y_b)
+    boot_coefs.append(model.coef_)
+
+boot_coefs = np.array(boot_coefs)
+ci_lower = np.percentile(boot_coefs, 2.5, axis=0)
+ci_upper = np.percentile(boot_coefs, 97.5, axis=0)
+<span class="comment"># Result: log(MRT_distance) CI = [-0.38, -0.24]  -  robust negative effect</span></pre>
+      </div>
+    </div>
+
+    <div data-aos="fade-up">
+      <div class="section-label">03  -  Key Findings</div>
+      <h2 class="section-title">What drives Taipei house prices</h2>
+      <div class="challenge-grid">
+        <div class="challenge-item"><div class="ch-label">Strongest driver</div><h5>MRT distance (negative)</h5><p>Coefficient: −0.31 (log scale). Every doubling of MRT distance reduces price per unit area by ~18%. The effect is non-linear  -  being near an MRT station matters far more than being slightly further away.</p></div>
+        <div class="challenge-item"><div class="ch-label">Positive driver</div><h5>Nearby convenience stores</h5><p>Each additional nearby store adds approximately 1.1 NT$/Ping. Proxy for urban density and walkability  -  areas with many stores command a consistent premium.</p></div>
+        <div class="challenge-item"><div class="ch-label">Negative driver</div><h5>House age</h5><p>Older buildings are discounted  -  approximately −0.27 NT$/Ping per year of age. Effect is more pronounced for properties over 20 years old.</p></div>
+        <div class="challenge-item"><div class="ch-label">Model performance</div><h5>CV R² ~0.58</h5><p>Explains 58% of price variance on held-out data. Solid for a linear model on real estate data  -  the remaining variance reflects factors not in the dataset (interior quality, floor level, negotiation).</p></div>
+      </div>
+    </div>
+
+    <div data-aos="fade-up">
+      <div class="section-label">04  -  Stack</div>
+      <h2 class="section-title">Technologies Used</h2>
+      <table class="tech-table">
+        <thead><tr><th>Tool</th><th>Purpose</th></tr></thead>
+        <tbody>
+          <tr><td>Statsmodels</td><td>OLS regression, statistical inference, diagnostic tests (BP, SW, VIF)</td></tr>
+          <tr><td>scikit-learn</td><td>LASSO (LassoCV), cross-validation, Logistic Regression for classification</td></tr>
+          <tr><td>Pandas &amp; NumPy</td><td>Data manipulation, bootstrap loop, feature engineering</td></tr>
+          <tr><td>Matplotlib &amp; Seaborn</td><td>Distribution plots, residual plots, coefficient CI visualisations</td></tr>
+          <tr><td>Dataset</td><td>UCI Real Estate Valuation  -  414 Taipei transactions</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div data-aos="fade-up">
+      <section class="impact-section">
+        <div class="section-label">05  -  Outcomes</div>
+        <h2 class="section-title">Results</h2>
+        <div class="impact-grid">
+          <div class="impact-stat"><div class="stat-number">R²~0.58</div><div class="stat-label">generalisation via 10-fold cross-validation</div></div>
+          <div class="impact-stat"><div class="stat-number">1,000</div><div class="stat-label">bootstrap samples for coefficient uncertainty</div></div>
+          <div class="impact-stat"><div class="stat-number">MRT</div><div class="stat-label">confirmed as strongest negative price predictor</div></div>
+        </div>
+        <ul class="impact-bullets">
+          <li>MRT distance identified as the dominant pricing factor  -  consistent across OLS, LASSO, and classification models</li>
+          <li>Log transformation of MRT distance was key  -  materially improved model diagnostics and fit</li>
+          <li>Bootstrap CIs confirmed coefficient stability  -  findings are not artefacts of a particular data split</li>
+          <li>LASSO correctly zeroed geographic coordinates  -  they're collinear with MRT distance at this scale</li>
+        </ul>
+      </section>
+    </div>
+
+    <div data-aos="fade-up">
+      <div class="section-label">06  -  Learnings</div>
+      <h2 class="section-title">What I took away</h2>
+      <ul class="learn-list">
+        <li>Cross-validation R² is the honest number  -  in-sample R² on 414 points can be inflated by a few outliers. Always report held-out performance.</li>
+        <li>Diagnostic testing isn't optional  -  heteroscedasticity in the residuals invalidates standard errors and confidence intervals, making the model's uncertainty estimates unreliable.</li>
+        <li>Bootstrap CIs are more interpretable than p-values for communicating "how sure are we about this coefficient" to a non-statistical audience.</li>
+        <li>Log transformations on skewed predictors often matter more than model choice  -  getting the functional form right first, then regularising.</li>
+      </ul>
+    </div>
+
+    <div class="article-footer-nav">
+      <a href="projects.html" class="back-link"><i class="bi bi-arrow-left"></i> All Projects</a>
+      <span class="article-meta-note">Jan – Mar 2026 · UC San Diego</span>
+    </div>
+  </div>
+</main>  <footer id="footer" class="footer dark-background"><div class="container"><div class="credits">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a></div></div></footer>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a><div id="preloader"></div>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script><script src="assets/vendor/aos/aos.js"></script><script src="assets/vendor/glightbox/js/glightbox.min.js"></script><script src="assets/js/main.js"></script></body></html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project  -  Priyanka Nidadavolu</title>
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/portfolio.css" rel="stylesheet">
+  
+  <style>
+    .callout { background:var(--surface-alt); border-left:4px solid var(--accent); border-radius:0 10px 10px 0; padding:18px 22px; margin:24px 0; }
+    .callout p { margin:0; font-size:0.9rem; color:var(--ink-soft); line-height:1.7; }
+    .callout strong { color:var(--ink); }
+    .code-block { background:var(--ink); border-radius:10px; padding:20px 24px; margin:20px 0; overflow-x:auto; }
+    .code-block pre { margin:0; font-family:var(--font-mono); font-size:0.78rem; color:rgba(255,255,255,0.85); line-height:1.65; white-space:pre; }
+    .code-block .comment { color:rgba(255,255,255,0.35); }
+    .code-block .kw { color:#fa687e; }
+    .code-block .fn { color:#ffd580; }
+    .code-block .str { color:#98c379; }
+    .inline-stat { display:inline-flex; align-items:center; gap:6px; background:var(--accent-light); border:1px solid rgba(250,104,126,0.2); border-radius:6px; padding:3px 10px; font-family:var(--font-mono); font-size:0.72rem; color:var(--accent); font-weight:500; }
+    .challenge-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:16px; margin:20px 0 32px; }
+    .challenge-item { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:18px 20px; }
+    .challenge-item .ch-label { font-family:var(--font-mono); font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:6px; }
+    .challenge-item h5 { font-family:var(--font-display); font-size:0.95rem; font-weight:600; color:var(--ink); margin-bottom:6px; }
+    .challenge-item p { font-size:0.83rem; color:var(--ink-soft); line-height:1.6; margin:0; }
+    .learn-list { list-style:none; padding:0; margin:0 0 32px; }
+    .learn-list li { display:flex; gap:12px; padding:10px 0; border-bottom:1px solid var(--border); font-size:0.9rem; color:var(--ink-soft); line-height:1.6; }
+    .learn-list li:last-child { border-bottom:none; }
+    .learn-list li::before { content:"→"; color:var(--accent); flex-shrink:0; font-weight:600; }
+  </style>
+</head>
+<body class="service-details-page">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="projects.html" class="logo d-flex align-items-center gap-2"><i class="bi bi-arrow-left" style="color:var(--accent);font-size:0.9rem;"></i><span class="sitename">All Projects</span></a>
+      <nav id="navmenu" class="navmenu"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="overview.html">Overview</a></li><li><a href="projects.html">Projects</a></li><li><a href="blogs.html">Blogs</a></li><li><a href="contact.html">Contact</a></li></ul><i class="mobile-nav-toggle d-xl-none bi bi-list"></i></nav>
+    </div>
+  </header>
+<main>
+
+  <section class="article-hero">
+    <div class="container" style="position:relative;z-index:2;">
+      <div class="article-hero-eyebrow" data-aos="fade-up"><span>Projects</span> / Data Engineering</div>
+      <h1 data-aos="fade-up" data-aos-delay="80">Large-Scale NYC Taxi<br>Data Pipeline &amp; Analysis</h1>
+      <p class="article-hero-tagline" data-aos="fade-up" data-aos-delay="140">57GB+ of NYC taxi records. One machine. Fully distributed pipeline  -  time-series analysis, PCA clustering, and spatial insights without ever hitting a memory wall.</p>
+      <div class="meta-row" data-aos="fade-up" data-aos-delay="180">
+        <div class="meta-pill"><i class="bi bi-calendar3"></i> Jan – Mar 2026</div>
+        <div class="meta-pill"><i class="bi bi-building"></i> UC San Diego</div>
+        <div class="meta-pill"><i class="bi bi-tag"></i> Data Engineering</div>
+      </div>
+      <div class="tech-row" data-aos="fade-up" data-aos-delay="220">
+        <span class="badge-tech">Python</span><span class="badge-tech">Dask</span><span class="badge-tech">PyArrow</span><span class="badge-tech">PCA</span><span class="badge-tech">Pandas</span><span class="badge-tech">NumPy</span><span class="badge-tech">Matplotlib</span><span class="badge-tech">Seaborn</span>
+      </div>
+      <div class="hero-actions" data-aos="fade-up" data-aos-delay="260">
+        <a href="https://github.com/priyanka-nidadavolu" target="_blank" class="btn-hero-primary"><i class="bi bi-github"></i> View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="article-body">
+    <img src="assets/img/projects/large-scale.svg" alt="" style="width:100%;max-height:420px;object-fit:cover;border-radius:16px;margin-bottom:48px;">
+
+    <div data-aos="fade-up">
+      <div class="section-label">01  -  The Problem</div>
+      <h2 class="section-title">Why pandas breaks at 57GB</h2>
+      <div class="prose">
+        <p>The NYC TLC dataset is a classic "too big for a laptop" problem. A single year of trip data is ~10GB compressed. Across multiple years, you're looking at 57GB+ of Parquet files  -  far beyond what pandas can load into memory at once. Traditional approaches either crash, require expensive cloud clusters, or force you to downsample and lose signal.</p>
+        <p>The goal was to process the full dataset on a single machine, efficiently, without approximation  -  then layer on time-series analysis and PCA-based clustering to find patterns that matter.</p>
+      </div>
+    </div>
+
+    <div class="callout" data-aos="fade-up">
+      <p><strong>Dataset:</strong> NYC TLC Yellow &amp; Green Taxi Trips  -  multiple years, 57GB+ of Parquet files. Features include pickup/dropoff datetime, location IDs, passenger count, trip distance, fare amount, tip, payment type, and congestion surcharge.</p>
+    </div>
+
+    <div data-aos="fade-up">
+      <div class="section-label">02  -  Architecture</div>
+      <h2 class="section-title">How the pipeline works</h2>
+      <div class="prose">
+        <p>The pipeline has three layers: <strong>ingest → transform → analyse</strong>. Dask handles the first two with lazy evaluation  -  nothing is computed until absolutely necessary. PyArrow provides the columnar Parquet I/O. The analysis layer materialises only the aggregated results, not the full dataset.</p>
+      </div>
+      <div class="code-block">
+        <pre><span class="comment"># Lazy load  -  nothing reads from disk yet</span>
+ddf = dd.read_parquet(<span class="str">"data/yellow_tripdata_*.parquet"</span>,
+                      engine=<span class="str">"pyarrow"</span>,
+                      columns=[<span class="str">"tpep_pickup_datetime"</span>, <span class="str">"trip_distance"</span>,
+                               <span class="str">"fare_amount"</span>, <span class="str">"tip_amount"</span>, <span class="str">"PULocationID"</span>])
+
+<span class="comment"># Feature engineering (still lazy)</span>
+ddf[<span class="str">"hour"</span>] = ddf[<span class="str">"tpep_pickup_datetime"</span>].dt.hour
+ddf[<span class="str">"dayofweek"</span>] = ddf[<span class="str">"tpep_pickup_datetime"</span>].dt.dayofweek
+ddf = ddf[(ddf.trip_distance > 0) &amp; (ddf.fare_amount > 0)]
+
+<span class="comment"># Aggregate  -  this is when Dask actually reads + processes</span>
+hourly = ddf.groupby(<span class="str">"hour"</span>)[<span class="str">"trip_distance"</span>].mean().compute()</pre>
+      </div>
+
+      <div class="contributions-grid">
+        <div class="contrib-card"><div class="contrib-icon"><i class="bi bi-cpu"></i></div><h4>Distributed Processing with Dask</h4><p>Replaced pandas with Dask DataFrames for out-of-core, parallel computation. Dask partitions the dataset across files and processes each lazily  -  only materialising results when <code>.compute()</code> is called.</p></div>
+        <div class="contrib-card"><div class="contrib-icon"><i class="bi bi-clock-history"></i></div><h4>Time-Series Analysis</h4><p>Extracted temporal features (hour, day of week, month, season) and computed rolling averages for ride volume, fare trends, and tip rates  -  revealing rush-hour peaks, weekend shifts, and seasonal demand drops.</p></div>
+        <div class="contrib-card"><div class="contrib-icon"><i class="bi bi-grid-3x3"></i></div><h4>PCA on Zone Aggregations</h4><p>Aggregated trip statistics by TLC zone (pickup rate, avg distance, avg fare, tip ratio) then applied PCA to reduce to 2D  -  revealing clusters of tourist zones, commuter zones, and airport corridors.</p></div>
+        <div class="contrib-card"><div class="contrib-icon"><i class="bi bi-funnel"></i></div><h4>Data Quality Pipeline</h4><p>Filtered impossible trips (zero distance, negative fares, zero passengers), capped fare outliers at the 99th percentile, and handled timezone alignment across multi-year data with different schema versions.</p></div>
+        <div class="contrib-card"><div class="contrib-icon"><i class="bi bi-map"></i></div><h4>Spatial Insights</h4><p>Joined TLC zone lookups to map location IDs to borough and neighbourhood names  -  enabling borough-level demand analysis without expensive geospatial joins on the full dataset.</p></div>
+        <div class="contrib-card"><div class="contrib-icon"><i class="bi bi-graph-up"></i></div><h4>Visualisation Suite</h4><p>Built a full set of Matplotlib/Seaborn charts: hourly demand curves, day-of-week heatmaps, fare distributions by borough, PCA scatterplots with zone labels, and tip-rate trends by payment type.</p></div>
+      </div>
+    </div>
+
+    <div data-aos="fade-up">
+      <div class="section-label">03  -  Key Findings</div>
+      <h2 class="section-title">What the data showed</h2>
+      <div class="challenge-grid">
+        <div class="challenge-item"><div class="ch-label">Time Pattern</div><h5>Dual peak demand</h5><p>Ridership peaks at 8–9am and 5–7pm on weekdays, with a completely different profile on weekends  -  late-night entertainment demand replacing the commuter spike.</p></div>
+        <div class="challenge-item"><div class="ch-label">Spatial Pattern</div><h5>3 zone clusters via PCA</h5><p>PCA revealed distinct airport zones (long trips, high fares), Midtown/tourist zones (short trips, high tip rates), and outer-borough zones (longer trips, low tips).</p></div>
+        <div class="challenge-item"><div class="ch-label">Economic Pattern</div><h5>Card payments = higher tips</h5><p>Credit card payments average 18.2% tip vs 12.1% for cash  -  a consistent pattern across all boroughs and time windows in the dataset.</p></div>
+        <div class="challenge-item"><div class="ch-label">Seasonal Pattern</div><h5>Winter dip, summer plateau</h5><p>January–February shows ~15% demand drop vs summer months. December spikes around holidays but crashes immediately after New Year.</p></div>
+      </div>
+    </div>
+
+    <div data-aos="fade-up">
+      <div class="section-label">04  -  Stack</div>
+      <h2 class="section-title">Technologies Used</h2>
+      <table class="tech-table">
+        <thead><tr><th>Category</th><th>Tool &amp; Role</th></tr></thead>
+        <tbody>
+          <tr><td>Distributed Computing</td><td>Dask  -  out-of-core parallel DataFrame processing; lazy evaluation graph</td></tr>
+          <tr><td>File I/O</td><td>PyArrow  -  columnar Parquet reading with column pruning for efficiency</td></tr>
+          <tr><td>Analysis</td><td>Pandas &amp; NumPy  -  post-aggregation analysis on materialised results</td></tr>
+          <tr><td>Dimensionality Reduction</td><td>scikit-learn PCA  -  zone-level clustering and pattern discovery</td></tr>
+          <tr><td>Visualisation</td><td>Matplotlib &amp; Seaborn  -  full chart suite for temporal and spatial analysis</td></tr>
+          <tr><td>Dataset</td><td>NYC TLC Yellow &amp; Green Taxi Trips  -  57GB+ multi-year Parquet files</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div data-aos="fade-up">
+      <section class="impact-section">
+        <div class="section-label">05  -  Outcomes</div>
+        <h2 class="section-title">Results</h2>
+        <div class="impact-grid">
+          <div class="impact-stat"><div class="stat-number">57GB+</div><div class="stat-label">processed on a single machine without memory errors</div></div>
+          <div class="impact-stat"><div class="stat-number">3</div><div class="stat-label">distinct zone clusters discovered via PCA</div></div>
+          <div class="impact-stat"><div class="stat-number">10M+</div><div class="stat-label">trip records analysed across multiple years</div></div>
+        </div>
+        <ul class="impact-bullets">
+          <li>Proved single-machine distributed processing is viable for 57GB+ datasets with Dask</li>
+          <li>Dual-peak demand structure validated  -  actionable for surge pricing and driver allocation</li>
+          <li>PCA zone clusters align closely with known NYC borough geography without using coordinates</li>
+          <li>Pipeline is fully modular  -  new years of data are automatically picked up by the glob pattern</li>
+        </ul>
+      </section>
+    </div>
+
+    <div data-aos="fade-up">
+      <div class="section-label">06  -  Learnings</div>
+      <h2 class="section-title">What I took away</h2>
+      <ul class="learn-list">
+        <li>Lazy evaluation is the key insight of Dask  -  building a computation graph before executing means you only pay for what you actually need.</li>
+        <li>Column pruning at read time (specifying <code>columns=[...]</code> in read_parquet) gave a 3–4x speedup over reading all columns and dropping later.</li>
+        <li>PCA on aggregated zone-level statistics is surprisingly powerful for spatial segmentation without needing actual geospatial tooling.</li>
+        <li>Schema drift between dataset years (column renames, new fields) requires careful validation before blindly unioning partitions.</li>
+      </ul>
+    </div>
+
+    <div class="article-footer-nav">
+      <a href="projects.html" class="back-link"><i class="bi bi-arrow-left"></i> All Projects</a>
+      <span class="article-meta-note">Jan – Mar 2026 · UC San Diego</span>
+    </div>
+  </div>
+
+</main>
+  <footer id="footer" class="footer dark-background">
+    <div class="container"><div class="credits">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a></div></div>
+  </footer>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body></html>

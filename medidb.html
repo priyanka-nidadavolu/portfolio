@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project  -  Priyanka Nidadavolu</title>
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/portfolio.css" rel="stylesheet">
+  
+  <style>
+    .callout { background:var(--surface-alt); border-left:4px solid var(--accent); border-radius:0 10px 10px 0; padding:18px 22px; margin:24px 0; }
+    .callout p { margin:0; font-size:0.9rem; color:var(--ink-soft); line-height:1.7; }
+    .callout strong { color:var(--ink); }
+    .code-block { background:var(--ink); border-radius:10px; padding:20px 24px; margin:20px 0; overflow-x:auto; }
+    .code-block pre { margin:0; font-family:var(--font-mono); font-size:0.78rem; color:rgba(255,255,255,0.85); line-height:1.65; white-space:pre; }
+    .code-block .comment { color:rgba(255,255,255,0.35); }
+    .code-block .kw { color:#fa687e; }
+    .code-block .fn { color:#ffd580; }
+    .code-block .str { color:#98c379; }
+    .inline-stat { display:inline-flex; align-items:center; gap:6px; background:var(--accent-light); border:1px solid rgba(250,104,126,0.2); border-radius:6px; padding:3px 10px; font-family:var(--font-mono); font-size:0.72rem; color:var(--accent); font-weight:500; }
+    .challenge-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:16px; margin:20px 0 32px; }
+    .challenge-item { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:18px 20px; }
+    .challenge-item .ch-label { font-family:var(--font-mono); font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:6px; }
+    .challenge-item h5 { font-family:var(--font-display); font-size:0.95rem; font-weight:600; color:var(--ink); margin-bottom:6px; }
+    .challenge-item p { font-size:0.83rem; color:var(--ink-soft); line-height:1.6; margin:0; }
+    .learn-list { list-style:none; padding:0; margin:0 0 32px; }
+    .learn-list li { display:flex; gap:12px; padding:10px 0; border-bottom:1px solid var(--border); font-size:0.9rem; color:var(--ink-soft); line-height:1.6; }
+    .learn-list li:last-child { border-bottom:none; }
+    .learn-list li::before { content:"→"; color:var(--accent); flex-shrink:0; font-weight:600; }
+  </style>
+</head>
+<body class="service-details-page">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="projects.html" class="logo d-flex align-items-center gap-2"><i class="bi bi-arrow-left" style="color:var(--accent);font-size:0.9rem;"></i><span class="sitename">All Projects</span></a>
+      <nav id="navmenu" class="navmenu"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="overview.html">Overview</a></li><li><a href="projects.html">Projects</a></li><li><a href="blogs.html">Blogs</a></li><li><a href="contact.html">Contact</a></li></ul><i class="mobile-nav-toggle d-xl-none bi bi-list"></i></nav>
+    </div>
+  </header>
+<main>
+
+  <section class="article-hero">
+    <div class="container" style="position:relative;z-index:2;">
+      <div class="article-hero-eyebrow" data-aos="fade-up"><span>Projects</span> / Healthcare · AI</div>
+      <h1 data-aos="fade-up" data-aos-delay="80">MediDB: Drug Safety &amp;<br>Recommendation System</h1>
+      <p class="article-hero-tagline" data-aos="fade-up" data-aos-delay="140">Four databases. One query. A unified clinical decision-support system that combines SQL structure, graph interactions, and vector similarity to explain why a drug is or isn't safe for a patient.</p>
+      <div class="meta-row" data-aos="fade-up" data-aos-delay="180">
+        <div class="meta-pill"><i class="bi bi-calendar3"></i> Jan – Mar 2026</div>
+        <div class="meta-pill"><i class="bi bi-building"></i> UC San Diego</div>
+        <div class="meta-pill"><i class="bi bi-people"></i> Team Project</div>
+      </div>
+      <div class="tech-row" data-aos="fade-up" data-aos-delay="220">
+        <span class="badge-tech">Python</span><span class="badge-tech">PostgreSQL</span><span class="badge-tech">Neo4j</span><span class="badge-tech">Qdrant</span><span class="badge-tech">MongoDB</span><span class="badge-tech">Streamlit</span><span class="badge-tech">Docker</span><span class="badge-tech">BioLORD</span>
+      </div>
+      <div class="hero-actions" data-aos="fade-up" data-aos-delay="260">
+        <a href="https://github.com/eemilycchen/drug_safety_and_recommendation" target="_blank" class="btn-hero-primary"><i class="bi bi-github"></i> View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="article-body">
+    <div data-aos="fade-up">
+      <div class="section-label">01  -  The Problem</div>
+      <h2 class="section-title">Why one database isn't enough for drug safety</h2>
+      <div class="prose">
+        <p>When a clinician prescribes medication they need to simultaneously answer three different questions: <em>Is this drug appropriate for this patient's history?</em> (structured EHR data), <em>Does it interact with their other medications?</em> (graph relationships), and <em>What did real patients experience?</em> (adverse event narratives). No single database paradigm handles all three well.</p>
+        <p>Traditional systems force clinicians to query multiple disconnected tools and mentally synthesise the results  -  a cognitive burden that contributes to prescribing errors. MediDB collapses this into one query, one report.</p>
+      </div>
+    </div>
+
+    <div class="callout" data-aos="fade-up">
+      <p><strong>Data sources:</strong> Synthea synthetic EHR (PostgreSQL) · DrugBank + SIDER drug interactions (Neo4j) · openFDA FAERS adverse events (MongoDB + Qdrant vectors) · BioLORD-2023 clinical embeddings for semantic search.</p>
+    </div>
+
+    <div data-aos="fade-up">
+      <div class="section-label">02  -  Architecture</div>
+      <h2 class="section-title">Four databases, one orchestration layer</h2>
+      <div class="prose"><p>Each database is chosen for its paradigm strength. The orchestration layer sends parallel queries, collects results, and merges them into a structured safety report with a risk level, interaction insights, and alternative drug suggestions.</p></div>
+      <div class="code-block">
+        <pre><span class="comment"># Multi-step retrieval pipeline</span>
+<span class="kw">def</span> <span class="fn">evaluate_drug_safety</span>(patient_id, drug_name):
+    <span class="comment"># 1. Patient context from PostgreSQL</span>
+    patient = pg_client.get_patient_history(patient_id)
+    current_meds = patient[<span class="str">"medications"</span>]
+
+    <span class="comment"># 2. Interaction graph from Neo4j</span>
+    interactions = neo4j_client.find_interactions(drug_name, current_meds)
+
+    <span class="comment"># 3. Similar adverse event cases from Qdrant</span>
+    embedding = bioLORD.encode(f<span class="str">"{drug_name} {patient['conditions']}"</span>)
+    similar_cases = qdrant.search(embedding, top_k=10,
+                                  filters={<span class="str">"severity"</span>: <span class="str">"serious"</span>})
+
+    <span class="comment"># 4. FAERS raw reports from MongoDB for audit trail</span>
+    faers_reports = mongo.get_reports(drug_name)
+
+    <span class="kw">return</span> <span class="fn">build_safety_report</span>(patient, interactions, similar_cases, faers_reports)</pre>
+      </div>
+
+      <div class="contributions-grid">
+        <div class="contrib-card"><div class="contrib-icon"><i class="bi bi-layers"></i></div><h4>Multi-DB Architecture Design</h4><p>Designed the paradigm selection: PostgreSQL for relational patient queries, Neo4j for drug interaction traversal, Qdrant for semantic case retrieval, MongoDB for FAERS raw storage + audit logs.</p></div>
+        <div class="contrib-card"><div class="contrib-icon"><i class="bi bi-diagram-2"></i></div><h4>Graph Modeling in Neo4j</h4><p>Modelled DrugBank interaction data as a property graph  -  drugs as nodes, interactions as typed edges with severity weights. Cypher traversal detects polypharmacy clusters and direct drug-drug conflicts.</p></div>
+        <div class="contrib-card"><div class="contrib-icon"><i class="bi bi-search"></i></div><h4>BioLORD Vector Search</h4><p>Used BioLORD-2023 (a biomedical sentence transformer) to embed clinical narratives from FAERS. Qdrant's multi-filter search retrieves top-k real-world adverse event cases matching drug, severity, and patient demographics.</p></div>
+        <div class="contrib-card"><div class="contrib-icon"><i class="bi bi-database"></i></div><h4>ETL Pipeline</h4><p>Three separate ETL jobs: Synthea EHR → PostgreSQL normalised schema; FAERS CSV → MongoDB raw + aggregated; SIDER side-effect data → Neo4j drug-symptom edges. All containerised with Docker Compose.</p></div>
+        <div class="contrib-card"><div class="contrib-icon"><i class="bi bi-window"></i></div><h4>Streamlit Clinical UI</h4><p>Four-tab interface: Safety Check (main report), Patient Data, Drug Knowledge Graph, Evidence Audit. The safety report shows risk level (Low/Medium/High), interaction details, and alternative drug suggestions.</p></div>
+        <div class="contrib-card"><div class="contrib-icon"><i class="bi bi-shield-check"></i></div><h4>Traceability &amp; Audit</h4><p>Every safety report is logged to MongoDB with timestamps, source citations, and the specific evidence used  -  making every recommendation fully traceable and auditable for clinical accountability.</p></div>
+      </div>
+    </div>
+
+    <div data-aos="fade-up">
+      <div class="section-label">03  -  Challenges</div>
+      <h2 class="section-title">Hard problems we solved</h2>
+      <div class="challenge-grid">
+        <div class="challenge-item"><div class="ch-label">Challenge</div><h5>FAERS data quality</h5><p>The FDA adverse event dataset has severe inconsistencies  -  drug name variations, missing fields, duplicate reports. We built a normalisation layer that standardises drug names via RxNorm lookups before storage.</p></div>
+        <div class="challenge-item"><div class="ch-label">Challenge</div><h5>Cross-DB result merging</h5><p>Merging results from four different data models (relational, graph, vector, document) into one coherent report required careful schema design for the orchestration layer's output format.</p></div>
+        <div class="challenge-item"><div class="ch-label">Challenge</div><h5>Embedding quality</h5><p>Generic sentence embeddings performed poorly on clinical text. BioLORD-2023 (fine-tuned on biomedical literature) gave substantially better semantic similarity results for adverse event retrieval.</p></div>
+        <div class="challenge-item"><div class="ch-label">Challenge</div><h5>Docker orchestration</h5><p>Getting four databases + the Python app to initialise in the correct order with health checks and retry logic required careful Docker Compose dependency management.</p></div>
+      </div>
+    </div>
+
+    <div data-aos="fade-up">
+      <div class="section-label">04  -  Stack</div>
+      <h2 class="section-title">Technologies Used</h2>
+      <table class="tech-table">
+        <thead><tr><th>Component</th><th>Tool &amp; Purpose</th></tr></thead>
+        <tbody>
+          <tr><td>Relational DB</td><td>PostgreSQL  -  normalised EHR data with Synthea synthetic patient records</td></tr>
+          <tr><td>Graph DB</td><td>Neo4j + Cypher  -  drug interaction network, polypharmacy detection</td></tr>
+          <tr><td>Vector DB</td><td>Qdrant  -  semantic similarity search over BioLORD clinical embeddings</td></tr>
+          <tr><td>Document DB</td><td>MongoDB  -  FAERS adverse event reports + audit log storage</td></tr>
+          <tr><td>Embeddings</td><td>BioLORD-2023 (Sentence Transformers)  -  biomedical clinical text encoding</td></tr>
+          <tr><td>UI</td><td>Streamlit  -  interactive clinical decision-support interface</td></tr>
+          <tr><td>Infrastructure</td><td>Docker Compose  -  containerised multi-database deployment</td></tr>
+          <tr><td>Data Sources</td><td>Synthea · DrugBank · SIDER · openFDA FAERS · RxNorm</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div data-aos="fade-up">
+      <section class="impact-section">
+        <div class="section-label">05  -  Outcomes</div>
+        <h2 class="section-title">Results</h2>
+        <div class="impact-grid">
+          <div class="impact-stat"><div class="stat-number">4</div><div class="stat-label">database paradigms integrated into one query</div></div>
+          <div class="impact-stat"><div class="stat-number">Full</div><div class="stat-label">audit traceability for every safety report</div></div>
+          <div class="impact-stat"><div class="stat-number">1</div><div class="stat-label">unified report replacing 4 separate tool queries</div></div>
+        </div>
+        <ul class="impact-bullets">
+          <li>Eliminated the need for clinicians to manually cross-reference multiple systems</li>
+          <li>BioLORD embeddings substantially outperformed generic embeddings for adverse event retrieval</li>
+          <li>Full Docker Compose deployment  -  any institution can spin up the system in minutes</li>
+          <li>Audit log provides complete provenance for every recommendation made by the system</li>
+        </ul>
+      </section>
+    </div>
+
+    <div data-aos="fade-up">
+      <div class="section-label">06  -  Learnings</div>
+      <h2 class="section-title">What I took away</h2>
+      <ul class="learn-list">
+        <li>Choosing the right database paradigm for each data type is more impactful than optimising within a single paradigm  -  graph traversal for interactions is orders of magnitude more natural than SQL self-joins.</li>
+        <li>Domain-specific embeddings (BioLORD) dramatically outperform general-purpose ones for clinical text retrieval  -  generic models miss clinical synonyms and abbreviations.</li>
+        <li>Multi-database systems need an explicit orchestration contract defining exactly how results from each source are merged and weighted.</li>
+        <li>Docker Compose health checks and dependency ordering are non-trivial to get right when databases have complex initialisation sequences.</li>
+      </ul>
+    </div>
+
+    <div class="article-footer-nav">
+      <a href="projects.html" class="back-link"><i class="bi bi-arrow-left"></i> All Projects</a>
+      <span class="article-meta-note">Jan – Mar 2026 · UC San Diego</span>
+    </div>
+  </div>
+
+</main>
+  <footer id="footer" class="footer dark-background">
+    <div class="container"><div class="credits">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a></div></div>
+  </footer>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body></html>

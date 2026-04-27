@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d1a"/><stop offset="100%" style="stop-color:#10101f"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+    <circle cx="15" cy="15" r="1" fill="#6a3fd6" opacity="0.06"/>
+  </pattern>
+  <rect width="1200" height="600" fill="url(#dots)"/>
+  <radialGradient id="cg" cx="0%" cy="0%" r="60%">
+    <stop offset="0%" style="stop-color:#6a3fd6;stop-opacity:0.1"/>
+    <stop offset="100%" style="stop-color:#6a3fd6;stop-opacity:0"/>
+  </radialGradient>
+  <rect width="1200" height="600" fill="url(#cg)"/>
+  <rect x="0" y="0" width="1200" height="3" fill="#6a3fd6" opacity="0.8"/>
+  <text x="50" y="44" font-family="monospace" font-size="11" letter-spacing="0.14em" fill="#6a3fd6" opacity="0.9">FULL-STACK · TRAVEL PLATFORM · BEST PROJECT AWARD</text>
+  <text x="36" y="88" font-family="Georgia,serif" font-size="34" font-weight="700" fill="#ffffff" opacity="0.95">Take A Trip</text>
+  <!-- Route map -->
+  <g>
+    <circle cx="120" cy="270" r="18" fill="#240769" stroke="#6a3fd6" stroke-width="2" filter="url(#glow)"/>
+    <text x="120" y="275" text-anchor="middle" font-family="monospace" font-size="9" fill="white">DEL</text>
+    <circle cx="340" cy="200" r="18" fill="#240769" stroke="#6a3fd6" stroke-width="2" filter="url(#glow)"/>
+    <text x="340" y="205" text-anchor="middle" font-family="monospace" font-size="9" fill="white">BOM</text>
+    <circle cx="530" cy="310" r="18" fill="#240769" stroke="#6a3fd6" stroke-width="2" filter="url(#glow)"/>
+    <text x="530" y="315" text-anchor="middle" font-family="monospace" font-size="9" fill="white">BLR</text>
+    <circle cx="280" cy="390" r="18" fill="#240769" stroke="#6a3fd6" stroke-width="2" filter="url(#glow)"/>
+    <text x="280" y="395" text-anchor="middle" font-family="monospace" font-size="9" fill="white">HYD</text>
+    <circle cx="660" cy="230" r="18" fill="#240769" stroke="#6a3fd6" stroke-width="2" filter="url(#glow)"/>
+    <text x="660" y="235" text-anchor="middle" font-family="monospace" font-size="9" fill="white">MAA</text>
+  </g>
+  <!-- All route options (dim) -->
+  <g stroke="#ffffff12" stroke-width="1.5" fill="none" stroke-dasharray="5,4">
+    <line x1="120" y1="270" x2="340" y2="200"/>
+    <line x1="120" y1="270" x2="280" y2="390"/>
+    <line x1="340" y1="200" x2="530" y2="310"/>
+    <line x1="340" y1="200" x2="660" y2="230"/>
+    <line x1="280" y1="390" x2="530" y2="310"/>
+    <line x1="530" y1="310" x2="660" y2="230"/>
+  </g>
+  <!-- Optimal route (bright) -->
+  <g stroke="#6a3fd6" stroke-width="3" fill="none" filter="url(#glow)" opacity="0.9">
+    <path d="M138 262 Q230 215 322 208"/>
+    <path d="M358 208 Q444 248 514 302"/>
+    <path d="M548 302 Q604 264 642 238"/>
+  </g>
+  <!-- Fare labels on optimal path -->
+  <text x="228" y="210" font-family="monospace" font-size="9" fill="#6a3fd6">&#x20B9;2,340</text>
+  <text x="434" y="248" font-family="monospace" font-size="9" fill="#6a3fd6">&#x20B9;1,890</text>
+  <text x="596" y="260" font-family="monospace" font-size="9" fill="#6a3fd6">&#x20B9;3,100</text>
+  <!-- Optimal badge -->
+  <rect x="310" y="148" width="98" height="24" rx="10" fill="#6a3fd6" opacity="0.9"/>
+  <text x="359" y="164" text-anchor="middle" font-family="monospace" font-size="9" fill="white">OPTIMAL &#x2713;</text>
+  <!-- Module cards -->
+  <rect x="790" y="130" width="380" height="380" rx="14" fill="#ffffff06" stroke="#6a3fd620"/>
+  <text x="980" y="162" text-anchor="middle" font-family="monospace" font-size="9" fill="#6a3fd6" letter-spacing="0.1em">PLATFORM MODULES</text>
+  <g>
+    <rect x="808" y="174" width="344" height="44" rx="8" fill="#6a3fd612" stroke="#6a3fd634"/>
+    <text x="980" y="196" text-anchor="middle" font-family="monospace" font-size="11" fill="#a78bfa">&#x2708;&#xFE0F; Transport Booking</text>
+    <text x="980" y="212" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff44">Dijkstra route optimisation · up to 20% cost savings</text>
+    <rect x="808" y="226" width="344" height="44" rx="8" fill="#6a3fd60e" stroke="#6a3fd628"/>
+    <text x="980" y="248" text-anchor="middle" font-family="monospace" font-size="11" fill="#a78bfa">&#x1F3E8; Hotel Booking</text>
+    <text x="980" y="264" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff44">Availability calendar · proximity ranking</text>
+    <rect x="808" y="278" width="344" height="44" rx="8" fill="#6a3fd60a" stroke="#6a3fd622"/>
+    <text x="980" y="300" text-anchor="middle" font-family="monospace" font-size="11" fill="#a78bfa">&#x1F5FA;&#xFE0F; Travel Guide</text>
+    <text x="980" y="316" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff44">Personalised recommendations · agent connections</text>
+    <rect x="808" y="330" width="344" height="44" rx="8" fill="#6a3fd608" stroke="#6a3fd61e"/>
+    <text x="980" y="352" text-anchor="middle" font-family="monospace" font-size="11" fill="#a78bfa">&#x1F4B3; Secure Payments</text>
+    <text x="980" y="368" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff44">Multi-option · receipts · booking history</text>
+    <rect x="808" y="382" width="344" height="40" rx="8" fill="#6a3fd628" stroke="#6a3fd666"/>
+    <text x="980" y="406" text-anchor="middle" font-family="monospace" font-size="11" fill="white">&#x1F3C6; Best Project of the Cohort · KL University</text>
+  </g>
+  <!-- Bottom stats -->
+  <rect x="36" y="440" width="720" height="60" rx="12" fill="#ffffff06" stroke="#ffffff0c"/>
+  <g text-anchor="middle" font-family="monospace">
+    <text x="150" y="464" font-size="9" fill="#ffffff35">COST SAVINGS</text>
+    <text x="150" y="486" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="#6a3fd6">20%</text>
+    <text x="360" y="464" font-size="9" fill="#ffffff35">TECH STACK</text>
+    <text x="360" y="486" font-size="12" fill="white">Django · MySQL · Figma</text>
+    <text x="580" y="464" font-size="9" fill="#ffffff35">DEPLOYMENT</text>
+    <text x="580" y="486" font-size="12" fill="white">Live on Render.com</text>
+  </g>
+  <rect x="0" y="548" width="1200" height="52" fill="#ffffff04" stroke="#ffffff08" stroke-width="1"/>
+  <text x="36" y="578" font-family="monospace" font-size="11" letter-spacing="0.1em" fill="#6a3fd6" opacity="0.7">PYTHON · DJANGO · MYSQL · FIGMA · ROUTE OPTIMISATION · HTML/CSS/JS</text>
+</svg>

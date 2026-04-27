@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d1a"/><stop offset="100%" style="stop-color:#10101f"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+    <circle cx="15" cy="15" r="1" fill="#4a90d9" opacity="0.06"/>
+  </pattern>
+  <rect width="1200" height="600" fill="url(#dots)"/>
+  <radialGradient id="cg" cx="0%" cy="0%" r="60%">
+    <stop offset="0%" style="stop-color:#4a90d9;stop-opacity:0.1"/>
+    <stop offset="100%" style="stop-color:#4a90d9;stop-opacity:0"/>
+  </radialGradient>
+  <rect width="1200" height="600" fill="url(#cg)"/>
+  <rect x="0" y="0" width="1200" height="3" fill="#4a90d9" opacity="0.8"/>
+  <text x="50" y="44" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.14em" fill="#4a90d9" opacity="0.9">CLOUD · INFRASTRUCTURE · AICTE</text>
+  <text x="36" y="88" font-family="'Fraunces',Georgia,serif" font-size="34" font-weight="700" fill="#ffffff" opacity="0.95">Amazon Web Services Project</text>
+  
+  <!-- Architecture layers top-down -->
+  <!-- Internet -->
+  <text x="600" y="148" text-anchor="middle" font-family="monospace" font-size="10" fill="#ffffff30" letter-spacing="0.1em">INTERNET</text>
+  <line x1="600" y1="155" x2="600" y2="180" stroke="#ffffff20" stroke-width="2" stroke-dasharray="5,4"/>
+  <!-- ALB -->
+  <rect x="380" y="180" width="440" height="52" rx="12" fill="#ff990020" stroke="#ff990055"/>
+  <text x="600" y="206" text-anchor="middle" font-family="monospace" font-size="12" fill="#ff9900">Application Load Balancer</text>
+  <text x="600" y="222" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff44">HTTPS · health checks every 30s · SSL termination</text>
+  <!-- Arrows down to EC2s -->
+  <path d="M520 232 L440 268" stroke="#ff990055" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <path d="M600 232 L600 268" stroke="#ff990055" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <path d="M680 232 L760 268" stroke="#ff990055" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <!-- EC2 instances -->
+  <rect x="340" y="268" width="180" height="80" rx="10" fill="#ffffff08" stroke="#4a90d940"/>
+  <text x="430" y="298" text-anchor="middle" font-family="monospace" font-size="10" fill="#4a90d9">EC2 Instance 1</text>
+  <text x="430" y="315" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff44">Apache HTTP Server</text>
+  <text x="430" y="331" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff33">Amazon Linux 2</text>
+  <rect x="510" y="268" width="180" height="80" rx="10" fill="#ffffff08" stroke="#4a90d960"/>
+  <text x="600" y="298" text-anchor="middle" font-family="monospace" font-size="10" fill="#4a90d9">EC2 Instance 2</text>
+  <text x="600" y="315" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff44">Apache HTTP Server</text>
+  <text x="600" y="331" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff33">Auto Scaled</text>
+  <rect x="680" y="268" width="180" height="80" rx="10" fill="#ffffff06" stroke="#4a90d930"/>
+  <text x="770" y="298" text-anchor="middle" font-family="monospace" font-size="10" fill="#4a90d970">EC2 Instance N</text>
+  <text x="770" y="315" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff33">Auto Scaled</text>
+  <text x="770" y="331" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff25">on demand</text>
+  <!-- VPC border -->
+  <rect x="70" y="160" width="1060" height="240" rx="16" fill="none" stroke="#4a90d920" stroke-width="2" stroke-dasharray="8,6"/>
+  <text x="90" y="390" font-family="monospace" font-size="9" fill="#4a90d940" letter-spacing="0.1em">VPC — CUSTOM NETWORK ISOLATION</text>
+  <!-- Security groups & NACLs -->
+  <rect x="36" y="420" width="340" height="80" rx="12" fill="#ffffff06" stroke="#ffffff12"/>
+  <text x="206" y="446" text-anchor="middle" font-family="monospace" font-size="10" fill="white">Security Groups</text>
+  <text x="206" y="464" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff44">HTTP 80 · HTTPS 443 from ALB only</text>
+  <text x="206" y="481" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff33">SSH 22 from trusted IPs only</text>
+  <!-- CloudWatch -->
+  <rect x="400" y="420" width="340" height="80" rx="12" fill="#ff990010" stroke="#ff990030"/>
+  <text x="570" y="446" text-anchor="middle" font-family="monospace" font-size="10" fill="#ff9900">CloudWatch</text>
+  <text x="570" y="464" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff44">CPU · NetworkIn/Out · 5xx errors</text>
+  <text x="570" y="481" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff33">Alarms → auto-scale triggers</text>
+  <!-- Auto Scaling -->
+  <rect x="764" y="420" width="400" height="80" rx="12" fill="#7ec8a410" stroke="#7ec8a430"/>
+  <text x="964" y="446" text-anchor="middle" font-family="monospace" font-size="10" fill="#7ec8a4">Auto Scaling Group</text>
+  <text x="964" y="464" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff44">min=1 · max=4 · CPU threshold 70%</text>
+  <text x="964" y="481" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff33">new instances auto-join ALB target group</text>
+  <!-- Internet gateway -->
+  <rect x="36" y="160" width="210" height="52" rx="10" fill="#ffffff06" stroke="#ffffff12"/>
+  <text x="141" y="183" text-anchor="middle" font-family="monospace" font-size="10" fill="#ffffff66">Internet Gateway</text>
+  <text x="141" y="200" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff33">public subnet routing</text>
+  <rect x="0" y="548" width="1200" height="52" fill="#ffffff04" stroke="#ffffff08" stroke-width="1"/>
+  <text x="36" y="578" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.1em" fill="#4a90d9" opacity="0.7">AWS EC2 · VPC · APACHE · ELASTIC LOAD BALANCER · AUTO SCALING · CLOUDWATCH</text>
+</svg>
