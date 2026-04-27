@@ -14,7 +14,7 @@
   </radialGradient>
   <rect width="1200" height="600" fill="url(#cg)"/>
   <rect x="0" y="0" width="1200" height="3" fill="#22c55e" opacity="0.8"/>
-  <text x="50" y="44" font-family="monospace" font-size="11" letter-spacing="0.14em" fill="#22c55e" opacity="0.9">SUSTAINABILITY · AI · CARBON-AWARE ML</text>
+  <text x="50" y="44" font-family="monospace" font-size="11" letter-spacing="0.14em" fill="#22c55e" opacity="0.9">SUSTAINABILITY &#xB7; AI &#xB7; CARBON-AWARE ML</text>
   <text x="36" y="88" font-family="Georgia,serif" font-size="34" font-weight="700" fill="#ffffff" opacity="0.95">GridGreen</text>
   
   <!-- Code editor area -->
@@ -78,5 +78,5 @@
     <text x="980" y="518">Suggestion coverage</text><text x="1110" y="518" fill="#22c55e">66.7%</text>
   </g>
   <rect x="0" y="548" width="1200" height="52" fill="#ffffff04" stroke="#ffffff08" stroke-width="1"/>
-  <text x="36" y="578" font-family="monospace" font-size="11" letter-spacing="0.1em" fill="#22c55e" opacity="0.7">PYTHON · FASTAPI · NEXT.JS · RAG · PROPHET · SNOWFLAKE · DATABRICKS · AWS SAGEMAKER · W&B</text>
+  <text x="36" y="578" font-family="monospace" font-size="11" letter-spacing="0.1em" fill="#22c55e" opacity="0.7">PYTHON &#xB7; FASTAPI &#xB7; NEXT.JS &#xB7; RAG &#xB7; PROPHET &#xB7; SNOWFLAKE &#xB7; DATABRICKS &#xB7; AWS SAGEMAKER &#xB7; W&amp;B</text>
 </svg>

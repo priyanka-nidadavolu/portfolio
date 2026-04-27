@@ -24,7 +24,7 @@
   <rect x="0" y="0" width="1200" height="3" fill="#fa687e" opacity="0.8"/>
   <!-- Project label pill -->
   <rect x="36" y="28" width="auto" height="24" rx="12" fill="#fa687e22" stroke="#fa687e55" stroke-width="1"/>
-  <text x="50" y="44" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.14em" fill="#fa687e" opacity="0.9">MACHINE LEARNING · RECSYS</text>
+  <text x="50" y="44" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.14em" fill="#fa687e" opacity="0.9">MACHINE LEARNING &#xB7; RECSYS</text>
   <!-- Title -->
   <text x="36" y="88" font-family="'Fraunces',Georgia,serif" font-size="34" font-weight="700" fill="#ffffff" opacity="0.95">Socially-Aware Recommendation</text>
   <!-- Main visual area -->
@@ -66,13 +66,13 @@
   <rect x="1030" y="120" width="140" height="210" rx="12" fill="#ffffff0a" stroke="#fa687e30"/>
   <text x="1100" y="146" text-anchor="middle" font-family="monospace" font-size="9" fill="#fa687e">TOP PICKS</text>
   <g font-family="monospace" font-size="11" fill="#ffffff77">
-    <text x="1048" y="174">★★★★★</text><text x="1048" y="192">Product A</text>
+    <text x="1048" y="174">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</text><text x="1048" y="192">Product A</text>
     <line x1="1048" y1="200" x2="1152" y2="200" stroke="#ffffff10"/>
-    <text x="1048" y="218">★★★★☆</text><text x="1048" y="236">Product B</text>
+    <text x="1048" y="218">&#x2605;&#x2605;&#x2605;&#x2605;&#x2606;</text><text x="1048" y="236">Product B</text>
     <line x1="1048" y1="244" x2="1152" y2="244" stroke="#ffffff10"/>
-    <text x="1048" y="262">★★★★☆</text><text x="1048" y="280">Product C</text>
+    <text x="1048" y="262">&#x2605;&#x2605;&#x2605;&#x2605;&#x2606;</text><text x="1048" y="280">Product C</text>
     <line x1="1048" y1="288" x2="1152" y2="288" stroke="#ffffff10"/>
-    <text x="1048" y="306">★★★☆☆</text>
+    <text x="1048" y="306">&#x2605;&#x2605;&#x2605;&#x2606;&#x2606;</text>
   </g>
   <!-- Legend -->
   <g>
@@ -94,5 +94,5 @@
   </g>
   <!-- Tech strip at bottom -->
   <rect x="0" y="548" width="1200" height="52" fill="#ffffff04" stroke="#ffffff08" stroke-width="1"/>
-  <text x="36" y="578" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.1em" fill="#fa687e" opacity="0.7">PYTHON · MARKOV RANDOM FIELD · SCIKIT-LEARN · EPINIONS · HUGGING FACE</text>
+  <text x="36" y="578" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.1em" fill="#fa687e" opacity="0.7">PYTHON &#xB7; MARKOV RANDOM FIELD &#xB7; SCIKIT-LEARN &#xB7; EPINIONS &#xB7; HUGGING FACE</text>
 </svg>

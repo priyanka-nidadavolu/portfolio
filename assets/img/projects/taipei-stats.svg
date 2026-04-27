@@ -61,8 +61,8 @@
   <!-- Annotation -->
   <line x1="430" y1="298" x2="510" y2="235" stroke="#fa687e" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.8"/>
   <rect x="510" y="200" width="185" height="60" rx="8" fill="#fa687e" opacity="0.85"/>
-  <text x="603" y="223" text-anchor="middle" font-family="monospace" font-size="11" fill="white">β(MRT) = −0.31</text>
-  <text x="603" y="242" text-anchor="middle" font-family="monospace" font-size="10" fill="#ffffff99">95% CI [−0.38, −0.24]</text>
+  <text x="603" y="223" text-anchor="middle" font-family="monospace" font-size="11" fill="white">&#x3B2;(MRT) = &#x2212;0.31</text>
+  <text x="603" y="242" text-anchor="middle" font-family="monospace" font-size="10" fill="#ffffff99">95% CI [&#x2212;0.38, &#x2212;0.24]</text>
   <text x="603" y="254" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff77">p &lt; 0.001</text>
   <!-- Axis labels -->
   <text x="376" y="545" text-anchor="middle" font-family="monospace" font-size="10" fill="#ffffff30">log(Distance to MRT)</text>
@@ -71,21 +71,21 @@
   <text x="960" y="158" text-anchor="middle" font-family="monospace" font-size="10" fill="#ffffff44" letter-spacing="0.1em">MODEL RESULTS</text>
   <!-- R2 big -->
   <text x="820" y="230" font-family="Georgia,serif" font-size="64" font-weight="bold" fill="#fa687e" opacity="0.9">0.58</text>
-  <text x="820" y="262" font-family="monospace" font-size="10" fill="#ffffff44">Cross-validated R²</text>
+  <text x="820" y="262" font-family="monospace" font-size="10" fill="#ffffff44">Cross-validated R&#xB2;</text>
   <line x1="780" y1="285" x2="1140" y2="285" stroke="#ffffff0c"/>
   <!-- Predictor bars -->
   <text x="780" y="314" font-family="monospace" font-size="9" fill="#ffffff44">KEY PREDICTORS</text>
   <text x="780" y="348" font-family="monospace" font-size="11" fill="#ffffff77">MRT distance</text>
   <rect x="780" y="354" width="260" height="10" rx="5" fill="#fa687e" opacity="0.8"/>
-  <text x="1048" y="363" font-family="monospace" font-size="10" fill="#fa687e">−0.31</text>
+  <text x="1048" y="363" font-family="monospace" font-size="10" fill="#fa687e">&#x2212;0.31</text>
   <text x="780" y="390" font-family="monospace" font-size="11" fill="#ffffff77">Nearby stores</text>
   <rect x="780" y="396" width="140" height="10" rx="5" fill="#7ec8a4" opacity="0.8"/>
   <text x="928" y="405" font-family="monospace" font-size="10" fill="#7ec8a4">+1.1</text>
   <text x="780" y="432" font-family="monospace" font-size="11" fill="#ffffff77">House age</text>
   <rect x="780" y="438" width="170" height="10" rx="5" fill="#fa687e" opacity="0.5"/>
-  <text x="958" y="447" font-family="monospace" font-size="10" fill="#fa687e77">−0.27</text>
-  <text x="780" y="488" font-family="monospace" font-size="10" fill="#ffffff44">Bootstrap n=1,000 · LASSO · 10-fold CV</text>
+  <text x="958" y="447" font-family="monospace" font-size="10" fill="#fa687e77">&#x2212;0.27</text>
+  <text x="780" y="488" font-family="monospace" font-size="10" fill="#ffffff44">Bootstrap n=1,000 &#xB7; LASSO &#xB7; 10-fold CV</text>
   <!-- Tech strip at bottom -->
   <rect x="0" y="548" width="1200" height="52" fill="#ffffff04" stroke="#ffffff08" stroke-width="1"/>
-  <text x="36" y="578" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.1em" fill="#fa687e" opacity="0.7">PYTHON · LASSO · STATSMODELS · BOOTSTRAP · SCIKIT-LEARN</text>
+  <text x="36" y="578" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.1em" fill="#fa687e" opacity="0.7">PYTHON &#xB7; LASSO &#xB7; STATSMODELS &#xB7; BOOTSTRAP &#xB7; SCIKIT-LEARN</text>
 </svg>

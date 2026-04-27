@@ -16,7 +16,7 @@
   </radialGradient>
   <rect width="1200" height="600" fill="url(#cg)"/>
   <rect x="0" y="0" width="1200" height="3" fill="#fa687e" opacity="0.8"/>
-  <text x="50" y="44" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.14em" fill="#fa687e" opacity="0.9">DATA ANALYSIS · TABLEAU</text>
+  <text x="50" y="44" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.14em" fill="#fa687e" opacity="0.9">DATA ANALYSIS &#xB7; TABLEAU</text>
   <text x="36" y="88" font-family="'Fraunces',Georgia,serif" font-size="34" font-weight="700" fill="#ffffff" opacity="0.95">Customer Response Analysis</text>
   
   <!-- KPI strip -->
@@ -30,13 +30,13 @@
     <rect x="508" y="120" width="220" height="66" rx="10" fill="#fa687e10" stroke="#fa687e25"/>
     <text x="618" y="145" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff35">TOP SEGMENT</text>
     <text x="618" y="168" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="white">Retired</text>
-    <text x="618" y="183" text-anchor="middle" font-family="monospace" font-size="10" fill="#fa687e">2.8× avg rate</text>
+    <text x="618" y="183" text-anchor="middle" font-family="monospace" font-size="10" fill="#fa687e">2.8&#xD7; avg rate</text>
     <rect x="744" y="120" width="200" height="66" rx="10" fill="#7ec8a410" stroke="#7ec8a425"/>
     <text x="844" y="145" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff35">EFFICIENCY GAIN</text>
     <text x="844" y="173" text-anchor="middle" font-family="Georgia,serif" font-size="28" font-weight="bold" fill="#7ec8a4">+12%</text>
     <rect x="960" y="120" width="200" height="66" rx="10" fill="#ffffff06" stroke="#ffffff0c"/>
     <text x="1060" y="145" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff35">BEST PERIOD</text>
-    <text x="1060" y="173" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="white">May–Aug</text>
+    <text x="1060" y="173" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="white">May-Aug</text>
   </g>
   <!-- Bar chart conversion by job -->
   <rect x="36" y="210" width="500" height="220" rx="12" fill="#ffffff04" stroke="#ffffff0c"/>
@@ -74,9 +74,9 @@
   <rect x="36" y="450" width="1124" height="78" rx="12" fill="#ffffff06" stroke="#ffffff0c"/>
   <text x="56" y="474" font-family="monospace" font-size="9" fill="#fa687e" letter-spacing="0.1em">RECOMMENDATIONS</text>
   <g font-family="monospace" font-size="11" fill="#ffffff77">
-    <text x="56" y="497">→  Focus May–Aug campaigns on retired + student segments via cellular · Thursday/Friday outperforms by 22%</text>
-    <text x="56" y="516">→  Prioritise previously-contacted customers with positive outcomes — 3.2× higher conversion rate</text>
+    <text x="56" y="497">&#x2192;  Focus May-Aug campaigns on retired + student segments via cellular &#xB7; Thursday/Friday outperforms by 22%</text>
+    <text x="56" y="516">&#x2192;  Prioritise previously-contacted customers with positive outcomes  -  3.2&#xD7; higher conversion rate</text>
   </g>
   <rect x="0" y="548" width="1200" height="52" fill="#ffffff04" stroke="#ffffff08" stroke-width="1"/>
-  <text x="36" y="578" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.1em" fill="#fa687e" opacity="0.7">PYTHON · TABLEAU · PANDAS · NUMPY · MATPLOTLIB · SEABORN</text>
+  <text x="36" y="578" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.1em" fill="#fa687e" opacity="0.7">PYTHON &#xB7; TABLEAU &#xB7; PANDAS &#xB7; NUMPY &#xB7; MATPLOTLIB &#xB7; SEABORN</text>
 </svg>

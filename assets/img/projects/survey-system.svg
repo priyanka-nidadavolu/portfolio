@@ -16,7 +16,7 @@
   </radialGradient>
   <rect width="1200" height="600" fill="url(#cg)"/>
   <rect x="0" y="0" width="1200" height="3" fill="#7c3aed" opacity="0.8"/>
-  <text x="50" y="44" font-family="monospace" font-size="11" letter-spacing="0.14em" fill="#7c3aed" opacity="0.9">FULL-STACK · WEB APP · JAVA SERVLETS</text>
+  <text x="50" y="44" font-family="monospace" font-size="11" letter-spacing="0.14em" fill="#7c3aed" opacity="0.9">FULL-STACK &#xB7; WEB APP &#xB7; JAVA SERVLETS</text>
   <text x="36" y="88" font-family="Georgia,serif" font-size="34" font-weight="700" fill="#ffffff" opacity="0.95">Online Survey System</text>
   <!-- Browser chrome / form mockup -->
   <rect x="36" y="120" width="680" height="400" rx="14" fill="#ffffff06" stroke="#ffffff0c"/>
@@ -44,7 +44,7 @@
   <rect x="460" y="374" width="80" height="30" rx="6" fill="#7c3aed" opacity="0.85"/>
   <text x="500" y="393" text-anchor="middle" font-family="monospace" font-size="10" fill="white">Copy</text>
   <rect x="556" y="374" width="140" height="30" rx="6" fill="#ffffff08" stroke="#ffffff15"/>
-  <text x="626" y="393" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff55">Email · Slack · Social</text>
+  <text x="626" y="393" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff55">Email &#xB7; Slack &#xB7; Social</text>
   <!-- Analytics panel -->
   <rect x="760" y="120" width="400" height="400" rx="14" fill="#ffffff04" stroke="#ffffff0c"/>
   <text x="960" y="158" text-anchor="middle" font-family="monospace" font-size="9" fill="#7c3aed" letter-spacing="0.1em">REAL-TIME ANALYTICS</text>
@@ -79,5 +79,5 @@
     <line x1="912" y1="448" x2="912" y2="500"/><line x1="1056" y1="448" x2="1056" y2="500"/>
   </g>
   <rect x="0" y="548" width="1200" height="52" fill="#ffffff04" stroke="#ffffff08" stroke-width="1"/>
-  <text x="36" y="578" font-family="monospace" font-size="11" letter-spacing="0.1em" fill="#7c3aed" opacity="0.7">JAVA · JSP · JAVA SERVLETS · MYSQL · HTML/CSS/JS · CHART.JS</text>
+  <text x="36" y="578" font-family="monospace" font-size="11" letter-spacing="0.1em" fill="#7c3aed" opacity="0.7">JAVA &#xB7; JSP &#xB7; JAVA SERVLETS &#xB7; MYSQL &#xB7; HTML/CSS/JS &#xB7; CHART.JS</text>
 </svg>

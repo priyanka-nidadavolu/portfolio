@@ -16,7 +16,7 @@
   </radialGradient>
   <rect width="1200" height="600" fill="url(#cg)"/>
   <rect x="0" y="0" width="1200" height="3" fill="#2f43d6" opacity="0.8"/>
-  <text x="50" y="44" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.14em" fill="#2f43d6" opacity="0.9">NLP · SPEECH · SAMSUNG PRISM</text>
+  <text x="50" y="44" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.14em" fill="#2f43d6" opacity="0.9">NLP &#xB7; SPEECH &#xB7; SAMSUNG PRISM</text>
   <text x="36" y="88" font-family="'Fraunces',Georgia,serif" font-size="34" font-weight="700" fill="#ffffff" opacity="0.95">Phoneme Data Creation</text>
   
   <!-- Waveform -->
@@ -28,22 +28,22 @@
   </g>
   <!-- IPA annotation block -->
   <rect x="36" y="130" width="800" height="80" rx="12" fill="#ffffff06" stroke="#2f43d630"/>
-  <text x="56" y="158" font-family="Georgia,serif" font-size="26" fill="#ffffff" opacity="0.9">ˈmoʊ.hæ.məd</text>
-  <text x="56" y="185" font-family="monospace" font-size="12" fill="#ffffff44">Muhammad · Mohammed · Muhamad · Mehmed → same phoneme cluster</text>
+  <text x="56" y="158" font-family="Georgia,serif" font-size="26" fill="#ffffff" opacity="0.9">'mou.hae.med</text>
+  <text x="56" y="185" font-family="monospace" font-size="12" fill="#ffffff44">Muhammad &#xB7; Mohammed &#xB7; Muhamad &#xB7; Mehmed &#x2192; same phoneme cluster</text>
   <!-- Dataset table -->
   <rect x="36" y="390" width="540" height="140" rx="12" fill="#ffffff06" stroke="#2f43d630"/>
   <text x="306" y="418" text-anchor="middle" font-family="monospace" font-size="9" fill="#4a6eff" letter-spacing="0.1em">MULTILINGUAL PHONETIC DATASET</text>
   <line x1="56" y1="428" x2="556" y2="428" stroke="#ffffff10"/>
   <g font-family="monospace" font-size="11">
     <text x="70" y="450" fill="#ffffff55">Name</text><text x="240" y="450" fill="#ffffff55">Origin</text><text x="400" y="450" fill="#2f43d6">IPA</text>
-    <text x="70" y="473" fill="#ffffff88">Priyanka</text><text x="240" y="473" fill="#ffffff66">Telugu/Hindi</text><text x="400" y="473" fill="#4a6eff88">ˈpriː.jɑː.ŋkɑː</text>
-    <text x="70" y="493" fill="#ffffff88">García</text><text x="240" y="493" fill="#ffffff66">Spanish</text><text x="400" y="493" fill="#4a6eff88">ɡarˈθi.a</text>
-    <text x="70" y="513" fill="#ffffff55">10,000+ entries · 15+ languages</text>
+    <text x="70" y="473" fill="#ffffff88">Priyanka</text><text x="240" y="473" fill="#ffffff66">Telugu/Hindi</text><text x="400" y="473" fill="#4a6eff88">'pri:.ja:.ngka:</text>
+    <text x="70" y="493" fill="#ffffff88">Garcia</text><text x="240" y="493" fill="#ffffff66">Spanish</text><text x="400" y="493" fill="#4a6eff88">gar'thi.a</text>
+    <text x="70" y="513" fill="#ffffff55">10,000+ entries &#xB7; 15+ languages</text>
   </g>
   <!-- Algorithm cards -->
   <rect x="620" y="390" width="250" height="66" rx="12" fill="#2f43d620" stroke="#2f43d650"/>
   <text x="745" y="415" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#4a6eff">Soundex</text>
-  <text x="745" y="435" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff55">phonetic hashing · English family</text>
+  <text x="745" y="435" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff55">phonetic hashing &#xB7; English family</text>
   <text x="745" y="450" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff44">SMITH = SMYTHE = S530</text>
   <rect x="620" y="468" width="250" height="58" rx="12" fill="#2f43d618" stroke="#2f43d640"/>
   <text x="745" y="491" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#4a6eff">Metaphone</text>
@@ -54,7 +54,7 @@
   <text x="1032" y="194" text-anchor="middle" font-family="monospace" font-size="11" fill="#ffffff55">ASR accuracy improvement</text>
   <rect x="900" y="240" width="264" height="60" rx="12" fill="#ffffff08" stroke="#ffffff15"/>
   <text x="1032" y="264" text-anchor="middle" font-family="monospace" font-size="11" fill="white">10,000+ names</text>
-  <text x="1032" y="283" text-anchor="middle" font-family="monospace" font-size="10" fill="#ffffff55">IPA annotated · validated</text>
+  <text x="1032" y="283" text-anchor="middle" font-family="monospace" font-size="10" fill="#ffffff55">IPA annotated &#xB7; validated</text>
   <rect x="0" y="548" width="1200" height="52" fill="#ffffff04" stroke="#ffffff08" stroke-width="1"/>
-  <text x="36" y="578" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.1em" fill="#2f43d6" opacity="0.7">PYTHON · SOUNDEX · METAPHONE · IPA · PANDAS · SPEECHRECOGNITION</text>
+  <text x="36" y="578" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.1em" fill="#2f43d6" opacity="0.7">PYTHON &#xB7; SOUNDEX &#xB7; METAPHONE &#xB7; IPA &#xB7; PANDAS &#xB7; SPEECHRECOGNITION</text>
 </svg>

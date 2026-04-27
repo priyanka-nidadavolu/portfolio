@@ -16,7 +16,7 @@
   </radialGradient>
   <rect width="1200" height="600" fill="url(#cg)"/>
   <rect x="0" y="0" width="1200" height="3" fill="#28a745" opacity="0.8"/>
-  <text x="50" y="44" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.14em" fill="#28a745" opacity="0.9">SUSTAINABILITY · FULL-STACK · KL UNIVERSITY</text>
+  <text x="50" y="44" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.14em" fill="#28a745" opacity="0.9">SUSTAINABILITY &#xB7; FULL-STACK &#xB7; KL UNIVERSITY</text>
   <text x="36" y="88" font-family="'Fraunces',Georgia,serif" font-size="34" font-weight="700" fill="#ffffff" opacity="0.95">Eco Entrepreneurship</text>
   
   <!-- App UI left -->
@@ -29,15 +29,15 @@
   </g>
   <!-- Startup idea cards -->
   <rect x="55" y="190" width="165" height="95" rx="10" fill="#28a74516" stroke="#28a74540"/>
-  <text x="137" y="222" text-anchor="middle" font-size="26">♻️</text>
+  <text x="137" y="222" text-anchor="middle" font-size="26">&#x267B;</text>
   <text x="137" y="250" text-anchor="middle" font-family="monospace" font-size="10" fill="#28a745">Waste Mgmt</text>
-  <text x="137" y="268" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff35">Low cost · Scalable</text>
+  <text x="137" y="268" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff35">Low cost &#xB7; Scalable</text>
   <rect x="234" y="190" width="165" height="95" rx="10" fill="#28a74512" stroke="#28a74535"/>
-  <text x="316" y="222" text-anchor="middle" font-size="26">🌱</text>
+  <text x="316" y="222" text-anchor="middle" font-size="26"></text>
   <text x="316" y="250" text-anchor="middle" font-family="monospace" font-size="10" fill="#28a745">Urban Farming</text>
   <text x="316" y="268" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff35">High demand</text>
   <rect x="413" y="190" width="165" height="95" rx="10" fill="#28a74510" stroke="#28a74530"/>
-  <text x="495" y="222" text-anchor="middle" font-size="26">☀️</text>
+  <text x="495" y="222" text-anchor="middle" font-size="26">&#x2600;</text>
   <text x="495" y="250" text-anchor="middle" font-family="monospace" font-size="10" fill="#28a745">Solar Services</text>
   <text x="495" y="268" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff35">Growing fast</text>
   <!-- Carbon footprint meter -->
@@ -48,30 +48,30 @@
   <!-- Donate module -->
   <rect x="65" y="380" width="220" height="60" rx="10" fill="#28a74510" stroke="#28a74530"/>
   <text x="175" y="406" text-anchor="middle" font-family="monospace" font-size="10" fill="#28a745">Social Causes</text>
-  <text x="175" y="424" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff44">🌳 Plant trees · ☀️ Renewables</text>
+  <text x="175" y="424" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff44"> Plant trees &#xB7; &#x2600; Renewables</text>
   <rect x="305" y="380" width="220" height="60" rx="10" fill="#28a74510" stroke="#28a74530"/>
   <text x="415" y="406" text-anchor="middle" font-family="monospace" font-size="10" fill="#28a745">Marketplace</text>
-  <text x="415" y="424" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff44">Eco products · PayPal / Stripe</text>
+  <text x="415" y="424" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffffff44">Eco products &#xB7; PayPal / Stripe</text>
   <!-- AWS stack right -->
   <rect x="660" y="120" width="500" height="400" rx="16" fill="#ffffff04" stroke="#ff990018"/>
   <text x="910" y="160" text-anchor="middle" font-family="monospace" font-size="10" fill="#ff9900" letter-spacing="0.1em">AWS INFRASTRUCTURE</text>
   <g text-anchor="middle" font-family="monospace">
     <rect x="680" y="180" width="460" height="58" rx="10" fill="#ff990015" stroke="#ff990030"/>
-    <text x="910" y="207" font-size="13" fill="#ff9900">EC2 · Application Server</text>
-    <text x="910" y="226" font-size="9" fill="#ff990077">Spring Boot + JSP · Auto-scaled · Amazon Linux 2</text>
+    <text x="910" y="207" font-size="13" fill="#ff9900">EC2 &#xB7; Application Server</text>
+    <text x="910" y="226" font-size="9" fill="#ff990077">Spring Boot + JSP &#xB7; Auto-scaled &#xB7; Amazon Linux 2</text>
     <rect x="680" y="252" width="460" height="58" rx="10" fill="#ff990012" stroke="#ff990025"/>
-    <text x="910" y="279" font-size="13" fill="#ff9900">RDS MySQL · Managed Database</text>
-    <text x="910" y="298" font-size="9" fill="#ff990077">Auto-backups · Multi-AZ · Optimised queries</text>
+    <text x="910" y="279" font-size="13" fill="#ff9900">RDS MySQL &#xB7; Managed Database</text>
+    <text x="910" y="298" font-size="9" fill="#ff990077">Auto-backups &#xB7; Multi-AZ &#xB7; Optimised queries</text>
     <rect x="680" y="324" width="460" height="58" rx="10" fill="#ff99000f" stroke="#ff990020"/>
-    <text x="910" y="351" font-size="13" fill="#ff9900">S3 · Static Assets + CDN</text>
-    <text x="910" y="370" font-size="9" fill="#ff990077">Images · Documents · Served via CloudFront</text>
+    <text x="910" y="351" font-size="13" fill="#ff9900">S3 &#xB7; Static Assets + CDN</text>
+    <text x="910" y="370" font-size="9" fill="#ff990077">Images &#xB7; Documents &#xB7; Served via CloudFront</text>
     <rect x="680" y="396" width="220" height="56" rx="10" fill="#28a74514" stroke="#28a74530"/>
     <text x="790" y="420" font-size="10" fill="#28a745">Spring Security</text>
-    <text x="790" y="440" font-size="9" fill="#ffffff44">JWT · RBAC · Sessions</text>
+    <text x="790" y="440" font-size="9" fill="#ffffff44">JWT &#xB7; RBAC &#xB7; Sessions</text>
     <rect x="920" y="396" width="220" height="56" rx="10" fill="#28a74510" stroke="#28a74528"/>
     <text x="1030" y="420" font-size="10" fill="#28a745">Stripe / PayPal</text>
-    <text x="1030" y="440" font-size="9" fill="#ffffff44">Donations · Marketplace</text>
+    <text x="1030" y="440" font-size="9" fill="#ffffff44">Donations &#xB7; Marketplace</text>
   </g>
   <rect x="0" y="548" width="1200" height="52" fill="#ffffff04" stroke="#ffffff08" stroke-width="1"/>
-  <text x="36" y="578" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.1em" fill="#28a745" opacity="0.7">JAVA · SPRING BOOT · MYSQL · AWS EC2 · RDS · S3 · SPRING SECURITY</text>
+  <text x="36" y="578" font-family="'DM Mono',monospace" font-size="11" letter-spacing="0.1em" fill="#28a745" opacity="0.7">JAVA &#xB7; SPRING BOOT &#xB7; MYSQL &#xB7; AWS EC2 &#xB7; RDS &#xB7; S3 &#xB7; SPRING SECURITY</text>
 </svg>

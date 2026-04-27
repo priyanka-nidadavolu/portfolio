@@ -14,7 +14,7 @@
   </radialGradient>
   <rect width="1200" height="600" fill="url(#cg)"/>
   <rect x="0" y="0" width="1200" height="3" fill="#f97316" opacity="0.8"/>
-  <text x="50" y="44" font-family="monospace" font-size="11" letter-spacing="0.14em" fill="#f97316" opacity="0.9">ML SYSTEMS · GPU KERNELS · DISTRIBUTED TRAINING</text>
+  <text x="50" y="44" font-family="monospace" font-size="11" letter-spacing="0.14em" fill="#f97316" opacity="0.9">ML SYSTEMS &#xB7; GPU KERNELS &#xB7; DISTRIBUTED TRAINING</text>
   <text x="36" y="88" font-family="Georgia,serif" font-size="34" font-weight="700" fill="#ffffff" opacity="0.95">GPU Kernel Optimization + Distributed Training</text>
   
   <!-- Fused kernel left panel -->
@@ -86,7 +86,7 @@
     <rect x="860" y="310" width="150" height="26" rx="6" fill="#f9731610" stroke="#f9731430"/>
     <text x="935" y="327" text-anchor="middle" fill="#f97316">Reduce-Scatter</text>
     <text x="600" y="358" fill="#ffffff35">Tensor sharding: fc_q/k/v split on output dim, fc_o on input dim</text>
-    <text x="600" y="376" fill="#ffffff25">Custom MPI vs native MPI benchmarked — hardware-aware ring algs faster</text>
+    <text x="600" y="376" fill="#ffffff25">Custom MPI vs native MPI benchmarked  -  hardware-aware ring algs faster</text>
     <text x="600" y="394" fill="#22c55e88">Built fused kernel &#x2265;1.25&#xD7; PyTorch baseline</text>
     <text x="600" y="412" fill="#22c55e66">Implemented AllReduce + AllToAll + Reduce-Scatter from scratch</text>
     <text x="600" y="430" fill="#22c55e55">Full forward + backward communication pipeline for tensor parallelism</text>
@@ -99,12 +99,12 @@
     <text x="420" y="480" font-size="9" fill="#ffffff35">PARALLELISM</text>
     <text x="420" y="505" font-size="13" fill="white">DP &#xD7; MP (2D)</text>
     <text x="660" y="480" font-size="9" fill="#ffffff35">COLLECTIVES</text>
-    <text x="660" y="505" font-size="13" fill="white">AllReduce · AllToAll</text>
+    <text x="660" y="505" font-size="13" fill="white">AllReduce &#xB7; AllToAll</text>
     <text x="900" y="480" font-size="9" fill="#ffffff35">OPERATIONS FUSED</text>
     <text x="900" y="505" font-size="13" fill="white">MatMul + Add + ReLU</text>
     <text x="1100" y="480" font-size="9" fill="#ffffff35">FRAMEWORK</text>
     <text x="1100" y="505" font-size="13" fill="white">Triton + MPI</text>
   </g>
   <rect x="0" y="548" width="1200" height="52" fill="#ffffff04" stroke="#ffffff08" stroke-width="1"/>
-  <text x="36" y="578" font-family="monospace" font-size="11" letter-spacing="0.1em" fill="#f97316" opacity="0.7">TRITON · CUDA · MPI (mpi4py) · NUMPY · PYTHON · PYTORCH TENSORS</text>
+  <text x="36" y="578" font-family="monospace" font-size="11" letter-spacing="0.1em" fill="#f97316" opacity="0.7">TRITON &#xB7; CUDA &#xB7; MPI (mpi4py) &#xB7; NUMPY &#xB7; PYTHON &#xB7; PYTORCH TENSORS</text>
 </svg>
